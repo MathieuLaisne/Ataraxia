@@ -116,7 +116,7 @@ public class MapGenerator : MonoBehaviour
         {
             for(int j = 0; j < width; j++)
             {
-                Vector3 pos = new Vector3(i*1.1f, j*1.1f, 0);
+                Vector3 pos = new Vector3(i * 1.1f - width * 1.1f / 2, j* 1.1f - width * 1.1f / 2, 0);
                 var obj = GameObject.Instantiate(map[i*width + j].Structure, pos, new Quaternion());
                 obj.AddComponent<BuildingHandler>();
                 obj.GetComponent<BuildingHandler>().building = map[i*j+width];
