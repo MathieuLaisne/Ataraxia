@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class Character
 {
@@ -50,9 +51,15 @@ public class Character
         set { m_insanity = value; }
     }
 
-    public Character(string name, Job job, int maxHp, int maxMental, int barrier) 
+    private Sprite m_profile;
+    public Sprite Profile
     {
-        m_name = name; m_job = job; m_maxHP = maxHP; m_maxMP = maxMental; m_mentalBarrier = barrier;
+        get { return m_profile; }
+    }
+
+    public Character(string name, Job job, Sprite img, int maxHp, int maxMental, int barrier) 
+    {
+        m_name = name; m_job = job; m_profile = img; m_maxHP = maxHp; m_maxMP = maxMental; m_mentalBarrier = barrier;
         m_hp = maxHP; m_mp = maxMental;
         m_status = new List<string>(); m_friends = new List<Character>();
     }

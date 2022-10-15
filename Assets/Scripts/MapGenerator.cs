@@ -13,6 +13,8 @@ public class MapGenerator : MonoBehaviour
     [SerializeField]
     private Job[] jobs;
 
+    public Sprite[] profile;
+
     public List<string> names;
 
     private Building[] map;
@@ -47,7 +49,6 @@ public class MapGenerator : MonoBehaviour
         nbConstruction = size / 15;
         nbAbandoned = size / 25;
         nbSpecial = size / 25;
-        Debug.Log("app " + nbApp + " construc " + nbConstruction + " aband " + nbAbandoned + " spec " + nbSpecial);
 
         for(int i = 0; i < nbApp; i++)
         {
@@ -55,7 +56,7 @@ public class MapGenerator : MonoBehaviour
             do {
                 pos = Random.Range(0, size);
             } while(map[pos] != null);
-            map[pos] = new Building("", buildingTypes[1]);
+            map[pos] = new Building(buildingTypes[1].m_name, buildingTypes[1]);
         }
 
         for(int i = 0; i < nbConstruction; i++)
@@ -64,7 +65,7 @@ public class MapGenerator : MonoBehaviour
             do {
                 pos = Random.Range(0, size);
             } while(map[pos] != null);
-            map[pos] = new Building("", buildingTypes[3]);
+            map[pos] = new Building(buildingTypes[3].m_name, buildingTypes[3]);
         }
 
         for(int i = 0; i < nbAbandoned; i++)
@@ -73,7 +74,7 @@ public class MapGenerator : MonoBehaviour
             do {
                 pos = Random.Range(0, size);
             } while(map[pos] != null);
-            map[pos] = new Building("", buildingTypes[0]);
+            map[pos] = new Building(buildingTypes[0].m_name, buildingTypes[0]);
         }
 
         for(int i = 0; i < nbSpecial; i++)
@@ -82,30 +83,30 @@ public class MapGenerator : MonoBehaviour
             do {
                 pos = Random.Range(0, size);
             } while(map[pos] != null);
-            map[pos] = new Building("", buildingTypes[2]);
+            map[pos] = new Building(buildingTypes[2].m_name, buildingTypes[2]);
             do {
                 pos = Random.Range(0, size);
             } while(map[pos] != null);
-            map[pos] = new Building("", buildingTypes[4]);
+            map[pos] = new Building(buildingTypes[4].m_name, buildingTypes[4]);
             do {
                 pos = Random.Range(0, size);
             } while(map[pos] != null);
-            map[pos] = new Building("", buildingTypes[5]);
+            map[pos] = new Building(buildingTypes[5].m_name, buildingTypes[5]);
             do {
                 pos = Random.Range(0, size);
             } while(map[pos] != null);
-            map[pos] = new Building("", buildingTypes[7]);
+            map[pos] = new Building(buildingTypes[7].m_name, buildingTypes[7]);
             do {
                 pos = Random.Range(0, size);
             } while(map[pos] != null);
-            map[pos] = new Building("", buildingTypes[8]);
+            map[pos] = new Building(buildingTypes[8].m_name, buildingTypes[8]);
         }
         
         for(int i = 0; i < size; i++)
         {
             if(map[i] == null)
             {
-                map[i] = new Building("", buildingTypes[6]);
+                map[i] = new Building(buildingTypes[6].m_name, buildingTypes[6]);
             }
         }
     }
@@ -117,18 +118,18 @@ public class MapGenerator : MonoBehaviour
             for(int j = 0; j < width; j++)
             {
                 Vector3 pos = new Vector3(i * 1.1f - width * 1.1f / 2, j* 1.1f - width * 1.1f / 2, 0);
-                var obj = GameObject.Instantiate(map[i*width + j].Structure, pos, new Quaternion());
+                var obj = Instantiate(map[i * width + j].Structure, pos, new Quaternion());
                 obj.AddComponent<BuildingHandler>();
-                obj.GetComponent<BuildingHandler>().building = map[i*j+width];
+                obj.GetComponent<BuildingHandler>().building = map[i * width + j];
             }
         }
     }
 
     private void CreateResidents() {
-        for(int i = 0; i < map.Length * 2; i++) {
+        for (int i = 0; i < map.Length * 2; i++) {
             int rndJob = Random.Range(0, jobs.Length);
             jobCount[rndJob]++;
-            Character c = new Character(names[Random.Range(0, names.Count)], jobs[rndJob], Random.Range(10, 30), Random.Range(10, 30), Random.Range(0, 10));
+            Character c = new Character(names[Random.Range(0, names.Count)], jobs[rndJob], profile[Random.Range(0, profile.Length)], Random.Range(10, 30), Random.Range(10, 30), Random.Range(0, 10));
             npc.Add(c);
         }
         int currIndex = 0;
