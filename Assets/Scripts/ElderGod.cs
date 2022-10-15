@@ -1,10 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "CosmicHorrorJam/ElderGod")]
-public class ElderGod : ScriptableObject
+namespace Exion.ScriptableObjects
 {
-    public string name;
-    public List<Card> deck;
+    [CreateAssetMenu(menuName = "CosmicHorrorJam/ElderGod")]
+    public class ElderGod : ScriptableObject
+    {
+        public string name;
+        public List<Card> deck;
+    }
 }
