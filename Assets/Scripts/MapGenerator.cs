@@ -33,7 +33,6 @@ namespace Exion.Default
 
         private int nbApp;
         private int nbConstruction;
-        private int nbAbandoned;
         private int nbSpecial;
         private int[] jobCount;
 
@@ -57,6 +56,7 @@ namespace Exion.Default
             CreateResidents();
             SetPrisoner();
             SetAbandoned();
+            SetFriends();
             CreateMap();
         }
 
@@ -165,7 +165,7 @@ namespace Exion.Default
             for (int i = 0; i < map.Length; i++)
             {
                 characters.Add(new ListWrapper());
-                if (map[i].Type.hasRes)
+                if (map[i].Type.hasRes && map[i].Type.name != "Prison")
                 {
                     for (int j = 0; j < (npc.Count / (nbApp)); j++)
                     {
@@ -236,6 +236,38 @@ namespace Exion.Default
                         b.AddResident(prisoners[i]);
                     }
                     nbPrisoner = i;
+                }
+            }
+        }
+
+        public void SetFriends()
+        {
+            foreach(Character c in npc)
+            {
+                int friendMax = Random.Range(2, npc.Count / 10);
+                while (c.Friends.Count < friendMax)
+                {
+                    int rndIndex = Random.Range(0, npc.Count);
+                    while (npc[rndIndex] == c)
+                    {
+                        rndIndex = Random.Range(0, npc.Count);
+                    }
+                    c.AddFriend(npc[rndIndex]);
+                    npc[rndIndex].AddFriend(c);
+                }
+            }
+            foreach(Character c in prisoners)
+            {
+                int friendMax = Random.Range(2, prisoners.Count / 10);
+                while (c.Friends.Count < friendMax)
+                {
+                    int rndIndex = Random.Range(0, prisoners.Count);
+                    while (prisoners[rndIndex] == c)
+                    {
+                        rndIndex = Random.Range(0, prisoners.Count);
+                    }
+                    c.AddFriend(prisoners[rndIndex]);
+                    prisoners[rndIndex].AddFriend(c);
                 }
             }
         }

@@ -1,6 +1,8 @@
 using Exion.Handler;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Exion.Default
@@ -8,19 +10,30 @@ namespace Exion.Default
     public class PlayerManager : MonoBehaviour
     {
         [SerializeField]
-        private TextMeshProUGUI infoName;
+        private TextMeshProUGUI infoBuildingName;
+        [SerializeField]
+        private GameObject residentList;
+        [SerializeField]
+        private GameObject infoBuilding;
+        [SerializeField]
+        private GameObject workerList;
 
         [SerializeField]
-        private GameObject info;
+        private TextMeshProUGUI infoCharacterName;
+        [SerializeField]
+        private TextMeshProUGUI infoCharacterJob;
+        [SerializeField]
+        private Image infoCharacterProfile;
+        [SerializeField]
+        private GameObject infoCharacter;
+        [SerializeField]
+        private GameObject acquaintances;
+
+
 
         [SerializeField]
         private GameObject characterContainer;
 
-        [SerializeField]
-        private GameObject residentList;
-
-        [SerializeField]
-        private GameObject workerList;
 
         // Start is called before the first frame update
         void Start()
@@ -31,7 +44,14 @@ namespace Exion.Default
         // Update is called once per frame
         void Update()
         {
+            UIDrawer();
+        }
+
+
+        private void UIDrawer()
+        {
             RaycastHit hit;
+            RaycastHit2D hit2D = Physics2D.Raycast(Input.mousePosition, new Vector2(0, 0));
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             ray.origin = new Vector3(ray.origin.x, ray.origin.y, -50);
 
@@ -39,36 +59,77 @@ namespace Exion.Default
             {
                 if (Physics.Raycast(ray, out hit))
                 {
-                    foreach (Transform t in residentList.GetComponentInChildren<Transform>()) Destroy(t.gameObject);
-                    foreach (Transform t in workerList.GetComponentInChildren<Transform>()) Destroy(t.gameObject);
-                    info.SetActive(true);
-                    GameObject objectHit = hit.transform.gameObject;
-                    Building BH = objectHit.GetComponent<BuildingHandler>().building;
-
-                    infoName.text = BH.Name;
-                    if (BH.Type.hasRes)
+                    if (hit.transform.gameObject.GetComponent<BuildingHandler>())
                     {
-                        foreach (Character c in BH.Residents)
+                        infoCharacter.SetActive(false);
+                        foreach (Transform t in residentList.GetComponentInChildren<Transform>()) Destroy(t.gameObject);
+                        foreach (Transform t in workerList.GetComponentInChildren<Transform>()) Destroy(t.gameObject);
+                        infoBuilding.SetActive(true);
+                        GameObject objectHit = hit.transform.gameObject;
+                        Building BH = objectHit.GetComponent<BuildingHandler>().building;
+
+                        infoBuildingName.text = BH.Name;
+                        if (BH.Type.hasRes)
                         {
-                            GameObject obj = Instantiate(characterContainer, residentList.transform);
-                            obj.GetComponentInChildren<Image>().sprite = c.Profile;
+                            foreach (Character c in BH.Residents)
+                            {
+                                GameObject obj = Instantiate(characterContainer, residentList.transform);
+                                obj.GetComponent<CharacterHandlerUI>().character = c;
+                            }
+                        }
+                        if (BH.Type.hasWorker)
+                        {
+                            foreach (Character c in BH.Workers)
+                            {
+                                GameObject obj = Instantiate(characterContainer, workerList.transform);
+                                obj.GetComponent<CharacterHandlerUI>().character = c;
+
+                            }
                         }
                     }
-                    if (BH.Type.hasWorker)
+                    else if (hit.transform.gameObject.GetComponent<CharacterHandler>())
                     {
-                        foreach (Character c in BH.Workers)
+                        infoCharacter.SetActive(true);
+                        infoBuilding.SetActive(false);
+                        foreach (Transform t in acquaintances.GetComponentInChildren<Transform>()) Destroy(t.gameObject);
+                        GameObject objectHit = hit.transform.gameObject;
+                        Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                        infoCharacterName.text = CH.Name;
+                        infoCharacterJob.text = CH.Job.name;
+                        infoCharacterProfile.sprite = CH.Profile;
+
+                        foreach(Character friend in CH.Friends)
                         {
-                            GameObject obj = Instantiate(characterContainer, workerList.transform);
-                            obj.GetComponentInChildren<Image>().sprite = c.Profile;
+                            GameObject obj = Instantiate(characterContainer, acquaintances.transform);
+                            obj.GetComponent<CharacterHandlerUI>().character = friend;
                         }
+                    }
+                } else if (hit2D)
+                {
+                    infoCharacter.SetActive(true);
+                    foreach (Transform t in acquaintances.GetComponentInChildren<Transform>()) Destroy(t.gameObject);
+                    GameObject objectHit = hit2D.transform.gameObject;
+                    Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                    infoCharacterName.text = CH.Name;
+                    infoCharacterJob.text = CH.Job.name;
+                    infoCharacterProfile.sprite = CH.Profile;
+
+                    foreach (Character friend in CH.Friends)
+                    {
+                        GameObject obj = Instantiate(characterContainer, acquaintances.transform);
+                        obj.GetComponent<CharacterHandlerUI>().character = friend;
                     }
                 }
                 else
                 {
-                    info.SetActive(false);
+                    infoBuilding.SetActive(false);
+                    infoCharacter.SetActive(false);
                 }
 
             }
         }
     }
+
 }

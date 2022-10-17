@@ -63,11 +63,13 @@
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\ElderGod.cs" />
     <Compile Include="Assets\Scripts\BuildingType.cs" />
+    <Compile Include="Assets\Scripts\ListWrapper.cs" />
     <Compile Include="Assets\Scripts\Job.cs" />
     <Compile Include="Assets\Scripts\Building.cs" />
     <Compile Include="Assets\Scripts\Status.cs" />
+    <Compile Include="Assets\Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\CharacterHandler.cs" />
-    <Compile Include="Assets\Scripts\ListWrapper.cs" />
+    <Compile Include="Assets\Scripts\CharacterHandlerUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
