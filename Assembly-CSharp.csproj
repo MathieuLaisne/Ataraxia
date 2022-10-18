@@ -66,10 +66,12 @@
     <Compile Include="Assets\Scripts\ListWrapper.cs" />
     <Compile Include="Assets\Scripts\Job.cs" />
     <Compile Include="Assets\Scripts\Building.cs" />
+    <Compile Include="Assets\Scripts\CharacterHandlerUI.cs" />
     <Compile Include="Assets\Scripts\Status.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\CharacterHandler.cs" />
-    <Compile Include="Assets\Scripts\CharacterHandlerUI.cs" />
+    <Compile Include="Assets\Scripts\StatusHandlerUI.cs" />
+    <Compile Include="Assets\Scripts\StatusHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

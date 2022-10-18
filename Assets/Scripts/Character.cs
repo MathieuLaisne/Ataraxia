@@ -1,3 +1,4 @@
+using Exion.Handler;
 using Exion.ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,8 +41,8 @@ namespace Exion.Default
             get { return m_mentalBarrier; }
             set { m_mentalBarrier = value; }
         }
-        private List<string> m_status;
-        public List<string> Statuses
+        private List<StatusHandler> m_status;
+        public List<StatusHandler> Statuses
         {
             get { return m_status; }
         }
@@ -74,7 +75,7 @@ namespace Exion.Default
         {
             m_name = name; m_job = job; m_profile = img; m_maxHP = maxHp; m_maxMP = maxMental; m_mentalBarrier = barrier;
             m_hp = maxHP; m_mp = maxMental;
-            m_status = new List<string>(); m_friends = new List<Character>();
+            m_status = new List<StatusHandler>(); m_friends = new List<Character>();
         }
 
         public void AddFriend(Character newFriend)
@@ -82,9 +83,18 @@ namespace Exion.Default
             m_friends.Add(newFriend);
         }
 
-        public void ApplyStatus(string status)
+        public void ApplyStatus(Status status, int stack)
         {
-            m_status.Add(status);
+            bool toAdd = true;
+            foreach (StatusHandler SH in m_status)
+            {
+                if (SH.status == status)
+                {
+                    SH.stacks += stack;
+                    toAdd = false;
+                }
+            }
+            if (toAdd) m_status.Add(new StatusHandler(status, stack));
         }
     }
 }

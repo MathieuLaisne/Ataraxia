@@ -1,4 +1,5 @@
 using Exion.Handler;
+using Exion.ScriptableObjects;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -17,6 +18,8 @@ namespace Exion.Default
         private GameObject infoBuilding;
         [SerializeField]
         private GameObject workerList;
+        [SerializeField]
+        private GameObject buildingStatus;
 
         [SerializeField]
         private TextMeshProUGUI infoCharacterName;
@@ -28,8 +31,11 @@ namespace Exion.Default
         private GameObject infoCharacter;
         [SerializeField]
         private GameObject acquaintances;
+        [SerializeField]
+        private GameObject characterStatus;
 
-
+        [SerializeField]
+        private GameObject status;
 
         [SerializeField]
         private GameObject characterContainer;
@@ -85,6 +91,11 @@ namespace Exion.Default
                                 obj.GetComponent<CharacterHandlerUI>().character = c;
 
                             }
+                        }
+                        foreach(StatusHandler s in BH.Statuses)
+                        {
+                            GameObject obj = Instantiate(status, buildingStatus.transform);
+                            obj.GetComponent<StatusHandlerUI>().status = s;
                         }
                     }
                     else if (hit.transform.gameObject.GetComponent<CharacterHandler>())

@@ -171,8 +171,9 @@ namespace Exion.Default
                     {
                         if (npcCopy.Count <= 0) break;
                         GameObject character = Instantiate(chara);
-                        character.AddComponent<CharacterHandler>();
                         character.GetComponent<CharacterHandler>().character = npcCopy[0];
+                        character.GetComponent<CharacterHandler>().Home = i;
+                        character.GetComponent<CharacterHandler>().width = Mathf.RoundToInt(Mathf.Sqrt(map.Length));
                         map[i].AddResident(npcCopy[0]);
                         characters[i].myList.Add(character);
                         npcCopy.Remove(npcCopy[0]);
@@ -183,26 +184,36 @@ namespace Exion.Default
             {
                 jobCount[i] /= 2;
                 List<Character> gotJob = new List<Character>();
+                List<GameObject> objsCharac = new List<GameObject>();
                 foreach (Character c in npc)
                 {
                     if (c.Job == jobs[i])
                     {
                         gotJob.Add(c);
+                        foreach(ListWrapper lw in characters)
+                        {
+                            foreach(GameObject charac in lw.myList)
+                            {
+                                if (c == charac.GetComponent<CharacterHandler>().character) objsCharac.Add(charac);
+                            }
+                        }
                     }
                 }
                 int currentIndex = 0;
                 if(gotJob.Count > 0)
                 {
-                    foreach (Building b in map)
+                    for(int b = 0; b < map.Length; b++)
                     {
-                        if (b.Type.hasWorker)
+                        if (map[b].Type.hasWorker)
                         {
-                            if (b.CanBeWorkedBy(jobs[i]))
+                            if (map[b].CanBeWorkedBy(jobs[i]))
                             {
                                 int j;
                                 for (j = currentIndex; j < currentIndex + jobCount[i] / nbSpecial; j++)
                                 {
-                                    b.AddWorker(gotJob[j]);
+                                    map[b].AddWorker(gotJob[j]);
+                                    objsCharac[j].GetComponent<CharacterHandler>().Work = b;
+
                                 }
                                 currentIndex = j;
                             }

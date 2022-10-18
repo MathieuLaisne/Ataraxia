@@ -1,3 +1,4 @@
+using Exion.Handler;
 using Exion.ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,8 +18,8 @@ namespace Exion.Default
             get { return m_type; }
         }
 
-        private List<string> m_status;
-        public List<string> Statuses
+        private List<StatusHandler> m_status;
+        public List<StatusHandler> Statuses
         {
             get { return m_status; }
         }
@@ -45,7 +46,7 @@ namespace Exion.Default
         public Building(string name, BuildingType type)
         {
             m_name = name; m_type = type;
-            m_status = new List<string>();
+            m_status = new List<StatusHandler>();
             if (type.hasRes) m_residents = new List<Character>();
             if (type.hasWorker) m_workers = new List<Character>();
             m_building = type.building;
@@ -59,7 +60,7 @@ namespace Exion.Default
                 {
                     foreach (Character worker in m_workers)
                     {
-                        worker.ApplyStatus("Jobless");
+                        worker.ApplyStatus(new Status("Jobless", "Have no work, will lose health and mental strength over time."), 1);
                     }
                 }
                 m_type = new BuildingType("Construction Site", false, true, false);
@@ -67,9 +68,18 @@ namespace Exion.Default
             }
         }
 
-        public void ApplyStatus(string name)
+        public void ApplyStatus(Status status, int stack)
         {
-            m_status.Add(name);
+            bool toAdd = true;
+            foreach(StatusHandler SH in m_status)
+            {
+                if (SH.status == status)
+                {
+                    SH.stacks += stack;
+                    toAdd = false;
+                }
+            }
+            if(toAdd)    m_status.Add(new StatusHandler(status, stack));
         }
 
         public void AddResident(Character c)

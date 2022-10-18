@@ -9,5 +9,10 @@ namespace Exion.ScriptableObjects
     {
         public string name;
         public string description;
+
+        public Status(string n, string d)
+        {
+            name = n; description = d;
+        }
     }
 }
