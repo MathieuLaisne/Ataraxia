@@ -1,5 +1,6 @@
 using Exion.Default;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Exion.Handler
 {
@@ -15,13 +16,15 @@ namespace Exion.Handler
         private Vector3 homePos;
         private Vector3 workPos;
 
-        private float speed;
+        NavMeshAgent agent;
 
         public void Start()
         {
-            homePos = new Vector3(Mathf.Floor(Home / width) * 1.1f - width * 1.1f / 2, Home % width - width * 1.1f / 2, 0);
-            workPos = new Vector3(Mathf.Floor(Work / width) * 1.1f - width * 1.1f / 2, Work % width - width * 1.1f / 2, 0);
-            speed = Random.Range(0.05f, 0.2f);
+            agent = GetComponent<NavMeshAgent>();
+            homePos = new Vector3(Mathf.Floor(Home / width) * 1.1f - width * 1.1f / 2 + 0.6f, Home % width - width * 1.1f / 2 + 0.6f, 0);
+            workPos = new Vector3(Mathf.Floor(Work / width) * 1.1f - width * 1.1f / 2 + 0.6f, Work % width - width * 1.1f / 2 + 0.6f, 0);
+            agent.speed = Random.Range(0.05f, 0.2f);
+            agent.destination = workPos;
             transform.position = homePos;
         }
 
@@ -32,8 +35,6 @@ namespace Exion.Handler
 
         private void Roaming()
         {
-            float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, workPos, step);
         }
     }
 }

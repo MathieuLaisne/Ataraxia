@@ -3,6 +3,7 @@ using Exion.Handler;
 using Exion.ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Exion.Default
 {
@@ -131,8 +132,8 @@ namespace Exion.Default
             {
                 for (int j = 0; j < width; j++)
                 {
-                    Vector3 pos = new Vector3(i * 1.1f - width * 1.1f / 2, j * 1.1f - width * 1.1f / 2, 0);
-                    var obj = Instantiate(map[i * width + j].Structure, pos, new Quaternion());
+                    Vector3 pos = new Vector3(i * 1.2f - width * 1.2f / 2 + 0.6f, j * 1.2f - width * 1.2f / 2 + 0.6f, -0.1f);
+                    var obj = Instantiate(map[i * width + j].Structure, pos, new Quaternion(), transform);
                     BuildingHandler BH = obj.AddComponent<BuildingHandler>();
                     BH.building = map[i * width + j];
                     if (map[i * width + j].Type.hasRes)

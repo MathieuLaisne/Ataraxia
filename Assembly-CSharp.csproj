@@ -56,10 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\StatusHandlerUI.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\BuildingHandler.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\Card.cs" />
+    <Compile Include="Assets\Scripts\StatusHandler.cs" />
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\ElderGod.cs" />
     <Compile Include="Assets\Scripts\BuildingType.cs" />
@@ -70,8 +72,6 @@
     <Compile Include="Assets\Scripts\Status.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\CharacterHandler.cs" />
-    <Compile Include="Assets\Scripts\StatusHandlerUI.cs" />
-    <Compile Include="Assets\Scripts\StatusHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
