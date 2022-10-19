@@ -63,7 +63,23 @@ namespace Exion.Default
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (Physics.Raycast(ray, out hit))
+                if (hit2D)
+                {
+                    infoCharacter.SetActive(true);
+                    foreach (Transform t in acquaintances.GetComponentInChildren<Transform>()) Destroy(t.gameObject);
+                    GameObject objectHit = hit2D.transform.gameObject;
+                    Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                    infoCharacterName.text = CH.Name;
+                    infoCharacterJob.text = CH.Job.name;
+                    infoCharacterProfile.sprite = CH.Profile;
+
+                    foreach (Character friend in CH.Friends)
+                    {
+                        GameObject obj = Instantiate(characterContainer, acquaintances.transform);
+                        obj.GetComponent<CharacterHandlerUI>().character = friend;
+                    }
+                } else if (Physics.Raycast(ray, out hit))
                 {
                     if (hit.transform.gameObject.GetComponent<BuildingHandler>())
                     {
@@ -92,7 +108,7 @@ namespace Exion.Default
 
                             }
                         }
-                        foreach(StatusHandler s in BH.Statuses)
+                        foreach (StatusHandler s in BH.Statuses)
                         {
                             GameObject obj = Instantiate(status, buildingStatus.transform);
                             obj.GetComponent<StatusHandlerUI>().status = s;
@@ -110,28 +126,13 @@ namespace Exion.Default
                         infoCharacterJob.text = CH.Job.name;
                         infoCharacterProfile.sprite = CH.Profile;
 
-                        foreach(Character friend in CH.Friends)
+                        foreach (Character friend in CH.Friends)
                         {
                             GameObject obj = Instantiate(characterContainer, acquaintances.transform);
                             obj.GetComponent<CharacterHandlerUI>().character = friend;
                         }
                     }
-                } else if (hit2D)
-                {
-                    infoCharacter.SetActive(true);
-                    foreach (Transform t in acquaintances.GetComponentInChildren<Transform>()) Destroy(t.gameObject);
-                    GameObject objectHit = hit2D.transform.gameObject;
-                    Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
-
-                    infoCharacterName.text = CH.Name;
-                    infoCharacterJob.text = CH.Job.name;
-                    infoCharacterProfile.sprite = CH.Profile;
-
-                    foreach (Character friend in CH.Friends)
-                    {
-                        GameObject obj = Instantiate(characterContainer, acquaintances.transform);
-                        obj.GetComponent<CharacterHandlerUI>().character = friend;
-                    }
+                    
                 }
                 else
                 {

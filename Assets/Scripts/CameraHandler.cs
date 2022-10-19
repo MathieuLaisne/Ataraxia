@@ -40,11 +40,11 @@ namespace Exion.Handler
             {
                 transform.Translate(new Vector3(-0.5f/zoomFactor * Time.deltaTime, 0, 0));
             }
-            if (Input.GetKey(KeyCode.DownArrow) && transform.position.y < size * 0.5f)
+            if (Input.GetKey(KeyCode.DownArrow) && transform.position.y > -size * 0.5f)
             {
                 transform.Translate(new Vector3(0, -0.5f/zoomFactor * Time.deltaTime, 0));
             }
-            if (Input.GetKey(KeyCode.UpArrow) && transform.position.y > - size * 0.5f)
+            if (Input.GetKey(KeyCode.UpArrow) && transform.position.y < size * 0.5f)
             {
                 transform.Translate(new Vector3(0, 0.5f/zoomFactor * Time.deltaTime, 0));
             }

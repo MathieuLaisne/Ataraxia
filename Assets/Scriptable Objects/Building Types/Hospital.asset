@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hospital
   m_EditorClassIdentifier: 
   m_name: Hospital
-  hasRes: 1
+  hasRes: 0
   hasWorker: 1
   destroyable: 0
   building: {fileID: 2199812489098847177, guid: 3ac20d84ac528534b94559baee1cabb6, type: 3}

@@ -2,6 +2,7 @@ using Exion.Editor;
 using Exion.Handler;
 using Exion.ScriptableObjects;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -37,9 +38,12 @@ namespace Exion.Default
         private int nbSpecial;
         private int[] jobCount;
 
+        private NavMeshSurface surface;
+
         // Start is called before the first frame update
         private void Start()
         {
+            surface = GetComponent<NavMeshSurface>();
             jobCount = new int[jobs.Length];
             npc = new List<Character>();
             characters = new List<ListWrapper>();
@@ -140,11 +144,13 @@ namespace Exion.Default
                     {
                         foreach (GameObject charact in characters[i * width + j].myList)
                         {
+                            charact.GetComponent<CharacterHandler>().Home = new Vector2(i,j);
                             obj.GetComponent<BuildingHandler>().AddResident(charact);
                         }
                     }
                 }
             }
+            surface.BuildNavMesh();
         }
 
         private void CreateResidents()
@@ -171,9 +177,8 @@ namespace Exion.Default
                     for (int j = 0; j < (npc.Count / (nbApp)); j++)
                     {
                         if (npcCopy.Count <= 0) break;
-                        GameObject character = Instantiate(chara);
+                        GameObject character = Instantiate(chara, transform);
                         character.GetComponent<CharacterHandler>().character = npcCopy[0];
-                        character.GetComponent<CharacterHandler>().Home = i;
                         character.GetComponent<CharacterHandler>().width = Mathf.RoundToInt(Mathf.Sqrt(map.Length));
                         map[i].AddResident(npcCopy[0]);
                         characters[i].myList.Add(character);
@@ -203,20 +208,24 @@ namespace Exion.Default
                 int currentIndex = 0;
                 if(gotJob.Count > 0)
                 {
-                    for(int b = 0; b < map.Length; b++)
+                    int width = Mathf.RoundToInt(Mathf.Sqrt(map.Length));
+                    for (int bi = 0; bi < width; bi++)
                     {
-                        if (map[b].Type.hasWorker)
+                        for (int bj = 0; bj < width; bj++)
                         {
-                            if (map[b].CanBeWorkedBy(jobs[i]))
+                            if (map[bi * width + bj].Type.hasWorker)
                             {
-                                int j;
-                                for (j = currentIndex; j < currentIndex + jobCount[i] / nbSpecial; j++)
+                                if (map[bi * width + bj].CanBeWorkedBy(jobs[i]))
                                 {
-                                    map[b].AddWorker(gotJob[j]);
-                                    objsCharac[j].GetComponent<CharacterHandler>().Work = b;
+                                    int j;
+                                    for (j = currentIndex; j < currentIndex + jobCount[i] / nbSpecial; j++)
+                                    {
+                                        map[bi * width + bj].AddWorker(gotJob[j]);
+                                        objsCharac[j].GetComponent<CharacterHandler>().Work = new Vector2(bi, bj);
 
+                                    }
+                                    currentIndex = j;
                                 }
-                                currentIndex = j;
                             }
                         }
                     }
