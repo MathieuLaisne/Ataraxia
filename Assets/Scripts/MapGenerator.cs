@@ -4,7 +4,6 @@ using Exion.ScriptableObjects;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Exion.Default
 {
@@ -136,7 +135,7 @@ namespace Exion.Default
             {
                 for (int j = 0; j < width; j++)
                 {
-                    Vector3 pos = new Vector3(i * 1.2f - width * 1.2f / 2 + 0.6f, j * 1.2f - width * 1.2f / 2 + 0.6f, -0.1f);
+                    Vector3 pos = new Vector3(i * 1.2f - width * 1.2f / 2 + 0.6f, j * 1.2f - width * 1.2f / 2 + 0.6f, -0.5f);
                     var obj = Instantiate(map[i * width + j].Structure, pos, new Quaternion(), transform);
                     BuildingHandler BH = obj.AddComponent<BuildingHandler>();
                     BH.building = map[i * width + j];
@@ -177,7 +176,7 @@ namespace Exion.Default
                     for (int j = 0; j < (npc.Count / (nbApp)); j++)
                     {
                         if (npcCopy.Count <= 0) break;
-                        GameObject character = Instantiate(chara, transform);
+                        GameObject character = Instantiate(chara, new Vector3(-Mathf.Sqrt(map.Length) * 0.5f, Mathf.Sqrt(map.Length) * 0.5f, -0.6f), new Quaternion(), transform);
                         character.GetComponent<CharacterHandler>().character = npcCopy[0];
                         character.GetComponent<CharacterHandler>().width = Mathf.RoundToInt(Mathf.Sqrt(map.Length));
                         map[i].AddResident(npcCopy[0]);
@@ -218,7 +217,7 @@ namespace Exion.Default
                                 if (map[bi * width + bj].CanBeWorkedBy(jobs[i]))
                                 {
                                     int j;
-                                    for (j = currentIndex; j < currentIndex + jobCount[i] / nbSpecial; j++)
+                                    for (j = currentIndex; j < currentIndex + jobCount[i] / nbSpecial - 1; j++)
                                     {
                                         map[bi * width + bj].AddWorker(gotJob[j]);
                                         objsCharac[j].GetComponent<CharacterHandler>().Work = new Vector2(bi, bj);

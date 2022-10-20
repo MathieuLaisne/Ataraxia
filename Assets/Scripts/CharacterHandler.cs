@@ -8,8 +8,38 @@ namespace Exion.Handler
     {
         public Character character;
 
-        public Vector2 Home;
-        public Vector2 Work;
+        private Vector2 home;
+        public Vector2 Home
+        {
+            set
+            {
+                home = value;
+                homePos = new Vector3((home.x - width / 2) * 1.2f + 0.6f, (home.y - width / 2) * 1.2f + 0.6f, 1);
+                if (agent == null) agent = GetComponent<NavMeshAgent>();
+                NavMeshHit hit;
+                NavMesh.SamplePosition(homePos, out hit, 0.5f, NavMesh.AllAreas);
+                homePos = hit.position;
+                transform.position = homePos;
+            }
+        }
+        private Vector2 work;
+        public Vector2 Work
+        {
+            set 
+            {
+                work = value;
+                workPos = new Vector3((work.x - width / 2) * 1.2f, (work.y - width / 2) * 1.2f, 1);
+                if(agent == null) agent = GetComponent<NavMeshAgent>();
+                agent.SetDestination(workPos);
+                if (!agent.hasPath)
+                {
+                    NavMeshHit hit;
+                    NavMesh.SamplePosition(workPos, out hit, 0.5f, NavMesh.AllAreas);
+                    workPos = hit.position;
+                }
+                agent.SetDestination(workPos);
+            }
+        }
 
         public int width;
 
@@ -18,19 +48,12 @@ namespace Exion.Handler
         [SerializeField]
         private Vector3 workPos;
 
-        private Vector3 delta = new Vector3(0.01f, 0.01f, 0);
-
         NavMeshAgent agent;
 
         public void Start()
         {
             agent = GetComponent<NavMeshAgent>();
-            homePos = new Vector3((Home.x - width / 2) * 1.2f , (Home.y - width / 2) * 1.2f, 0); 
-            workPos = new Vector3((Work.x - width / 2) * 1.2f, (Work.y - width / 2) * 1.2f, 0);
             agent.speed = Random.Range(0.6f, 0.8f);
-            
-            transform.position = homePos - new Vector3(0,0.2f,0);
-            agent.SetDestination(workPos);
         }
 
         public void Update()
@@ -40,7 +63,8 @@ namespace Exion.Handler
 
         private void Roaming()
         {
-            if((transform.position - workPos).x < delta.x && (transform.position - workPos).x > -delta.x && (transform.position - workPos).y < delta.y && (transform.position - workPos).y > -delta.y)
+            
+            if (false)
             {
                 gameObject.SetActive(false);
             }
