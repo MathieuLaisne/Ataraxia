@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Exion.Default
 {
+    [System.Serializable]
     public class Character
     {
         private string m_name;
@@ -12,6 +13,7 @@ namespace Exion.Default
         {
             get { return m_name; }
         }
+        [SerializeField]
         private Job m_job;
         public Job Job
         {

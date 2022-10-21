@@ -29,7 +29,7 @@ namespace Exion.Default
         private List<Character> npc;
 
         [SerializeField]
-        private List<ListWrapper> characters;
+        private List<ListWrapper> charactersMap;
         private List<Character> prisoners = new List<Character>();
 
         private int nbApp;
@@ -45,7 +45,7 @@ namespace Exion.Default
             surface = GetComponent<NavMeshSurface>();
             jobCount = new int[jobs.Length];
             npc = new List<Character>();
-            characters = new List<ListWrapper>();
+            charactersMap = new List<ListWrapper>();
             switch (size)
             {
                 case "Small":
@@ -139,11 +139,12 @@ namespace Exion.Default
                     var obj = Instantiate(map[i * width + j].Structure, pos, new Quaternion(), transform);
                     BuildingHandler BH = obj.AddComponent<BuildingHandler>();
                     BH.building = map[i * width + j];
-                    if (map[i * width + j].Type.hasRes)
+                    if (map[i * width + j].Type.hasRes && map[i * width + j].Type.name != "Prison")
                     {
-                        foreach (GameObject charact in characters[i * width + j].myList)
+                        foreach (GameObject charact in charactersMap[i * width + j].myList)
                         {
                             charact.GetComponent<CharacterHandler>().Home = new Vector2(i,j);
+                            charact.GetComponent<CharacterHandler>().initAll();
                             obj.GetComponent<BuildingHandler>().AddResident(charact);
                         }
                     }
@@ -170,7 +171,7 @@ namespace Exion.Default
             List<Character> npcCopy = new List<Character>(npc);
             for (int i = 0; i < map.Length; i++)
             {
-                characters.Add(new ListWrapper());
+                charactersMap.Add(new ListWrapper());
                 if (map[i].Type.hasRes && map[i].Type.name != "Prison")
                 {
                     for (int j = 0; j < (npc.Count / (nbApp)); j++)
@@ -180,7 +181,7 @@ namespace Exion.Default
                         character.GetComponent<CharacterHandler>().character = npcCopy[0];
                         character.GetComponent<CharacterHandler>().width = Mathf.RoundToInt(Mathf.Sqrt(map.Length));
                         map[i].AddResident(npcCopy[0]);
-                        characters[i].myList.Add(character);
+                        charactersMap[i].myList.Add(character);
                         npcCopy.Remove(npcCopy[0]);
                     }
                 }
@@ -195,7 +196,7 @@ namespace Exion.Default
                     if (c.Job == jobs[i])
                     {
                         gotJob.Add(c);
-                        foreach(ListWrapper lw in characters)
+                        foreach(ListWrapper lw in charactersMap)
                         {
                             foreach(GameObject charac in lw.myList)
                             {
@@ -221,7 +222,6 @@ namespace Exion.Default
                                     {
                                         map[bi * width + bj].AddWorker(gotJob[j]);
                                         objsCharac[j].GetComponent<CharacterHandler>().Work = new Vector2(bi, bj);
-
                                     }
                                     currentIndex = j;
                                 }
