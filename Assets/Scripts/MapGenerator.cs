@@ -29,7 +29,8 @@ namespace Exion.Default
         private List<Character> npc;
 
         [SerializeField]
-        private List<ListWrapper> characters;
+        private List<ListWrapper> charactersMap;
+
         private List<Character> prisoners = new List<Character>();
 
         private int nbApp;
@@ -42,7 +43,7 @@ namespace Exion.Default
         {
             jobCount = new int[jobs.Length];
             npc = new List<Character>();
-            characters = new List<ListWrapper>();
+            charactersMap = new List<ListWrapper>();
             switch (size)
             {
                 case "Small":
@@ -138,8 +139,10 @@ namespace Exion.Default
                     BH.building = map[i * width + j];
                     if (map[i * width + j].Type.hasRes)
                     {
-                        foreach (GameObject charact in characters[i * width + j].myList)
+                        foreach (GameObject charact in charactersMap[i * width + j].myList)
                         {
+                            charact.GetComponent<CharacterHandler>().Home = new Vector2(i, j);
+                            charact.GetComponent<CharacterHandler>().initAll();
                             obj.GetComponent<BuildingHandler>().AddResident(charact);
                         }
                     }
@@ -153,31 +156,35 @@ namespace Exion.Default
             {
                 int rndJob = Random.Range(0, jobs.Length);
                 jobCount[rndJob]++;
-                Character c = new Character(names[Random.Range(0, names.Count)], jobs[rndJob], profile[Random.Range(0, profile.Length)], Random.Range(10, 30), Random.Range(10, 30), Random.Range(0, 10));
-                if(c.Job.name == "Prisoner")
+                Character c = new Character(names[Random.Range(0, names.Count)], jobs[rndJob], profile[Random.Range(0, profile.Length)], Random.Range(10, 30), Random.Range(10, 30), Mathf.Max(Random.Range(-3, 3) + Random.Range(0, 3), 0));
+                if (c.Job.name == "Prisoner")
                 {
                     prisoners.Add(c);
-                } else
+                }
+                else
                 {
                     npc.Add(c);
                 }
             }
             List<Character> npcCopy = new List<Character>(npc);
-            for (int i = 0; i < map.Length; i++)
+            int width = Mathf.FloorToInt(Mathf.Sqrt(map.Length));
+            for (int bi = 0; bi < width; bi++)
             {
-                characters.Add(new ListWrapper());
-                if (map[i].Type.hasRes && map[i].Type.name != "Prison")
+                for (int bj = 0; bj < width; bj++)
                 {
-                    for (int j = 0; j < (npc.Count / (nbApp)); j++)
+                    charactersMap.Add(new ListWrapper());
+                    if (map[bi * width + bj].Type.hasRes && map[bi * width + bj].Type.name != "Prison")
                     {
-                        if (npcCopy.Count <= 0) break;
-                        GameObject character = Instantiate(chara);
-                        character.GetComponent<CharacterHandler>().character = npcCopy[0];
-                        character.GetComponent<CharacterHandler>().Home = i;
-                        character.GetComponent<CharacterHandler>().width = Mathf.RoundToInt(Mathf.Sqrt(map.Length));
-                        map[i].AddResident(npcCopy[0]);
-                        characters[i].myList.Add(character);
-                        npcCopy.Remove(npcCopy[0]);
+                        for (int j = 0; j < (npc.Count / (nbApp)); j++)
+                        {
+                            if (npcCopy.Count <= 0) break;
+                            GameObject character = Instantiate(chara);
+                            character.GetComponent<CharacterHandler>().character = npcCopy[0];
+                            character.GetComponent<CharacterHandler>().Home = new Vector2(bi, bj);
+                            map[bi * width + bj].AddResident(npcCopy[0]);
+                            charactersMap[bi * width + bj].myList.Add(character);
+                            npcCopy.Remove(npcCopy[0]);
+                        }
                     }
                 }
             }
@@ -191,9 +198,9 @@ namespace Exion.Default
                     if (c.Job == jobs[i])
                     {
                         gotJob.Add(c);
-                        foreach(ListWrapper lw in characters)
+                        foreach (ListWrapper lw in charactersMap)
                         {
-                            foreach(GameObject charac in lw.myList)
+                            foreach (GameObject charac in lw.myList)
                             {
                                 if (c == charac.GetComponent<CharacterHandler>().character) objsCharac.Add(charac);
                             }
@@ -201,22 +208,26 @@ namespace Exion.Default
                     }
                 }
                 int currentIndex = 0;
-                if(gotJob.Count > 0)
+                if (gotJob.Count > 0)
                 {
-                    for(int b = 0; b < map.Length; b++)
+                    width = Mathf.RoundToInt(Mathf.Sqrt(map.Length));
+                    for (int bi = 0; bi < width; bi++)
                     {
-                        if (map[b].Type.hasWorker)
+                        for (int bj = 0; bj < width; bj++)
                         {
-                            if (map[b].CanBeWorkedBy(jobs[i]))
+                            if (map[bi * width + bj].Type.hasWorker)
                             {
-                                int j;
-                                for (j = currentIndex; j < currentIndex + jobCount[i] / nbSpecial; j++)
+                                if (map[bi * width + bj].CanBeWorkedBy(jobs[i]))
                                 {
-                                    map[b].AddWorker(gotJob[j]);
-                                    objsCharac[j].GetComponent<CharacterHandler>().Work = b;
-
+                                    int j;
+                                    for (j = currentIndex; j < currentIndex + jobCount[i] / nbSpecial; j++)
+                                    {
+                                        if (j >= objsCharac.Count) break;
+                                        map[bi * width + bj].AddWorker(gotJob[j]);
+                                        objsCharac[j].GetComponent<CharacterHandler>().Work = new Vector2(bi, bj);
+                                    }
+                                    currentIndex = j;
                                 }
-                                currentIndex = j;
                             }
                         }
                     }
@@ -226,9 +237,9 @@ namespace Exion.Default
 
         public void SetAbandoned()
         {
-            for(int i = 0; i < map.Length; i++)
+            for (int i = 0; i < map.Length; i++)
             {
-                if(map[i].Type.hasRes && map[i].Residents.Count == 0)
+                if (map[i].Type.hasRes && map[i].Residents.Count == 0)
                 {
                     map[i] = new Building(buildingTypes[0].m_name, buildingTypes[0]);
                 }
@@ -240,10 +251,10 @@ namespace Exion.Default
             int nbPrisoner = 0;
             foreach (Building b in map)
             {
-                if(b.Type.name == "Prison")
+                if (b.Type.name == "Prison")
                 {
                     int i;
-                    for(i = nbPrisoner; i < nbPrisoner + prisoners.Count / nbSpecial; i++)
+                    for (i = nbPrisoner; i < nbPrisoner + prisoners.Count / nbSpecial; i++)
                     {
                         b.AddResident(prisoners[i]);
                     }
@@ -254,7 +265,7 @@ namespace Exion.Default
 
         public void SetFriends()
         {
-            foreach(Character c in npc)
+            foreach (Character c in npc)
             {
                 int friendMax = Random.Range(2, npc.Count / 10);
                 while (c.Friends.Count < friendMax)
@@ -268,7 +279,7 @@ namespace Exion.Default
                     npc[rndIndex].AddFriend(c);
                 }
             }
-            foreach(Character c in prisoners)
+            foreach (Character c in prisoners)
             {
                 int friendMax = Random.Range(2, prisoners.Count / 10);
                 while (c.Friends.Count < friendMax)

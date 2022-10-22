@@ -112,9 +112,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a40bc2e9e1fe0409c03d6712c08e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Home: 0
   Work: 0
   width: 0
+=======
+  character:
+    m_job: {fileID: 0}
+  width: 0
+  homePos: {x: 0, y: 0, z: 0}
+  workPos: {x: 0, y: 0, z: 0}
+  destinationPos: {x: 0, y: 0, z: 0}
+  stuckFrames: 0
+>>>>>>> Stashed changes
 --- !u!195 &5945240861642169081
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -3,8 +3,7 @@ using UnityEngine;
 
 namespace Exion.Handler
 {
-
-    public class StatusHandler : MonoBehaviour
+    public class StatusHandler
     {
         public int stacks;
         public Status status;

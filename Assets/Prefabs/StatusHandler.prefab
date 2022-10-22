@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6964572478814943391}
   - component: {fileID: 6964572478814943388}
   - component: {fileID: 6964572478814943389}
-  - component: {fileID: 6964572478814943390}
   m_Layer: 5
   m_Name: Status
   m_TagString: Untagged
@@ -136,20 +135,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &6964572478814943390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6964572478814943360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cca0b1067242a494caab09e94211707d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  status: {fileID: 0}
-  statusName: {fileID: 6964572478814943389}
 --- !u!1 &6964572480526427297
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6964572480526427296}
+  - component: {fileID: 1991676919841678609}
   m_Layer: 0
   m_Name: StatusHandler
   m_TagString: Untagged
@@ -182,3 +168,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1991676919841678609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6964572480526427297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca0b1067242a494caab09e94211707d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statusName: {fileID: 6964572478814943389}

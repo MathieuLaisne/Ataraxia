@@ -19,6 +19,5 @@ namespace Exion.Handler
         {
             resident.Add(c);
         }
-
     }
 }

@@ -1,7 +1,5 @@
-using Exion.ScriptableObjects;
-using UnityEngine;
-using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine;
 
 namespace Exion.Handler
 {
@@ -10,11 +8,10 @@ namespace Exion.Handler
         public StatusHandler status;
         public TextMeshProUGUI statusName;
 
-        void Start()
+        private void Start()
         {
             statusName.text = status.status.name;
             if (status.stacks > 1) statusName.text += " x" + status.stacks;
         }
-
     }
 }

@@ -8,17 +8,21 @@ namespace Exion.Default
     public class Building
     {
         private string m_name;
+
         public string Name
         {
             get { return m_name; }
         }
+
         private BuildingType m_type;
+
         public BuildingType Type
         {
             get { return m_type; }
         }
 
         private List<StatusHandler> m_status;
+
         public List<StatusHandler> Statuses
         {
             get { return m_status; }
@@ -26,18 +30,21 @@ namespace Exion.Default
 
         [SerializeField]
         private List<Character> m_residents;
+
         public List<Character> Residents
         {
             get { return m_residents; }
         }
 
         private List<Character> m_workers;
+
         public List<Character> Workers
         {
             get { return m_workers; }
         }
 
         private GameObject m_building;
+
         public GameObject Structure
         {
             get { return m_building; }
@@ -71,7 +78,7 @@ namespace Exion.Default
         public void ApplyStatus(Status status, int stack)
         {
             bool toAdd = true;
-            foreach(StatusHandler SH in m_status)
+            foreach (StatusHandler SH in m_status)
             {
                 if (SH.status == status)
                 {
@@ -79,7 +86,7 @@ namespace Exion.Default
                     toAdd = false;
                 }
             }
-            if(toAdd)    m_status.Add(new StatusHandler(status, stack));
+            if (toAdd) m_status.Add(new StatusHandler(status, stack));
         }
 
         public void AddResident(Character c)
