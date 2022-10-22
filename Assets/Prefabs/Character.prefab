@@ -113,10 +113,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Home: 0
   Work: 0
   width: 0
 =======
+=======
+>>>>>>> Stashed changes
   character:
     m_job: {fileID: 0}
   width: 0
@@ -124,6 +127,9 @@ MonoBehaviour:
   workPos: {x: 0, y: 0, z: 0}
   destinationPos: {x: 0, y: 0, z: 0}
   stuckFrames: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!195 &5945240861642169081
 NavMeshAgent:
