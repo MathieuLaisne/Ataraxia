@@ -15,11 +15,7 @@ C:/Users/Neox/CosmicHorrorJam
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-<<<<<<< Updated upstream
 58992
-=======
-63136
->>>>>>> Stashed changes
 Successfully changed project path to: C:/Users/Neox/CosmicHorrorJam
 C:/Users/Neox/CosmicHorrorJam
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -118,16 +114,6 @@ Domain Reload Profiling:
 				RefreshPlugins (139ms)
 				BeforeProcessingInitializeOnLoad (2ms)
 				ProcessInitializeOnLoadAttributes (189ms)
-=======
-		EndReloadAssembly (647ms)
-			LoadAssemblies (100ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (133ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (405ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (138ms)
 				BeforeProcessingInitializeOnLoad (2ms)
@@ -157,7 +143,6 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1721ms)
 		BeginReloadAssembly (154ms)
-=======
 Refreshing native plugins compatible for Editor in 137.07 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -187,18 +172,6 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (405ms)
 				ProcessInitializeOnLoadMethodAttributes (58ms)
 				AfterProcessingInitializeOnLoad (16ms)
-=======
-			CreateAndSetChildDomain (24ms)
-		EndReloadAssembly (1378ms)
-			LoadAssemblies (130ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (330ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (78ms)
-			SetupLoadedEditorAssemblies (770ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (137ms)
 				BeforeProcessingInitializeOnLoad (148ms)
 				ProcessInitializeOnLoadAttributes (404ms)
@@ -228,51 +201,17 @@ Total: 4.847300 ms (FindLiveObjects: 0.508400 ms CreateObjectMapping: 0.145600 m
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b ->
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 ->
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 ->
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 ->
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 ->
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 <<<<<<< Updated upstream
 ========================================================================
-Received Import Request.
-  Time since last request: 46764.797640 seconds.
-  path: Assets/Scenes/Main
-  artifactKey: Guid(9858c6724e81953468ea30d55ec7ad96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main using Guid(9858c6724e81953468ea30d55ec7ad96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33d7c9753208a3926faaaaa53ffb021a') in 0.015861 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Scenes/Main/NavMesh-MapGenerator.asset
-  artifactKey: Guid(ed57134c42bf3784d95035c5f65008fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main/NavMesh-MapGenerator.asset using Guid(ed57134c42bf3784d95035c5f65008fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '077d1e0cdfa04641c81f0ecad09a62b1') in 0.040051 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 37.272763 seconds.
-  path: Assets/Prefabs/Card.prefab
-  artifactKey: Guid(8fac7b89b78a8d443b160eccfa564c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Card.prefab using Guid(8fac7b89b78a8d443b160eccfa564c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27c61ba3cb5fa53d63c0725dc9292ccb') in 0.081396 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.981597 seconds.
-  path: Assets/Prefabs/Character.prefab
-  artifactKey: Guid(efddea1cbe1124a4f8d1216a3ab0ccb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Character.prefab using Guid(efddea1cbe1124a4f8d1216a3ab0ccb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acfa7562876bdd89eb4d31c4418d4479') in 0.003821 seconds 
-=======
-========================================================================
-Received Import Request.
-  Time since last request: 41854.819457 seconds.
-  path: Assets/Sprites/EerieLand.png
-  artifactKey: Guid(ad46d803bc0318542a0eae35f8441b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/EerieLand.png using Guid(ad46d803bc0318542a0eae35f8441b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36256aa7b8b2c34a0f90237192ff99b0') in 0.283374 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013338 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Neox\CosmicHorrorJam\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Neox\CosmicHorrorJam\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -316,15 +255,15 @@ Memory consumption went from 171.0 MB to 170.8 MB.
 Total: 4.921400 ms (FindLiveObjects: 0.411300 ms CreateObjectMapping: 0.129700 ms MarkObjects: 4.148200 ms  DeleteObjects: 0.230600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b ->
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 ->
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 ->
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 ->
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 ->
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
@@ -372,27 +311,15 @@ Memory consumption went from 171.0 MB to 170.8 MB.
 Total: 4.771000 ms (FindLiveObjects: 0.421800 ms CreateObjectMapping: 0.127900 ms MarkObjects: 4.020300 ms  DeleteObjects: 0.199300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 63.366022 seconds.
-  path: Assets/Scriptable Objects/Cards/Eerie Land.asset
-  artifactKey: Guid(a5a8a739a63017040910c8bda2f01adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scriptable Objects/Cards/Eerie Land.asset using Guid(a5a8a739a63017040910c8bda2f01adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0af9edea6d3f9ccde0fb54cf9310854') in 0.029253 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 136.211885 seconds.
-  path: Assets/Sprites/EerieLand.png
-  artifactKey: Guid(ad46d803bc0318542a0eae35f8441b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/EerieLand.png using Guid(ad46d803bc0318542a0eae35f8441b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5064a1fb35309cbcf2a5c1499ff2c3d4') in 0.175605 seconds 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b ->
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 ->
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 ->
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 ->
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 ->
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
@@ -440,15 +367,15 @@ Memory consumption went from 171.0 MB to 170.8 MB.
 Total: 4.813100 ms (FindLiveObjects: 0.419900 ms CreateObjectMapping: 0.138700 ms MarkObjects: 4.052600 ms  DeleteObjects: 0.200600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b ->
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 ->
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 ->
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 ->
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 ->
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
@@ -496,15 +423,15 @@ Memory consumption went from 171.0 MB to 170.8 MB.
 Total: 4.614200 ms (FindLiveObjects: 0.417300 ms CreateObjectMapping: 0.140400 ms MarkObjects: 3.850700 ms  DeleteObjects: 0.204400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b ->
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 ->
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 ->
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 ->
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 ->
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
@@ -552,27 +479,27 @@ Memory consumption went from 171.0 MB to 170.8 MB.
 Total: 4.567300 ms (FindLiveObjects: 0.396400 ms CreateObjectMapping: 0.127700 ms MarkObjects: 3.835300 ms  DeleteObjects: 0.206700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b ->
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 ->
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 ->
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 ->
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 ->
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 ========================================================================
 Received Import Request.
   Time since last request: 470.334952 seconds.
   path: Assets/Prefabs/Cards.prefab
   artifactKey: Guid(ed9fc67b97bf5ab42b20bd91e14a1ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cards.prefab using Guid(ed9fc67b97bf5ab42b20bd91e14a1ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5ee4964cc1488fb4da53773a225c777') in 0.094907 seconds 
+Start importing Assets/Prefabs/Cards.prefab using Guid(ed9fc67b97bf5ab42b20bd91e14a1ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5ee4964cc1488fb4da53773a225c777') in 0.094907 seconds
 ========================================================================
 Received Import Request.
   Time since last request: 0.000027 seconds.
   path: Assets/Prefabs/CharacterContainer.prefab
   artifactKey: Guid(d197a1485634c0d419deae63b1026120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/CharacterContainer.prefab using Guid(d197a1485634c0d419deae63b1026120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '148cd60e19328002744fb7bd92d13388') in 0.011536 seconds 
+Start importing Assets/Prefabs/CharacterContainer.prefab using Guid(d197a1485634c0d419deae63b1026120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '148cd60e19328002744fb7bd92d13388') in 0.011536 seconds
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
@@ -620,15 +547,15 @@ Memory consumption went from 171.1 MB to 170.9 MB.
 Total: 4.898300 ms (FindLiveObjects: 0.403700 ms CreateObjectMapping: 0.125600 ms MarkObjects: 4.132200 ms  DeleteObjects: 0.235200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b ->
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 ->
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 ->
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 ->
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 ->
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
@@ -676,15 +603,15 @@ Memory consumption went from 171.1 MB to 170.9 MB.
 Total: 4.581400 ms (FindLiveObjects: 0.398900 ms CreateObjectMapping: 0.130700 ms MarkObjects: 3.842300 ms  DeleteObjects: 0.207700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b ->
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 ->
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 ->
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 ->
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 ->
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
@@ -732,13 +659,13 @@ Memory consumption went from 171.1 MB to 170.9 MB.
 Total: 4.692100 ms (FindLiveObjects: 0.394300 ms CreateObjectMapping: 0.125700 ms MarkObjects: 3.968500 ms  DeleteObjects: 0.202400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b ->
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 ->
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 ->
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 ->
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 ->
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 >>>>>>> Stashed changes

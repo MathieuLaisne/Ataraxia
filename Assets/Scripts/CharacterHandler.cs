@@ -47,21 +47,11 @@ namespace Exion.Handler
         private Vector3 destinationPos;
 
         private NavMeshAgent agent;
-<<<<<<< Updated upstream
 
         private Vector3 prevPos;
 
         [SerializeField]
         private int stuckFrames = 0;
-
-=======
-
-        private Vector3 prevPos;
-
-        [SerializeField]
-        private int stuckFrames = 0;
-
->>>>>>> Stashed changes
         public bool isPaused = true;
 
         public void Start()

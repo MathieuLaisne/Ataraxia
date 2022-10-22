@@ -110,14 +110,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76a40bc2e9e1fe0409c03d6712c08e6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
   Home: 0
   Work: 0
   width: 0
-=======
 =======
 >>>>>>> Stashed changes
   character:
