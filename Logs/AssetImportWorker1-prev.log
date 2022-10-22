@@ -225,9 +225,6 @@ Unloading 47 unused Assets / (229.1 KB). Loaded Objects now: 4916.
 Memory consumption went from 168.1 MB to 167.9 MB.
 <<<<<<< Updated upstream
 Total: 4.847100 ms (FindLiveObjects: 0.457500 ms CreateObjectMapping: 0.139800 ms MarkObjects: 4.020200 ms  DeleteObjects: 0.228300 ms)
-=======
-Total: 4.956800 ms (FindLiveObjects: 0.517200 ms CreateObjectMapping: 0.188400 ms MarkObjects: 4.028700 ms  DeleteObjects: 0.220800 ms)
->>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc ->
@@ -240,7 +237,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 ->
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 ->
 ========================================================================
-<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 46764.810705 seconds.
   path: Assets/Scenes/Main/NavMesh-Cube.asset

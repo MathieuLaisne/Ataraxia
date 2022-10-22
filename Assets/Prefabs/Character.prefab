@@ -118,6 +118,8 @@ MonoBehaviour:
   Work: 0
   width: 0
 =======
+  m_Name:
+  m_EditorClassIdentifier:
 >>>>>>> Stashed changes
   character:
     m_job: {fileID: 0}
