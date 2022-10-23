@@ -178,7 +178,7 @@ namespace Exion.Default
                         for (int j = 0; j < (npc.Count / (nbApp)); j++)
                         {
                             if (npcCopy.Count <= 0) break;
-                            GameObject character = Instantiate(chara);
+                            GameObject character = Instantiate(chara, transform);
                             character.GetComponent<CharacterHandler>().character = npcCopy[0];
                             character.GetComponent<CharacterHandler>().Home = new Vector2(bi, bj);
                             map[bi * width + bj].AddResident(npcCopy[0]);

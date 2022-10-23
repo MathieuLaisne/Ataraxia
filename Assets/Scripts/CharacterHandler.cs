@@ -14,12 +14,12 @@ namespace Exion.Handler
         {
             set
             {
-                if (Random.Range(0, 1) < 0.5) homePos = new Vector3((value.x - width / 2) * 1.2f - 0.6f,
+                if (Random.Range(0, 1) < 0.5) homePos = new Vector3((value.x - width / 2) * 1.2f,
                                                                      (value.y - width / 2) * 1.2f,
-                                                                     -1);
+                                                                     -0.1f);
                 else homePos = new Vector3((value.x - width / 2) * 1.2f,
-                                            (value.y - width / 2) * 1.2f - 0.6f,
-                                            -1);
+                                            (value.y - width / 2) * 1.2f,
+                                            -0.1f);
                 transform.position = homePos;
             }
         }
@@ -30,7 +30,7 @@ namespace Exion.Handler
             {
                 workPos = new Vector3((value.x - width / 2) * 1.2f,
                                         (value.y - width / 2) * 1.2f,
-                                        -1);
+                                        -0.1f);
                 if (agent == null) agent = GetComponent<NavMeshAgent>();
                 agent.destination = workPos;
             }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Smash
   m_EditorClassIdentifier: 
   name: Smash Mental Barrier
-  description: Select Target to start taking over the mind.Select Target to start
-    taking over the mind.
+  description: Select Target to start taking over the mind.
+  image: {fileID: 0}
