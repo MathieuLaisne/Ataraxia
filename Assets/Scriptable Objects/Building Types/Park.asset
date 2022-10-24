@@ -16,5 +16,5 @@ MonoBehaviour:
   hasRes: 0
   hasWorker: 0
   destroyable: 1
-  building: {fileID: 4642380678926620298, guid: 5729b9df2984c3441a017e801ccd2347, type: 3}
+  building: {fileID: 2199812489098847177, guid: 55a093500ca2e2d4fa3a2d2119dfa3de, type: 3}
   workerType: []

@@ -2,8 +2,8 @@ using Exion.Editor;
 using Exion.Handler;
 using Exion.ScriptableObjects;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Exion.Default
 {
@@ -37,6 +37,9 @@ namespace Exion.Default
         private int nbConstruction;
         private int nbSpecial;
         private int[] jobCount;
+
+        [SerializeField]
+        private NavMeshSurface surface;
 
         // Start is called before the first frame update
         private void Start()
@@ -142,12 +145,19 @@ namespace Exion.Default
                         foreach (GameObject charact in charactersMap[i * width + j].myList)
                         {
                             charact.GetComponent<CharacterHandler>().Home = new Vector2(i, j);
-                            charact.GetComponent<CharacterHandler>().initAll();
                             obj.GetComponent<BuildingHandler>().AddResident(charact);
                         }
                     }
                 }
             }
+            foreach(ListWrapper LW in charactersMap)
+            {
+                foreach(GameObject charact in LW.myList)
+                {
+                    charact.GetComponent<CharacterHandler>().initAll();
+                }
+            }
+            surface.BuildNavMesh();
         }
 
         private void CreateResidents()

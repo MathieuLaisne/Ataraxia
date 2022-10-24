@@ -174,6 +174,7 @@ MonoBehaviour:
   HPText: {fileID: 2047246682}
   MPText: {fileID: 1383616527}
   insanityText: {fileID: 700744658}
+  arrow: {fileID: 6733759550669114264, guid: 98e90f825efa0734f818bd50b52f9c9f, type: 3}
   suspicion: 0
   susBar: {fileID: 538590658}
   susText: {fileID: 899301797}
@@ -3251,6 +3252,7 @@ MonoBehaviour:
   - Astrid
   - Irma
   charactersMap: []
+  surface: {fileID: 1706041493}
 --- !u!23 &1706041491
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3327,7 +3329,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.033333335
+  m_VoxelSize: 0.016666668
   m_MinRegionArea: 1
   m_NavMeshData: {fileID: 23800000, guid: ed57134c42bf3784d95035c5f65008fe, type: 2}
   m_BuildHeightMesh: 0
@@ -3353,7 +3355,7 @@ Transform:
   m_GameObject: {fileID: 1706041488}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 0.1, z: 6}
+  m_LocalScale: {x: 6, y: 1, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

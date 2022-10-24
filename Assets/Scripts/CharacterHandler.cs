@@ -14,13 +14,12 @@ namespace Exion.Handler
         {
             set
             {
-                if (Random.Range(0, 1) < 0.5) homePos = new Vector3((value.x - width / 2) * 1.2f,
-                                                                     (value.y - width / 2) * 1.2f,
-                                                                     -0.1f);
-                else homePos = new Vector3((value.x - width / 2) * 1.2f,
-                                            (value.y - width / 2) * 1.2f,
-                                            -0.1f);
-                transform.position = homePos;
+                if(Random.Range(0,1) < 0.5) homePos = new Vector3(  (value.x - width / 2) * 1.2f - 0.6f,
+                                                                    (value.y - width / 2) * 1.2f,
+                                                                    -1f);
+                else homePos = new Vector3( (value.x - width / 2) * 1.2f,
+                                            (value.y - width / 2) * 1.2f - 0.6f,
+                                            -1f);
             }
         }
 
@@ -29,15 +28,14 @@ namespace Exion.Handler
             set
             {
                 workPos = new Vector3((value.x - width / 2) * 1.2f,
-                                        (value.y - width / 2) * 1.2f,
-                                        -0.1f);
-                if (agent == null) agent = GetComponent<NavMeshAgent>();
-                agent.destination = workPos;
+                                        (value.y - width / 2) * 1.2f + 0.6f,
+                                        -1f);
             }
         }
 
         public int width;
 
+        [SerializeField]
         private Vector3 homePos;
 
         [SerializeField]
@@ -62,8 +60,11 @@ namespace Exion.Handler
 
         public void initAll()
         {
-            transform.position = homePos;
             if (agent == null) agent = GetComponent<NavMeshAgent>();
+            NavMeshHit hit;
+            NavMesh.SamplePosition(homePos, out hit, 0.6f, NavMesh.AllAreas);
+            homePos = hit.position;
+            transform.position = homePos;
             agent.speed = Random.Range(0.3f, 0.5f);
             agent.SetDestination(workPos);
             destinationPos = workPos;

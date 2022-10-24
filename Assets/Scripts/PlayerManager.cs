@@ -75,6 +75,9 @@ namespace Exion.Default
         [SerializeField]
         private TextMeshProUGUI insanityText;
 
+        [SerializeField]
+        private GameObject arrow;
+
         private GameObject selectedCard;
 
         private List<GameObject> statusHandlerUI;
@@ -90,6 +93,8 @@ namespace Exion.Default
         public List<Card> Used;
 
         public ElderGod player;
+
+        private GameObject currentArrow;
 
         // Start is called before the first frame update
         private void Start()
@@ -125,6 +130,14 @@ namespace Exion.Default
         // Update is called once per frame
         private void Update()
         {
+            if(Input.GetMouseButtonDown(1))
+            {
+                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                infoBuilding.SetActive(false);
+                infoCharacter.SetActive(false);
+                selectedCard = null;
+                if(currentArrow) Destroy(currentArrow);
+            }
             if (selectedCard) ApplyCard();
             else UIDrawer();
         }
@@ -174,12 +187,16 @@ namespace Exion.Default
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (Physics.Raycast(ray, out hit))
+                if (hit2D)
                 {
                     if (hit2D.transform.gameObject.GetComponent<CardHandler>())
                     {
                         selectedCard = hit2D.transform.gameObject;
                         hit2D.transform.gameObject.GetComponent<CardHandler>().Highlight(true);
+                        infoCharacter.SetActive(false);
+                        infoBuilding.SetActive(false);
+                        /*currentArrow = Instantiate(arrow, selectedCard.transform);
+                        currentArrow.transform.position = selectedCard.transform.position;*/
                     }
                     else if(hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                     {
