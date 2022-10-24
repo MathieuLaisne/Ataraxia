@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Force Will
   m_EditorClassIdentifier: 
   name: Force Will
-  description: 'Force the target to submit: Lose all Mental Strength, gain as much
-    insanity. '
+  description: 'Force the target to submit: Lose all Mental Strength, gain thrice
+    as much insanity. '
+  image: {fileID: 0}

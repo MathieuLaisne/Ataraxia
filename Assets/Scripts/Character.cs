@@ -140,6 +140,7 @@ namespace Exion.Default
             {
                 if (m_mentalBarrier > 0) m_mentalBarrier--;
                 else m_mp--;
+                if (m_mp == 0) break;
             }
             if (m_mp <= 0) corrupted = true;
         }
@@ -149,6 +150,24 @@ namespace Exion.Default
             m_hp -= damage;
             if(m_hp <= 0) return true;
             return false;
+        }
+
+        public float DestroyMentalBarrier()
+        {
+            m_mentalBarrier = 0;
+            if (Random.Range(0, 100) < 50) return 0.01f * m_friends.Count;
+            return 0;
+        }
+
+        public bool MakeInsane(int damage)
+        {
+            m_insanity += damage;
+            if (m_insanity > 100)
+            {
+                corrupted = true;
+                m_insanity = 100;
+            }
+            return m_insanity >= 100;
         }
     }
 }

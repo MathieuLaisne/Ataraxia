@@ -150,14 +150,14 @@ namespace Exion.Default
 
         private void ApplyCard()
         {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
             if (Input.GetMouseButtonDown(0))
             {
                 switch (selectedCard.GetComponent<CardHandler>().card.name)
                 {
                     case "Eerie Land":
-                        RaycastHit hit;
-                        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                        ray.origin = new Vector3(ray.origin.x, ray.origin.y, -50);
                         if (Physics.Raycast(ray, out hit))
                         {
                             if (hit.transform.gameObject.GetComponent<BuildingHandler>())
@@ -171,8 +171,96 @@ namespace Exion.Default
                             }
                         }
                         break;
-
+                    case "Smash Mental Barrier":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+                                suspicion += CH.DestroyMentalBarrier();
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Force Will":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+                                CH.MakeInsane(CH.Mental * 3);
+                                CH.DealMentalDamage(CH.Mental);
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Press Will":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+                                CH.DealMentalDamage(5);
+                                CH.MakeInsane(15);
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Wrathful Cry":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+                                CH.MakeInsane(30);
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Painful Cry":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+                                CH.MakeInsane(45);
+                                CH.DealMentalDamage(5);
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Urge":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+                                CH.MakeInsane(30);
+                                CH.DealMentalDamage(10);
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
                     default:
+                        print("Not Implemented yet.");
                         break;
                 }
             }
@@ -254,9 +342,9 @@ namespace Exion.Default
                         }
                         else armor.SetActive(false);
 
-                        hp.fillAmount = CH.HP / CH.maxHP;
-                        mp.fillAmount = CH.Mental / CH.maxMental;
-                        insanity.fillAmount = CH.Insanity / 100;
+                        hp.fillAmount = (float)CH.HP / (float)CH.maxHP;
+                        mp.fillAmount = (float)CH.Mental / (float)CH.maxMental;
+                        insanity.fillAmount = (float)CH.Insanity / 100f;
 
                         HPText.text = CH.HP + "/" + CH.maxHP;
                         MPText.text = CH.Mental + "/" + CH.maxMental;

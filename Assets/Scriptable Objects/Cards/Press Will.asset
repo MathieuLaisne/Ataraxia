@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Press Will
   m_EditorClassIdentifier: 
   name: Press Will
-  description: Deal 5 Insanity and 5 Mental Damage.
+  description: Deal 15 Insanity and 5 Mental Damage.
+  image: {fileID: 0}

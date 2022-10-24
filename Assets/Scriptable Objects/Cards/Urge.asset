@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Urge
   m_EditorClassIdentifier: 
   name: Urge
-  description: Deal 10 Insanity and 10 Mental Damage.
+  description: Deal 30 Insanity and 10 Mental Damage.
+  image: {fileID: 0}

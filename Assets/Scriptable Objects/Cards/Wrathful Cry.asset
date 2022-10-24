@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Wrathful Cry
   m_EditorClassIdentifier: 
   name: Wrathful Cry
-  description: Deal 10 Insanity.
+  description: Deal 30 Insanity.
+  image: {fileID: 0}

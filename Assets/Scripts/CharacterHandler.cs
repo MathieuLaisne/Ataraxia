@@ -78,6 +78,11 @@ namespace Exion.Handler
             if (Input.GetButtonDown("Jump")) isPaused = !isPaused;
         }
 
+        public void LateUpdate()
+        {
+            if (character.corrupted) GetComponent<Material>().color = new Color(139, 0, 139);
+        }
+
         private void Roaming()
         {
             agent.isStopped = false;

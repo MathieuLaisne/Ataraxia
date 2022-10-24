@@ -166,7 +166,7 @@ namespace Exion.Default
             {
                 int rndJob = Random.Range(0, jobs.Length);
                 jobCount[rndJob]++;
-                Character c = new Character(names[Random.Range(0, names.Count)], jobs[rndJob], profile[Random.Range(0, profile.Length)], Random.Range(10, 30), Random.Range(10, 30), Mathf.Max(Random.Range(-3, 3) + Random.Range(0, 3), 0));
+                Character c = new Character(names[Random.Range(0, names.Count)], jobs[rndJob], profile[Random.Range(0, profile.Length)], Random.Range(15, 30) + Random.Range(15, 30), Random.Range(15, 30) + Random.Range(15,30), Mathf.Max(Random.Range(-3, 3) + Random.Range(0, 3), 0));
                 if (c.Job.name == "Prisoner")
                 {
                     prisoners.Add(c);

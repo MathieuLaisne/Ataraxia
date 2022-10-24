@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc0deb3d08096d45b213f2aafb41614, type: 3}
   m_Name: TakeOver
   m_EditorClassIdentifier: 
-  name: Initiate Take Over
-  description: Select Target to start taking over the mind.
+  name: ' Take Over'
+  description: Apply Taking Over Status.
+  image: {fileID: 0}
