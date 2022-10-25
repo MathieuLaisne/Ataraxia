@@ -41,6 +41,11 @@ namespace Exion.Default
         [SerializeField]
         private NavMeshSurface surface;
 
+        [SerializeField]
+        private TimeManager timeManager;
+
+        private List<Vector3> parks = new List<Vector3>();
+
         // Start is called before the first frame update
         private void Start()
         {
@@ -63,6 +68,20 @@ namespace Exion.Default
             SetAbandoned();
             SetFriends();
             CreateMap();
+        }
+
+        private void LateUpdate()
+        {
+            if(timeManager.Time == "End Work")
+            {
+                foreach(ListWrapper objs in charactersMap)
+                {
+                    foreach(GameObject charac in objs.myList)
+                    {
+                        charac.SetActive(true);
+                    }
+                }
+            }
         }
 
         private void BuildMap(int size)
@@ -119,12 +138,16 @@ namespace Exion.Default
                 } while (map[pos] != null);
                 map[pos] = new Building(buildingTypes[8].m_name, buildingTypes[8]);
             }
-
-            for (int i = 0; i < size; i++)
+            int width = Mathf.RoundToInt(Mathf.Sqrt(size));
+            for (int i = 0; i < width; i++)
             {
-                if (map[i] == null)
+                for (int j = 0; j < width; j++)
                 {
-                    map[i] = new Building(buildingTypes[6].m_name, buildingTypes[6]);
+                    if (map[i * width + j] == null)
+                    {
+                        map[i * width + j] = new Building(buildingTypes[6].m_name, buildingTypes[6]);
+                        parks.Add(new Vector3(i * 1.2f - width * 1.2f / 2 + 0.6f, j * 1.2f - width * 1.2f / 2 + 0.6f, -0.1f));
+                    }
                 }
             }
         }
@@ -150,14 +173,14 @@ namespace Exion.Default
                     }
                 }
             }
-            foreach(ListWrapper LW in charactersMap)
+            surface.BuildNavMesh();
+            foreach (ListWrapper LW in charactersMap)
             {
                 foreach(GameObject charact in LW.myList)
                 {
                     charact.GetComponent<CharacterHandler>().initAll();
                 }
             }
-            surface.BuildNavMesh();
         }
 
         private void CreateResidents()
@@ -188,9 +211,11 @@ namespace Exion.Default
                         for (int j = 0; j < (npc.Count / (nbApp)); j++)
                         {
                             if (npcCopy.Count <= 0) break;
-                            GameObject character = Instantiate(chara, transform);
+                            GameObject character = Instantiate(chara, new Vector3(bi * 1.2f - width * 1.2f / 2 + 0.6f, bj * 1.2f - width * 1.2f / 2 + 0.6f, -0.1f), new Quaternion(), transform);
                             character.GetComponent<CharacterHandler>().character = npcCopy[0];
-                            character.GetComponent<CharacterHandler>().Home = new Vector2(bi, bj);
+                            character.GetComponent<CharacterHandler>().Home = new Vector3(bi * 1.2f - width * 1.2f / 2 + 0.6f, bj * 1.2f - width * 1.2f / 2 + 0.6f, -0.1f);
+                            character.GetComponent<CharacterHandler>().timeManager = timeManager;
+                            character.GetComponent<CharacterHandler>().allParks = parks;
                             map[bi * width + bj].AddResident(npcCopy[0]);
                             charactersMap[bi * width + bj].myList.Add(character);
                             npcCopy.Remove(npcCopy[0]);
@@ -234,7 +259,7 @@ namespace Exion.Default
                                     {
                                         if (j >= objsCharac.Count) break;
                                         map[bi * width + bj].AddWorker(gotJob[j]);
-                                        objsCharac[j].GetComponent<CharacterHandler>().Work = new Vector2(bi, bj);
+                                        objsCharac[j].GetComponent<CharacterHandler>().Work = new Vector3(bi * 1.2f - width * 1.2f / 2 + 0.6f, bj * 1.2f - width * 1.2f / 2 + 0.6f, -0.1f);
                                     }
                                     currentIndex = j;
                                 }

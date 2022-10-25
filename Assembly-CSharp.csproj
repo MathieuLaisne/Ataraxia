@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\ListWrapper.cs" />
     <Compile Include="Assets\Scripts\Job.cs" />
     <Compile Include="Assets\Scripts\Building.cs" />
+    <Compile Include="Assets\Scripts\TimeManager.cs" />
     <Compile Include="Assets\Scripts\BezierArrow.cs" />
     <Compile Include="Assets\Scripts\CharacterHandlerUI.cs" />
     <Compile Include="Assets\Scripts\Status.cs" />

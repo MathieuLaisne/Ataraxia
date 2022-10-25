@@ -159,15 +159,25 @@ namespace Exion.Default
             return 0;
         }
 
-        public bool MakeInsane(int damage)
+        public float MakeInsane(int damage)
         {
             m_insanity += damage;
-            if (m_insanity > 100)
+            if (m_insanity >= 100)
             {
                 corrupted = true;
                 m_insanity = 100;
+                return m_friends.Count * 0.1f;
             }
-            return m_insanity >= 100;
+            return 0;
+        }
+
+        public bool HasStatus(string statusName)
+        {
+            foreach (StatusHandler status in Statuses)
+            {
+                if (status.status.name == statusName) return true;
+            }
+            return false;
         }
     }
 }

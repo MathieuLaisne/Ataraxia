@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6733759550669114265}
   - component: {fileID: 6733759550669114270}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,4 +52,4 @@ MonoBehaviour:
   ArrowHead: {fileID: 7139832219847840993, guid: 75aea8c3c3de9424f98996e0b18a275b, type: 3}
   ArrowNode: {fileID: 6038537148031252890, guid: f381826bf70a09c42b8fff8469b43687, type: 3}
   nodeNum: 5
-  scale: 1
+  scale: 0.5

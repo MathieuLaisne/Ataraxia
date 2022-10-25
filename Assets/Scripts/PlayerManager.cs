@@ -96,6 +96,9 @@ namespace Exion.Default
 
         private GameObject currentArrow;
 
+        [SerializeField]
+        private TimeManager tm;
+
         // Start is called before the first frame update
         private void Start()
         {
@@ -108,6 +111,37 @@ namespace Exion.Default
                 Deck.Add(card);
                 Deck.Add(card);
             }
+            Hand[0] = Instantiate(card, cardContainer);
+            int rndIdx = Random.Range(0, Deck.Count);
+            Hand[0].GetComponent<CardHandler>().card = Deck[rndIdx];
+            Used.Add(Deck[rndIdx]);
+            Deck.RemoveAt(rndIdx);
+
+            rndIdx = Random.Range(0, Deck.Count);
+            Hand[1] = Instantiate(card, cardContainer);
+            Hand[1].GetComponent<CardHandler>().card = Deck[Random.Range(0, Deck.Count)];
+            Used.Add(Deck[rndIdx]);
+            Deck.RemoveAt(rndIdx);
+
+            rndIdx = Random.Range(0, Deck.Count);
+            Hand[2] = Instantiate(card, cardContainer);
+            Hand[2].GetComponent<CardHandler>().card = Deck[Random.Range(0, Deck.Count)];
+            Used.Add(Deck[rndIdx]);
+            Deck.RemoveAt(rndIdx);
+        }
+
+        private void Mulligan()
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                Destroy(Hand[i]);
+                Hand[i] = null;
+            }
+            DrawCards();
+        }
+
+        private void DrawCards()
+        {
             Hand[0] = Instantiate(card, cardContainer);
             int rndIdx = Random.Range(0, Deck.Count);
             Hand[0].GetComponent<CardHandler>().card = Deck[rndIdx];
@@ -142,17 +176,22 @@ namespace Exion.Default
             else UIDrawer();
         }
 
-        private void LateUpdate()
+        private void FixedUpdate()
         {
             susBar.fillAmount = suspicion / 100;
             susText.text = suspicion.ToString("0.00") + "%";
+            if (tm.Time == "End Night")
+            {
+                suspicion = Mathf.Clamp(suspicion - 0.05f, 0f, 100f);
+                Mulligan();
+            }
         }
 
         private void ApplyCard()
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+            RaycastHit2D hit2D = Physics2D.Raycast(Input.mousePosition, new Vector2(0, 0));
             if (Input.GetMouseButtonDown(0))
             {
                 switch (selectedCard.GetComponent<CardHandler>().card.name)
@@ -164,7 +203,9 @@ namespace Exion.Default
                             {
                                 GameObject objectHit = hit.transform.gameObject;
                                 Building BH = objectHit.GetComponent<BuildingHandler>().building;
+
                                 BH.ApplyStatus(AllStatus.Find(s => s.name == "Eerie"), 1);
+
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
                                 selectedCard = null;
@@ -178,7 +219,22 @@ namespace Exion.Default
                             {
                                 GameObject objectHit = hit.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
                                 suspicion += CH.DestroyMentalBarrier();
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        } else if(hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                suspicion += CH.DestroyMentalBarrier();
+
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
                                 selectedCard = null;
@@ -192,8 +248,27 @@ namespace Exion.Default
                             {
                                 GameObject objectHit = hit.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandler>().character;
-                                CH.MakeInsane(CH.Mental * 3);
+
+                                suspicion += CH.MakeInsane(CH.Mental * 3);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
                                 CH.DealMentalDamage(CH.Mental);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                suspicion += CH.MakeInsane(CH.Mental * 3);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
+                                CH.DealMentalDamage(CH.Mental);
+
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
                                 selectedCard = null;
@@ -207,8 +282,27 @@ namespace Exion.Default
                             {
                                 GameObject objectHit = hit.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
                                 CH.DealMentalDamage(5);
-                                CH.MakeInsane(15);
+                                suspicion += CH.MakeInsane(15);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.DealMentalDamage(5);
+                                suspicion += CH.MakeInsane(15);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
+
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
                                 selectedCard = null;
@@ -222,7 +316,25 @@ namespace Exion.Default
                             {
                                 GameObject objectHit = hit.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandler>().character;
-                                CH.MakeInsane(30);
+
+                                suspicion += CH.MakeInsane(30);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                suspicion += CH.MakeInsane(30);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
+
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
                                 selectedCard = null;
@@ -236,8 +348,27 @@ namespace Exion.Default
                             {
                                 GameObject objectHit = hit.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandler>().character;
-                                CH.MakeInsane(45);
+
+                                suspicion += CH.MakeInsane(45);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
                                 CH.DealMentalDamage(5);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                suspicion += CH.MakeInsane(45);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
+                                CH.DealMentalDamage(5);
+
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
                                 selectedCard = null;
@@ -251,8 +382,57 @@ namespace Exion.Default
                             {
                                 GameObject objectHit = hit.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandler>().character;
-                                CH.MakeInsane(30);
+
+                                suspicion += CH.MakeInsane(30);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
                                 CH.DealMentalDamage(10);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                suspicion += CH.MakeInsane(30);
+                                if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
+                                CH.DealMentalDamage(10);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Take Over":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Taking Over"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Taking Over"), 1);
+
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
                                 selectedCard = null;
@@ -282,9 +462,8 @@ namespace Exion.Default
                         selectedCard = hit2D.transform.gameObject;
                         hit2D.transform.gameObject.GetComponent<CardHandler>().Highlight(true);
                         infoCharacter.SetActive(false);
-                        infoBuilding.SetActive(false);
-                        /*currentArrow = Instantiate(arrow, selectedCard.transform);
-                        currentArrow.transform.position = selectedCard.transform.position;*/
+                        currentArrow = Instantiate(arrow, selectedCard.transform);
+                        currentArrow.transform.localPosition = selectedCard.transform.position;
                     }
                     else if(hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                     {

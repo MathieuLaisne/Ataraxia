@@ -1,4 +1,5 @@
 using Exion.Default;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,26 +11,23 @@ namespace Exion.Handler
 
         public PlayerManager PM;
 
-        public Vector2 Home
+        public TimeManager timeManager;
+
+        public List<Vector3> allParks = new List<Vector3>();
+
+        public Vector3 Home
         {
             set
             {
-                if(Random.Range(0,1) < 0.5) homePos = new Vector3(  (value.x - width / 2) * 1.2f - 0.6f,
-                                                                    (value.y - width / 2) * 1.2f,
-                                                                    -1f);
-                else homePos = new Vector3( (value.x - width / 2) * 1.2f,
-                                            (value.y - width / 2) * 1.2f - 0.6f,
-                                            -1f);
+                homePos = value;
             }
         }
 
-        public Vector2 Work
+        public Vector3 Work
         {
             set
             {
-                workPos = new Vector3((value.x - width / 2) * 1.2f,
-                                        (value.y - width / 2) * 1.2f + 0.6f,
-                                        -1f);
+                workPos = value;
             }
         }
 
@@ -51,6 +49,10 @@ namespace Exion.Handler
         [SerializeField]
         private int stuckFrames = 0;
         public bool isPaused = true;
+        private Vector3 todayFree;
+
+        [SerializeField]
+        private Material material;
 
         public void Start()
         {
@@ -62,25 +64,28 @@ namespace Exion.Handler
         {
             if (agent == null) agent = GetComponent<NavMeshAgent>();
             NavMeshHit hit;
-            NavMesh.SamplePosition(homePos, out hit, 0.6f, NavMesh.AllAreas);
-            homePos = hit.position;
-            transform.position = homePos;
+            if(NavMesh.SamplePosition(homePos, out hit, 0.6f, NavMesh.AllAreas)) homePos = hit.position;
+            print(homePos + " recalculated:" + hit.position);
+            transform.localPosition = homePos;
             agent.speed = Random.Range(0.3f, 0.5f);
             agent.SetDestination(workPos);
             destinationPos = workPos;
             prevPos = homePos;
+            material = GetComponent<MeshRenderer>().material;
         }
 
         public void Update()
         {
-            if(!isPaused) Roaming();
+            isPaused = timeManager.pause;
+            if (!isPaused) Roaming();
             else agent.isStopped = true;
-            if (Input.GetButtonDown("Jump")) isPaused = !isPaused;
         }
 
-        public void LateUpdate()
+        public void FixedUpdate()
         {
-            if (character.corrupted) GetComponent<Material>().color = new Color(139, 0, 139);
+            if (character.corrupted) material.color = new Color(139, 0, 139);
+            if (timeManager.Time == "End Work") todayFree = allParks[Random.Range(0, allParks.Count)];
+            if (timeManager.Time == "End Night" && character.HasStatus("Taking Over")) character.DealMentalDamage(2);
         }
 
         private void Roaming()
@@ -89,16 +94,37 @@ namespace Exion.Handler
             if (!agent.hasPath) recalculatePath();
             else
             {
-                if (agent.remainingDistance <= 0.1f)
+                switch (timeManager.Time)
                 {
-                    gameObject.SetActive(false);
-                }
-                else
-                {
-                    if (prevPos == transform.position) stuckFrames++;
-                    else stuckFrames = 0;
-                    if (stuckFrames > 60) recalculatePath();
-                    prevPos = transform.position;
+                    case "Free Time":
+                        destinationPos = todayFree;
+                        recalculatePath();
+                        break;
+                    case "End Free":
+                        destinationPos = homePos;
+                        recalculatePath();
+                        break;
+                    case "Morning":
+                        destinationPos = workPos;
+                        recalculatePath();
+                        if (agent.remainingDistance <= 0.2f)
+                        {
+                            gameObject.SetActive(false);
+                        }
+                        break;
+                    default:
+                        if (agent.remainingDistance <= 0.2f)
+                        {
+                            gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            if (prevPos == transform.position) stuckFrames++;
+                            else stuckFrames = 0;
+                            if (stuckFrames > 60) recalculatePath();
+                            prevPos = transform.position;
+                        }
+                        break;
                 }
             }
         }

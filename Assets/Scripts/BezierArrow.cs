@@ -8,6 +8,7 @@ public class BezierArrow : MonoBehaviour
     public int nodeNum;
     public float scale = 1f;
 
+    private RectTransform origin;
     private List<RectTransform> arrowNodes = new List<RectTransform>();
     private List<Vector2> controlPoints = new List<Vector2>();
     private readonly List<Vector2> controlPointsFactor = new List<Vector2> { new Vector2(-0.3f, 0.8f), new Vector2(0.1f, 1.4f) };
@@ -15,6 +16,8 @@ public class BezierArrow : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        origin = GetComponent<RectTransform>();
+
         for (int i = 0; i < nodeNum; i++) arrowNodes.Add(Instantiate(ArrowNode, transform).GetComponent<RectTransform>());
 
         arrowNodes.Add(Instantiate(ArrowHead, transform).GetComponent<RectTransform>());
@@ -27,7 +30,7 @@ public class BezierArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        controlPoints[0] = new Vector2(transform.position.x, transform.position.y);
+        controlPoints[0] = new Vector2(origin.position.x, origin.position.y);
 
         controlPoints[3] = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
