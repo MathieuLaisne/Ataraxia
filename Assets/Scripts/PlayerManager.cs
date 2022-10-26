@@ -476,6 +476,7 @@ namespace Exion.Default
                         infoCharacterJob.text = CH.Job.name;
                         infoCharacterProfile.sprite = CH.Profile;
                         if (CH.corrupted) infoCharacterProfile.color = new Color(139, 0, 139);
+                        else infoCharacterProfile.color = new Color();
 
                         if (CH.Barrier > 0)
                         {
@@ -497,6 +498,14 @@ namespace Exion.Default
                             GameObject obj = Instantiate(characterContainer, acquaintances.transform);
                             obj.GetComponent<CharacterHandlerUI>().character = friend;
                         }
+
+                        foreach (GameObject obj in statusHandlerUI) Destroy(obj);
+                        foreach (StatusHandler s in CH.Statuses)
+                        {
+                            GameObject obj = Instantiate(status, characterStatus.transform);
+                            statusHandlerUI.Add(obj);
+                            obj.GetComponent<StatusHandlerUI>().status = s;
+                        }
                     }
                 }
                 else if (Physics.Raycast(ray, out hit))
@@ -513,6 +522,7 @@ namespace Exion.Default
                         infoCharacterJob.text = CH.Job.name;
                         infoCharacterProfile.sprite = CH.Profile;
                         if (CH.corrupted) infoCharacterProfile.color = new Color(139, 0, 139);
+                        else infoCharacterProfile.color = new Color();
 
                         if (CH.Barrier > 0)
                         {
@@ -534,6 +544,14 @@ namespace Exion.Default
                             GameObject obj = Instantiate(characterContainer, acquaintances.transform);
                             obj.GetComponent<CharacterHandlerUI>().character = friend;
                         }
+
+                        foreach (GameObject obj in statusHandlerUI) Destroy(obj);
+                        foreach (StatusHandler s in CH.Statuses)
+                        {
+                            GameObject obj = Instantiate(status, characterStatus.transform);
+                            statusHandlerUI.Add(obj);
+                            obj.GetComponent<StatusHandlerUI>().status = s;
+                        }
                     }
                     else if (hit.transform.gameObject.GetComponent<BuildingHandler>())
                     {
@@ -550,7 +568,11 @@ namespace Exion.Default
                             foreach (Character c in BH.Residents)
                             {
                                 GameObject obj = Instantiate(characterContainer, residentList.transform);
-                                obj.GetComponent<CharacterHandlerUI>().character = c;
+                                CharacterHandlerUI CHUI = obj.GetComponent<CharacterHandlerUI>();
+                                CHUI.character = c;
+
+                                if (CHUI.character.corrupted) obj.GetComponent<Image>().color = new Color(139, 0, 139);
+                                else CHUI.img.color = new Color(1,1,1);
                             }
                         }
                         if (BH.Type.hasWorker)
@@ -558,7 +580,11 @@ namespace Exion.Default
                             foreach (Character c in BH.Workers)
                             {
                                 GameObject obj = Instantiate(characterContainer, workerList.transform);
-                                obj.GetComponent<CharacterHandlerUI>().character = c;
+                                CharacterHandlerUI CHUI = obj.GetComponent<CharacterHandlerUI>();
+                                CHUI.character = c;
+
+                                if (CHUI.character.corrupted) obj.GetComponent<Image>().color = new Color(139, 0, 139);
+                                else obj.GetComponent<Image>().color = new Color();
                             }
                         }
                         foreach (GameObject obj in statusHandlerUI) Destroy(obj);

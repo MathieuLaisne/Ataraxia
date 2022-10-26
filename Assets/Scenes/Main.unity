@@ -165,7 +165,14 @@ MonoBehaviour:
   characterStatus: {fileID: 1888355806}
   status: {fileID: 6964572480526427297, guid: ee3558a8f75a1e541a706be647f6e2a6, type: 3}
   characterContainer: {fileID: 2439277159547943527, guid: d197a1485634c0d419deae63b1026120, type: 3}
-  AllStatus: []
+  AllStatus:
+  - {fileID: 11400000, guid: d91098128d016174c83be12f00904438, type: 2}
+  - {fileID: 11400000, guid: 0fb6afbb448d01541a31c86d8d9176ca, type: 2}
+  - {fileID: 11400000, guid: b11317edbe9fbc246a186cae369ed70a, type: 2}
+  - {fileID: 11400000, guid: 6869e95d5104f454e89806970932760d, type: 2}
+  - {fileID: 11400000, guid: 60de277426b810140b027781d1fc86fa, type: 2}
+  - {fileID: 11400000, guid: 3e4464af661c3644194421dbb4626543, type: 2}
+  - {fileID: 11400000, guid: e263b2a60de749b40aaa8b08f367afbc, type: 2}
   armor: {fileID: 759344633}
   hp: {fileID: 169062925}
   mp: {fileID: 1507630313}
@@ -3838,7 +3845,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -15, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097568096
 MonoBehaviour:

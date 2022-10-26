@@ -84,6 +84,7 @@ namespace Exion.Handler
         public void FixedUpdate()
         {
             if (character.corrupted) material.color = new Color(139, 0, 139);
+            else material.color = new Color();
             if (timeManager.Time == "End Work") todayFree = allParks[Random.Range(0, allParks.Count)];
             if (timeManager.Time == "End Night" && character.HasStatus("Taking Over")) character.DealMentalDamage(2);
         }

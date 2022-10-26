@@ -13,7 +13,7 @@ namespace Exion.Default
         private string size;
 
         [SerializeField]
-        private BuildingType[] buildingTypes;
+        private List<BuildingType> buildingTypes;
 
         [SerializeField]
         private Job[] jobs;
@@ -97,7 +97,7 @@ namespace Exion.Default
                 {
                     pos = Random.Range(0, size);
                 } while (map[pos] != null);
-                map[pos] = new Building(buildingTypes[1].m_name, buildingTypes[1]);
+                map[pos] = new Building("Appartment", buildingTypes.Find(type => type.name == "Appartment"));
             }
 
             for (int i = 0; i < nbConstruction; i++)
@@ -107,7 +107,7 @@ namespace Exion.Default
                 {
                     pos = Random.Range(0, size);
                 } while (map[pos] != null);
-                map[pos] = new Building(buildingTypes[3].m_name, buildingTypes[3]);
+                map[pos] = new Building("Construction Site", buildingTypes.Find(type => type.name == "Construction Site"));
             }
             for (int i = 0; i < nbSpecial; i++)
             {
@@ -116,27 +116,27 @@ namespace Exion.Default
                 {
                     pos = Random.Range(0, size);
                 } while (map[pos] != null);
-                map[pos] = new Building(buildingTypes[2].m_name, buildingTypes[2]);
+                map[pos] = new Building("Clinic", buildingTypes.Find(type => type.name == "Clinic"));
                 do
                 {
                     pos = Random.Range(0, size);
                 } while (map[pos] != null);
-                map[pos] = new Building(buildingTypes[4].m_name, buildingTypes[4]);
+                map[pos] = new Building("Highschool", buildingTypes.Find(type => type.name == "HS"));
                 do
                 {
                     pos = Random.Range(0, size);
                 } while (map[pos] != null);
-                map[pos] = new Building(buildingTypes[5].m_name, buildingTypes[5]);
+                map[pos] = new Building("Prison", buildingTypes.Find(type => type.name == "Prison"));
                 do
                 {
                     pos = Random.Range(0, size);
                 } while (map[pos] != null);
-                map[pos] = new Building(buildingTypes[7].m_name, buildingTypes[7]);
+                map[pos] = new Building("Police Station", buildingTypes.Find(type => type.name == "Police Station"));
                 do
                 {
                     pos = Random.Range(0, size);
                 } while (map[pos] != null);
-                map[pos] = new Building(buildingTypes[8].m_name, buildingTypes[8]);
+                map[pos] = new Building("Hospital", buildingTypes.Find(type => type.name == "Hospital"));
             }
             int width = Mathf.RoundToInt(Mathf.Sqrt(size));
             for (int i = 0; i < width; i++)
@@ -145,7 +145,7 @@ namespace Exion.Default
                 {
                     if (map[i * width + j] == null)
                     {
-                        map[i * width + j] = new Building(buildingTypes[6].m_name, buildingTypes[6]);
+                        map[i * width + j] = new Building("Park", buildingTypes.Find(type => type.name == "Park"));
                         parks.Add(new Vector3(i * 1.2f - width * 1.2f / 2 + 0.6f, j * 1.2f - width * 1.2f / 2 + 0.6f, -0.1f));
                     }
                 }
@@ -189,7 +189,12 @@ namespace Exion.Default
             {
                 int rndJob = Random.Range(0, jobs.Length);
                 jobCount[rndJob]++;
-                Character c = new Character(names[Random.Range(0, names.Count)], jobs[rndJob], profile[Random.Range(0, profile.Length)], Random.Range(15, 30) + Random.Range(15, 30), Random.Range(15, 30) + Random.Range(15,30), Mathf.Max(Random.Range(-3, 3) + Random.Range(0, 3), 0));
+                Character c = new Character(names[Random.Range(0, names.Count)], 
+                                            jobs[rndJob], 
+                                            profile[Random.Range(0, profile.Length)], 
+                                            Random.Range(15, 30) + Random.Range(15, 30), 
+                                            Random.Range(15, 30) + Random.Range(15,30), 
+                                            Mathf.Max(Random.Range(-10, 10) + Random.Range(0, 10), 0));
                 if (c.Job.name == "Prisoner")
                 {
                     prisoners.Add(c);

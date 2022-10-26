@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc0deb3d08096d45b213f2aafb41614, type: 3}
   m_Name: TakeOver
   m_EditorClassIdentifier: 
-  name: ' Take Over'
+  name: Take Over
   description: Apply Taking Over Status.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 3abebd4200f358941b1d3e06ddc01c1f, type: 3}

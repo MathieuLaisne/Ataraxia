@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Force Will
   description: 'Force the target to submit: Lose all Mental Strength, gain thrice
     as much insanity. '
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 65791112fd9d95348aa2df52ecc9f6b6, type: 3}

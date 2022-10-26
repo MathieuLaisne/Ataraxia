@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Painful Cry
   description: Deal 45 Insanity and 5 Mental Damage.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 7031f33d22631d942bd7fff3ee3fa4fe, type: 3}
