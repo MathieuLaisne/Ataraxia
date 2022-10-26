@@ -12,7 +12,7 @@ namespace Exion.Handler
         public void Start()
         {
             img.sprite = character.Profile;
-            if(character.corrupted) img.color = new Color(139, 0, 139);
+            if (character.corrupted) img.color = new Color(139, 0, 139);
         }
     }
 }

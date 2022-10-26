@@ -14,7 +14,7 @@ public class BezierArrow : MonoBehaviour
     private readonly List<Vector2> controlPointsFactor = new List<Vector2> { new Vector2(-0.3f, 0.8f), new Vector2(0.1f, 1.4f) };
 
     // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         origin = GetComponent<RectTransform>();
 
@@ -28,7 +28,7 @@ public class BezierArrow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         controlPoints[0] = new Vector2(origin.position.x, origin.position.y);
 
@@ -37,16 +37,16 @@ public class BezierArrow : MonoBehaviour
         controlPoints[1] = controlPoints[0] + (controlPoints[3] - controlPoints[0]) * controlPointsFactor[0];
         controlPoints[2] = controlPoints[0] + (controlPoints[3] - controlPoints[0]) * controlPointsFactor[1];
 
-        for(int i = 0; i < arrowNodes.Count; i++)
+        for (int i = 0; i < arrowNodes.Count; i++)
         {
             float t = Mathf.Log(1f * i / (arrowNodes.Count - 1) + 1f, 2f);
 
-            arrowNodes[i].position =    Mathf.Pow(1 - t, 3) * controlPoints[0] +
+            arrowNodes[i].position = Mathf.Pow(1 - t, 3) * controlPoints[0] +
                                         3 * Mathf.Pow(1 - t, 2) * controlPoints[1] +
                                         3 * (1 - t) * Mathf.Pow(t, 2) * controlPoints[2] +
                                         Mathf.Pow(t, 3) * controlPoints[3];
 
-            if(i > 0)
+            if (i > 0)
             {
                 Vector3 euler = new Vector3(0, 0, Vector2.SignedAngle(Vector2.up, arrowNodes[i].position - arrowNodes[i - 1].position));
                 arrowNodes[i].rotation = Quaternion.Euler(euler);
@@ -54,7 +54,6 @@ public class BezierArrow : MonoBehaviour
 
             float lScale = scale * (1f - 0.03f * (arrowNodes.Count - 1 - i));
             arrowNodes[i].localScale = new Vector3(lScale, lScale, 1);
-
         }
 
         arrowNodes[0].transform.rotation = arrowNodes[1].transform.rotation;

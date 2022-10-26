@@ -17,3 +17,4 @@ MonoBehaviour:
   hasWorker: 0
   destroyable: 1
   building: {fileID: 2199812489098847177, guid: 3bf2a5359d2b8d3408b728e4db716e93, type: 3}
+  workerType: []

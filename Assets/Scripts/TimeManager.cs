@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Exion.Handler
@@ -7,23 +5,25 @@ namespace Exion.Handler
     public class TimeManager : MonoBehaviour
     {
         private int m_timeElapsed = 0;
+
         public string Time
         {
             get { return m_time; }
         }
+
         [SerializeField]
         private string m_time = "Morning";
 
         public bool pause = true;
 
         // Start is called before the first frame update
-        void Update()
+        private void Update()
         {
             if (Input.GetButtonDown("Jump")) pause = !pause;
         }
 
         // Update is called once per frame
-        void FixedUpdate()
+        private void FixedUpdate()
         {
             if (!pause)
             {
@@ -37,6 +37,7 @@ namespace Exion.Handler
                             m_time = "Work";
                         }
                         break;
+
                     case "Work":
                         if (m_timeElapsed == 30)
                         {
@@ -44,6 +45,7 @@ namespace Exion.Handler
                             m_time = "End Work";
                         }
                         break;
+
                     case "End Work":
                         if (m_timeElapsed == 1)
                         {
@@ -51,6 +53,7 @@ namespace Exion.Handler
                             m_time = "Free Time";
                         }
                         break;
+
                     case "Free Time":
                         if (m_timeElapsed == 20)
                         {
@@ -58,6 +61,7 @@ namespace Exion.Handler
                             m_time = "End Free";
                         }
                         break;
+
                     case "End Free":
                         if (m_timeElapsed == 1)
                         {
@@ -65,6 +69,7 @@ namespace Exion.Handler
                             m_time = "Night";
                         }
                         break;
+
                     case "Night":
                         if (m_timeElapsed == 10)
                         {
@@ -72,6 +77,7 @@ namespace Exion.Handler
                             m_time = "End Night";
                         }
                         break;
+
                     case "End Night":
                         if (m_timeElapsed == 1)
                         {
@@ -79,11 +85,11 @@ namespace Exion.Handler
                             m_time = "Morning";
                         }
                         break;
+
                     default:
                         break;
                 }
             }
-
         }
     }
 }

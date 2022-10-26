@@ -8,5 +8,6 @@ namespace Exion.ScriptableObjects
     {
         public string name;
         public List<Card> deck;
+        public Sprite sprite;
     }
 }

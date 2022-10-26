@@ -22,7 +22,6 @@ namespace Exion.Handler
             originalSize = cam.orthographicSize;
         }
 
-
         // Update is called once per frame
         private void Update()
         {

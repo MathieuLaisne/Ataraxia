@@ -68,15 +68,16 @@ namespace Exion.Default
             SetAbandoned();
             SetFriends();
             CreateMap();
+            SetFirstContact();
         }
 
-        private void LateUpdate()
+        private void FixedUpdate()
         {
-            if(timeManager.Time == "End Work")
+            if (timeManager.Time == "End Work")
             {
-                foreach(ListWrapper objs in charactersMap)
+                foreach (ListWrapper objs in charactersMap)
                 {
-                    foreach(GameObject charac in objs.myList)
+                    foreach (GameObject charac in objs.myList)
                     {
                         charac.SetActive(true);
                     }
@@ -122,11 +123,11 @@ namespace Exion.Default
                     pos = Random.Range(0, size);
                 } while (map[pos] != null);
                 map[pos] = new Building("Highschool", buildingTypes.Find(type => type.name == "HS"));
-                do
+                /*do
                 {
                     pos = Random.Range(0, size);
                 } while (map[pos] != null);
-                map[pos] = new Building("Prison", buildingTypes.Find(type => type.name == "Prison"));
+                map[pos] = new Building("Prison", buildingTypes.Find(type => type.name == "Prison"));*/ //Prisons not handled yet
                 do
                 {
                     pos = Random.Range(0, size);
@@ -176,7 +177,7 @@ namespace Exion.Default
             surface.BuildNavMesh();
             foreach (ListWrapper LW in charactersMap)
             {
-                foreach(GameObject charact in LW.myList)
+                foreach (GameObject charact in LW.myList)
                 {
                     charact.GetComponent<CharacterHandler>().initAll();
                 }
@@ -189,11 +190,11 @@ namespace Exion.Default
             {
                 int rndJob = Random.Range(0, jobs.Length);
                 jobCount[rndJob]++;
-                Character c = new Character(names[Random.Range(0, names.Count)], 
-                                            jobs[rndJob], 
-                                            profile[Random.Range(0, profile.Length)], 
-                                            Random.Range(15, 30) + Random.Range(15, 30), 
-                                            Random.Range(15, 30) + Random.Range(15,30), 
+                Character c = new Character(names[Random.Range(0, names.Count)],
+                                            jobs[rndJob],
+                                            profile[Random.Range(0, profile.Length)],
+                                            Random.Range(15, 30) + Random.Range(15, 30),
+                                            Random.Range(15, 30) + Random.Range(15, 30),
                                             Mathf.Max(Random.Range(-10, 10) + Random.Range(0, 10), 0));
                 if (c.Job.name == "Prisoner")
                 {
@@ -211,7 +212,7 @@ namespace Exion.Default
                 for (int bj = 0; bj < width; bj++)
                 {
                     charactersMap.Add(new ListWrapper());
-                    if (map[bi * width + bj].Type.hasRes && map[bi * width + bj].Type.name != "Prison")
+                    if (map[bi * width + bj].Type.hasRes) //&& map[bi * width + bj].Type.name != "Prison")
                     {
                         for (int j = 0; j < (npc.Count / (nbApp)); j++)
                         {
@@ -228,6 +229,11 @@ namespace Exion.Default
                     }
                 }
             }
+            SetWorkers(width);
+        }
+
+        private void SetWorkers(int width)
+        {
             for (int i = 0; i < jobs.Length; i++)
             {
                 jobCount[i] /= 2;
@@ -250,7 +256,6 @@ namespace Exion.Default
                 int currentIndex = 0;
                 if (gotJob.Count > 0)
                 {
-                    width = Mathf.RoundToInt(Mathf.Sqrt(map.Length));
                     for (int bi = 0; bi < width; bi++)
                     {
                         for (int bj = 0; bj < width; bj++)
@@ -273,6 +278,24 @@ namespace Exion.Default
                     }
                 }
             }
+        }
+
+        private void SetFirstContact()
+        {
+            Player player = FindObjectOfType<Player>();
+            Job j = player.chosenJob;
+            int rndIndx = 0;
+            ListWrapper building = charactersMap[0];
+            Character CH = new Character(null, null, null, 0, 0, 0);
+            if (building.myList.Count > 0) CH = building.myList[0].GetComponent<CharacterHandler>().character;
+            while (CH.Job != j)
+            {
+                building = charactersMap[Random.Range(0, charactersMap.Count - 1)];
+                rndIndx = Random.Range(0, building.myList.Count - 1);
+                if (building.myList.Count > 0) CH = building.myList[rndIndx].GetComponent<CharacterHandler>().character;
+            }
+            CH.corrupted = true;
+            player.firstContact = building.myList[rndIndx];
         }
 
         public void SetAbandoned()

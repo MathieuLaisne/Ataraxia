@@ -48,6 +48,7 @@ namespace Exion.Handler
 
         [SerializeField]
         private int stuckFrames = 0;
+
         public bool isPaused = true;
         private Vector3 todayFree;
 
@@ -64,7 +65,7 @@ namespace Exion.Handler
         {
             if (agent == null) agent = GetComponent<NavMeshAgent>();
             NavMeshHit hit;
-            if(NavMesh.SamplePosition(homePos, out hit, 0.6f, NavMesh.AllAreas)) homePos = hit.position;
+            if (NavMesh.SamplePosition(homePos, out hit, 0.6f, NavMesh.AllAreas)) homePos = hit.position;
             print(homePos + " recalculated:" + hit.position);
             transform.localPosition = homePos;
             agent.speed = Random.Range(0.3f, 0.5f);
@@ -101,10 +102,12 @@ namespace Exion.Handler
                         destinationPos = todayFree;
                         recalculatePath();
                         break;
+
                     case "End Free":
                         destinationPos = homePos;
                         recalculatePath();
                         break;
+
                     case "Morning":
                         destinationPos = workPos;
                         recalculatePath();
@@ -113,6 +116,7 @@ namespace Exion.Handler
                             gameObject.SetActive(false);
                         }
                         break;
+
                     default:
                         if (agent.remainingDistance <= 0.2f)
                         {
@@ -156,7 +160,8 @@ namespace Exion.Handler
                             break;
                     }
                 }
-            } else if (other.gameObject.GetComponent<CharacterHandler>())
+            }
+            else if (other.gameObject.GetComponent<CharacterHandler>())
             {
                 CharacterHandler CH = other.gameObject.GetComponent<CharacterHandler>();
                 foreach (StatusHandler status in CH.character.Statuses)

@@ -23,7 +23,7 @@ namespace Exion.Handler
 
         public void Highlight(bool state)
         {
-            if(state) transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            if (state) transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             else transform.localScale = new Vector3(1, 1, 1);
             highlight.SetActive(state);
         }

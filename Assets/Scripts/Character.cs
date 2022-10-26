@@ -98,7 +98,7 @@ namespace Exion.Default
             get
             {
                 int str = 1;
-                foreach(StatusHandler SH in m_status)
+                foreach (StatusHandler SH in m_status)
                 {
                     if (SH.status.name == "Strength") str += SH.stacks;
                 }
@@ -148,14 +148,14 @@ namespace Exion.Default
         public bool DealHealthDamage(int damage)
         {
             m_hp -= damage;
-            if(m_hp <= 0) return true;
+            if (m_hp <= 0) return true;
             return false;
         }
 
         public float DestroyMentalBarrier()
         {
             m_mentalBarrier = 0;
-            if (Random.Range(0, 100) < 50) return 0.01f * m_friends.Count;
+            if (Random.Range(0, 100) < 50) return 0.5f * m_friends.Count;
             return 0;
         }
 
@@ -166,7 +166,7 @@ namespace Exion.Default
             {
                 corrupted = true;
                 m_insanity = 100;
-                return m_friends.Count * 0.1f;
+                return m_friends.Count * 2f;
             }
             return 0;
         }

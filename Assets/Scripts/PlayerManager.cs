@@ -3,6 +3,7 @@ using Exion.ScriptableObjects;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Exion.Default
@@ -90,27 +91,49 @@ namespace Exion.Default
 
         public GameObject[] Hand;
         public List<Card> Deck;
+        public List<Card> jobDeck;
         public List<Card> Used;
+        public List<Card> jobUsed;
 
-        public ElderGod player;
+        public Player player;
 
         private GameObject currentArrow;
 
         [SerializeField]
         private TimeManager tm;
 
+        [SerializeField]
+        private GameObject crusader;
+
+        [SerializeField]
+        private GameObject gameOver;
+
+        private int nbCrusader = 0;
+
         // Start is called before the first frame update
         private void Start()
         {
+            player = FindObjectOfType<Player>();
+
             statusHandlerUI = new List<GameObject>();
             Hand = new GameObject[3];
             Deck = new List<Card>();
+            jobDeck = new List<Card>();
             Used = new List<Card>();
-            foreach(Card card in player.deck)
+            jobUsed = new List<Card>();
+
+            foreach (Card card in player.god.deck)
             {
                 Deck.Add(card);
                 Deck.Add(card);
             }
+
+            foreach (Card card in player.chosenJob.deck)
+            {
+                jobDeck.Add(card);
+                jobDeck.Add(card);
+            }
+
             Hand[0] = Instantiate(card, cardContainer);
             int rndIdx = Random.Range(0, Deck.Count);
             Hand[0].GetComponent<CardHandler>().card = Deck[rndIdx];
@@ -130,18 +153,26 @@ namespace Exion.Default
             Deck.RemoveAt(rndIdx);
         }
 
-        private void Mulligan()
+        private void EmptyHand()
         {
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Destroy(Hand[i]);
                 Hand[i] = null;
             }
-            DrawCards();
         }
 
         private void DrawCards()
         {
+            if (Deck.Count < 3)
+            {
+                foreach (Card card in Used)
+                {
+                    Deck.Add(card);
+                }
+                Used.Clear();
+            }
+
             Hand[0] = Instantiate(card, cardContainer);
             int rndIdx = Random.Range(0, Deck.Count);
             Hand[0].GetComponent<CardHandler>().card = Deck[rndIdx];
@@ -159,18 +190,47 @@ namespace Exion.Default
             Hand[2].GetComponent<CardHandler>().card = Deck[Random.Range(0, Deck.Count)];
             Used.Add(Deck[rndIdx]);
             Deck.RemoveAt(rndIdx);
+        }
+
+        private void DrawJobHand()
+        {
+            if(jobDeck.Count < 3)
+            {
+                foreach(Card card in jobUsed)
+                {
+                    jobDeck.Add(card);
+                }
+                jobUsed.Clear();
+            }
+            Hand[0] = Instantiate(card, cardContainer);
+            int rndIdx = Random.Range(0, jobDeck.Count);
+            Hand[0].GetComponent<CardHandler>().card = jobDeck[rndIdx];
+            jobUsed.Add(jobDeck[rndIdx]);
+            jobDeck.RemoveAt(rndIdx);
+
+            rndIdx = Random.Range(0, jobDeck.Count);
+            Hand[1] = Instantiate(card, cardContainer);
+            Hand[1].GetComponent<CardHandler>().card = jobDeck[Random.Range(0, jobDeck.Count)];
+            jobUsed.Add(jobDeck[rndIdx]);
+            jobDeck.RemoveAt(rndIdx);
+
+            rndIdx = Random.Range(0, jobDeck.Count);
+            Hand[2] = Instantiate(card, cardContainer);
+            Hand[2].GetComponent<CardHandler>().card = jobDeck[Random.Range(0, jobDeck.Count)];
+            jobUsed.Add(jobDeck[rndIdx]);
+            jobDeck.RemoveAt(rndIdx);
         }
 
         // Update is called once per frame
         private void Update()
         {
-            if(Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1))
             {
                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                 infoBuilding.SetActive(false);
                 infoCharacter.SetActive(false);
                 selectedCard = null;
-                if(currentArrow) Destroy(currentArrow);
+                if (currentArrow) Destroy(currentArrow);
             }
             if (selectedCard) ApplyCard();
             else UIDrawer();
@@ -180,10 +240,36 @@ namespace Exion.Default
         {
             susBar.fillAmount = suspicion / 100;
             susText.text = suspicion.ToString("0.00") + "%";
+            if (tm.Time == "End Free")
+            {
+                EmptyHand();
+                DrawJobHand();
+            }
             if (tm.Time == "End Night")
             {
+                EmptyHand();
                 suspicion = Mathf.Clamp(suspicion - 0.05f, 0f, 100f);
-                Mulligan();
+                DrawCards();
+            }
+            if (suspicion >= 25 && nbCrusader <= 0)
+            {
+                Instantiate(crusader);
+                nbCrusader = 1;
+            }
+            if (suspicion >= 50 && nbCrusader <= 1)
+            {
+                Instantiate(crusader);
+                nbCrusader = 2;
+            }
+            if (suspicion >= 75 && nbCrusader <= 2)
+            {
+                Instantiate(crusader);
+                nbCrusader = 3;
+            }
+            if (player.firstContact == null)
+            {
+                tm.pause = true;
+                gameOver.SetActive(true);
             }
         }
 
@@ -212,6 +298,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Smash Mental Barrier":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -226,7 +313,8 @@ namespace Exion.Default
                                 Destroy(selectedCard);
                                 selectedCard = null;
                             }
-                        } else if(hit2D)
+                        }
+                        else if (hit2D)
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
@@ -241,6 +329,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Force Will":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -275,6 +364,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Press Will":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -309,6 +399,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Wrathful Cry":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -341,6 +432,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Painful Cry":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -375,6 +467,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Urge":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -409,6 +502,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Take Over":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -439,6 +533,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     default:
                         print("Not Implemented yet.");
                         break;
@@ -465,7 +560,7 @@ namespace Exion.Default
                         currentArrow = Instantiate(arrow, selectedCard.transform);
                         currentArrow.transform.localPosition = selectedCard.transform.position;
                     }
-                    else if(hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                    else if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                     {
                         infoCharacter.SetActive(true);
                         foreach (Transform t in acquaintances.GetComponentInChildren<Transform>()) Destroy(t.gameObject);
@@ -476,7 +571,7 @@ namespace Exion.Default
                         infoCharacterJob.text = CH.Job.name;
                         infoCharacterProfile.sprite = CH.Profile;
                         if (CH.corrupted) infoCharacterProfile.color = new Color(139, 0, 139);
-                        else infoCharacterProfile.color = new Color();
+                        else infoCharacterProfile.color = new Color(1, 1, 1);
 
                         if (CH.Barrier > 0)
                         {
@@ -496,7 +591,11 @@ namespace Exion.Default
                         foreach (Character friend in CH.Friends)
                         {
                             GameObject obj = Instantiate(characterContainer, acquaintances.transform);
-                            obj.GetComponent<CharacterHandlerUI>().character = friend;
+                            CharacterHandlerUI CHUI = obj.GetComponent<CharacterHandlerUI>();
+                            CHUI.character = friend;
+
+                            if (CHUI.character.corrupted) CHUI.img.color = new Color(139, 0, 139);
+                            else CHUI.img.color = new Color(1, 1, 1);
                         }
 
                         foreach (GameObject obj in statusHandlerUI) Destroy(obj);
@@ -522,7 +621,7 @@ namespace Exion.Default
                         infoCharacterJob.text = CH.Job.name;
                         infoCharacterProfile.sprite = CH.Profile;
                         if (CH.corrupted) infoCharacterProfile.color = new Color(139, 0, 139);
-                        else infoCharacterProfile.color = new Color();
+                        else infoCharacterProfile.color = new Color(1, 1, 1);
 
                         if (CH.Barrier > 0)
                         {
@@ -542,7 +641,11 @@ namespace Exion.Default
                         foreach (Character friend in CH.Friends)
                         {
                             GameObject obj = Instantiate(characterContainer, acquaintances.transform);
-                            obj.GetComponent<CharacterHandlerUI>().character = friend;
+                            CharacterHandlerUI CHUI = obj.GetComponent<CharacterHandlerUI>();
+                            CHUI.character = friend;
+
+                            if (CHUI.character.corrupted) CHUI.img.color = new Color(139, 0, 139);
+                            else CHUI.img.color = new Color(1, 1, 1);
                         }
 
                         foreach (GameObject obj in statusHandlerUI) Destroy(obj);
@@ -571,8 +674,8 @@ namespace Exion.Default
                                 CharacterHandlerUI CHUI = obj.GetComponent<CharacterHandlerUI>();
                                 CHUI.character = c;
 
-                                if (CHUI.character.corrupted) obj.GetComponent<Image>().color = new Color(139, 0, 139);
-                                else CHUI.img.color = new Color(1,1,1);
+                                if (CHUI.character.corrupted) CHUI.img.color = new Color(139, 0, 139);
+                                else CHUI.img.color = new Color(1, 1, 1);
                             }
                         }
                         if (BH.Type.hasWorker)
@@ -583,20 +686,19 @@ namespace Exion.Default
                                 CharacterHandlerUI CHUI = obj.GetComponent<CharacterHandlerUI>();
                                 CHUI.character = c;
 
-                                if (CHUI.character.corrupted) obj.GetComponent<Image>().color = new Color(139, 0, 139);
-                                else obj.GetComponent<Image>().color = new Color();
+                                if (CHUI.character.corrupted) CHUI.img.color = new Color(139, 0, 139);
+                                else CHUI.img.color = new Color(1, 1, 1);
                             }
                         }
                         foreach (GameObject obj in statusHandlerUI) Destroy(obj);
                         statusHandlerUI = new List<GameObject>();
                         foreach (StatusHandler s in BH.Statuses)
                         {
-                            GameObject obj = Instantiate(status, buildingStatus.transform); 
+                            GameObject obj = Instantiate(status, buildingStatus.transform);
                             statusHandlerUI.Add(obj);
                             obj.GetComponent<StatusHandlerUI>().status = s;
                         }
                     }
-                    
                 }
                 else
                 {
@@ -604,6 +706,11 @@ namespace Exion.Default
                     infoCharacter.SetActive(false);
                 }
             }
+        }
+
+        public void ReturnMenu()
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
