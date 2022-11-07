@@ -39,11 +39,7 @@ namespace Exion.Handler
                     break;
 
                 case "Free Time":
-                    sun.color = Color.Lerp(sun.color, Color.red, 0.9f);
-                    break;
-
-                case "End Free":
-                    sun.color = Color.Lerp(sun.color, Color.magenta, 0.9f);
+                    sun.color = Color.Lerp(sun.color, Color.red, 0.1f);
                     break;
 
                 case "Night":

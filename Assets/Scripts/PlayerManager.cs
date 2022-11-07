@@ -110,9 +110,13 @@ namespace Exion.Default
 
         private int nbCrusader = 0;
 
+        public Material[] skyboxes;
+
         // Start is called before the first frame update
         private void Start()
         {
+            RenderSettings.skybox = skyboxes[Random.Range(0, 3)];
+
             player = FindObjectOfType<Player>();
 
             statusHandlerUI = new List<GameObject>();

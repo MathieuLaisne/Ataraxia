@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cf4dd3dc84bb30a4dba8f628e8797992, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.15560293, g: 0.15266052, b: 0.16309571, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 5301371}
   - component: {fileID: 5301370}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,6 +196,11 @@ MonoBehaviour:
   tm: {fileID: 1752840454}
   crusader: {fileID: 8829960740854501258, guid: ae5cf8637b014a04d8d0857d81e09475, type: 3}
   gameOver: {fileID: 861404079}
+  skyboxes:
+  - {fileID: 2100000, guid: 504426ff0d0ff7642a9fc80fb84c149e, type: 2}
+  - {fileID: 2100000, guid: cf4dd3dc84bb30a4dba8f628e8797992, type: 2}
+  - {fileID: 2100000, guid: a0b851f54a1d7a149a22855edff93991, type: 2}
+  - {fileID: 2100000, guid: 726df9a1eddb4e344956db88e1acd62c, type: 2}
 --- !u!4 &5301371
 Transform:
   m_ObjectHideFlags: 0
@@ -945,7 +950,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2

@@ -73,9 +73,10 @@
     <Compile Include="Assets\Scripts\BezierArrow.cs" />
     <Compile Include="Assets\Scripts\CharacterHandlerUI.cs" />
     <Compile Include="Assets\Scripts\Status.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\CharacterHandler.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\MenuManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
