@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Force Will
   description: Target loses all Mental Strength and gain 3 times its max Mental Strength
     as Insanity.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 65791112fd9d95348aa2df52ecc9f6b6, type: 3}

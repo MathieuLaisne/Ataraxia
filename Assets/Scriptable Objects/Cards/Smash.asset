@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Smash Mental Barrier
   description: Removes all mental barriers. Have a 50% chance of generating x suspicion
     per friends.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: b490c0c14d1e4fb4bbb3ed832fbc690a, type: 3}

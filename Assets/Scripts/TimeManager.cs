@@ -14,6 +14,16 @@ namespace Exion.Handler
         public Sprite pauseSprite;
         public Sprite playSprite;
 
+        [SerializeField]
+        private Color[] lightTime;
+
+        private enum LightColour
+        {
+            Night = 0,
+            Day = 1,
+            Noon = 2
+        }
+
         public string Time
         {
             get { return m_time; }
@@ -28,26 +38,26 @@ namespace Exion.Handler
         private void Update()
         {
             if (Input.GetButtonDown("Jump")) pause = !pause;
-            switch (m_time)
+            if (!pause)
             {
-                case "Morning":
-                    sun.color = Color.Lerp(sun.color, Color.white, 0.1f);
-                    break;
+                switch (m_time)
+                {
+                    case "Morning":
+                    case "Work":
+                        sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Day], 0.00005f);
+                        break;
 
-                case "Work":
-                    sun.color = Color.Lerp(sun.color, Color.yellow, 0.1f);
-                    break;
+                    case "Free Time":
+                        sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Noon], 0.000005f);
+                        break;
 
-                case "Free Time":
-                    sun.color = Color.Lerp(sun.color, Color.red, 0.1f);
-                    break;
+                    case "Night":
+                        sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Night], 0.00005f);
+                        break;
 
-                case "Night":
-                    sun.color = Color.Lerp(sun.color, Color.blue, 0.1f);
-                    break;
-
-                default:
-                    break;
+                    default:
+                        break;
+                }
             }
         }
 
