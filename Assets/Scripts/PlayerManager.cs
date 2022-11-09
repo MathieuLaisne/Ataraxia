@@ -236,7 +236,8 @@ namespace Exion.Default
                 selectedCard = null;
                 if (currentArrow) Destroy(currentArrow);
             }
-            if (selectedCard) ApplyCard();
+            if (selectedCard && tm.Time != "Night") ApplyGodCard();
+            else if(selectedCard) ApplyJobCard();
             else UIDrawer();
         }
 
@@ -277,7 +278,32 @@ namespace Exion.Default
             }
         }
 
-        private void ApplyCard()
+        private void ApplyJobCard()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                switch (selectedCard.GetComponent<CardHandler>().card.name)
+                {
+                    case "Hide Evidence":
+                        suspicion -= 5;
+                        break;
+                    case "Create Drug":
+                        jobDeck.Add(RandomDrugCard());
+                        break;
+                    default:
+                        break;
+                }
+                EmptyHand();
+            }
+        }
+
+        private Card RandomDrugCard()
+        {
+            Card RndCard;
+            return RndCard
+        }
+
+        private void ApplyGodCard()
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
