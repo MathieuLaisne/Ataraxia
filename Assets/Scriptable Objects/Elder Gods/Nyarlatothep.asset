@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: Nyarlatothep
   m_EditorClassIdentifier: 
   name: Nyarlatothep
-  deck: []
+  deck:
+  - {fileID: 11400000, guid: 01440015b67ecec44bad50676ad3f9b6, type: 2}
+  - {fileID: 11400000, guid: 90d54b52cd1d057479b7b26f004f0e7e, type: 2}
+  - {fileID: 11400000, guid: 832e7d6bee58064408c6be03034097f3, type: 2}
+  - {fileID: 11400000, guid: 071f7f08ce9856142a67235f71e0c846, type: 2}
+  - {fileID: 11400000, guid: 18712df9ec4108b4598ef64160ffd31b, type: 2}
+  - {fileID: 11400000, guid: 079616bcab6aba840a49a820d52eec60, type: 2}
+  - {fileID: 11400000, guid: 834f7cc7604fb7b4ba7e391f0895f143, type: 2}

@@ -43,16 +43,23 @@ namespace Exion.Handler
                 switch (m_time)
                 {
                     case "Morning":
-                    case "Work":
+                        sun.intensity += 0.00000001f;
                         sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Day], 0.00005f);
                         break;
 
+                    case "Work":
+                        sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Day], 0.00005f);
+                        sun.intensity = Mathf.Clamp(sun.intensity + 0.00005f, 0.5f, 1);
+                        break;
+
                     case "Free Time":
-                        sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Noon], 0.000005f);
+                        sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Noon], 0.000005f); 
+                        sun.intensity = Mathf.Clamp(sun.intensity - 0.00005f, 0.5f, 1);
                         break;
 
                     case "Night":
                         sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Night], 0.00005f);
+                        sun.intensity = Mathf.Clamp(sun.intensity - 0.00005f, 0.5f, 1);
                         break;
 
                     default:

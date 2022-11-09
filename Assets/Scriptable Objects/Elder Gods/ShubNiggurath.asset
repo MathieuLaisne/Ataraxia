@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: ShubNiggurath
   m_EditorClassIdentifier: 
   name: Shub-Niggurath
-  deck: []
+  deck:
+  - {fileID: 11400000, guid: 193c85246311d004b91d2ab9c3d29342, type: 2}
+  - {fileID: 11400000, guid: a5a8a739a63017040910c8bda2f01adc, type: 2}
+  - {fileID: 11400000, guid: 10b69cb507cb90b4994b7c2a21708cb6, type: 2}
+  - {fileID: 11400000, guid: 4607df7c1e434a8468434de08471e9fb, type: 2}
+  - {fileID: 11400000, guid: eea2c3d9490540b45b1a7201e31840fb, type: 2}
+  - {fileID: 11400000, guid: 0be817eea2055844fa56da2cecdeef5e, type: 2}
+  - {fileID: 11400000, guid: 6f73fbc49075aa9459a99c0b8415361c, type: 2}

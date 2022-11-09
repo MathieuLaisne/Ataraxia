@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Nurse
   deck:
-  - {fileID: 11400000, guid: be97791d1fafb3148851bcd8bf4b090b, type: 2}
-  - {fileID: 11400000, guid: 0e952f2ff816a7641bf694c18c1ee4d3, type: 2}
-  - {fileID: 11400000, guid: c9610b30f82dfda4fbaf2d4a0b39af30, type: 2}
-  - {fileID: 11400000, guid: c4a5e7fee5856744eadf7dcf997f4794, type: 2}
-  sprite: {fileID: 21300000, guid: 3030780dd16d2704ab76390b6bd25f2e, type: 3}
+  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
+  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
+  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
+  - {fileID: 11400000, guid: 63c215fdc5dce8542b3ca37eb5a91d23, type: 2}
+  - {fileID: 11400000, guid: 79ee35931bf39b14c828603ef43fa82f, type: 2}
+  - {fileID: 11400000, guid: 5db336c255f16d641801806712ab7ecc, type: 2}
+  - {fileID: 11400000, guid: 540f5d4acbe2e1d4f95e0afe7fd1bb87, type: 2}

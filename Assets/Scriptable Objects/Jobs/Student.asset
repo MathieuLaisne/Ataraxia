@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Student
   deck:
-  - {fileID: 11400000, guid: 3442126384f13dc4199a58a4ae061164, type: 2}
-  - {fileID: 11400000, guid: eff4079af45f8644ea2db66bfab5f310, type: 2}
-  - {fileID: 11400000, guid: c4a5e7fee5856744eadf7dcf997f4794, type: 2}
-  sprite: {fileID: 21300000, guid: 165051c21891037409e392448c1297d0, type: 3}
+  - {fileID: 11400000, guid: aa6622a5348618441a4bcc662f0ef481, type: 2}
+  - {fileID: 11400000, guid: 91012d8d84a0ff94fa10b1136239204a, type: 2}
+  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
+  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
+  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
+  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
