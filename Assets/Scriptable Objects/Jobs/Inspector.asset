@@ -15,6 +15,10 @@ MonoBehaviour:
   name: Inspector
   deck:
   - {fileID: 11400000, guid: 4c61786070a0fe8439ebb311e0b39e1c, type: 2}
+  - {fileID: 11400000, guid: 4c61786070a0fe8439ebb311e0b39e1c, type: 2}
+  - {fileID: 11400000, guid: 4c61786070a0fe8439ebb311e0b39e1c, type: 2}
+  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
+  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
   - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
   - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
   - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}

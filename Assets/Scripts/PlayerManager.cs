@@ -110,7 +110,12 @@ namespace Exion.Default
 
         private int nbCrusader = 0;
 
+        [SerializeField]
+        private Card[] Drugs;
+
         public Material[] skyboxes;
+
+        public int bombCounter = 1;
 
         // Start is called before the first frame update
         private void Start()
@@ -134,7 +139,6 @@ namespace Exion.Default
 
             foreach (Card card in player.chosenJob.deck)
             {
-                jobDeck.Add(card);
                 jobDeck.Add(card);
             }
 
@@ -280,6 +284,9 @@ namespace Exion.Default
 
         private void ApplyJobCard()
         {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit2D = Physics2D.Raycast(Input.mousePosition, new Vector2(0, 0));
             if (Input.GetMouseButtonDown(0))
             {
                 switch (selectedCard.GetComponent<CardHandler>().card.name)
@@ -287,8 +294,144 @@ namespace Exion.Default
                     case "Hide Evidence":
                         suspicion -= 5;
                         break;
+
                     case "Create Drug":
                         jobDeck.Add(RandomDrugCard());
+                        break;
+                    case "Mental Drug":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.DealMentalDamage(5);
+                                suspicion -= 2;
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.DealMentalDamage(5);
+                                suspicion -= 2;
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Weakening Drug":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.DealHealthDamage(10);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.DealHealthDamage(10);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Stimulant":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.Heal(10);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.Heal(10);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+
+                    case "Plan Rave":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<BuildingHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Building BH = objectHit.GetComponent<BuildingHandler>().building;
+
+                                if(BH.Name == "Abandoned Building")
+                                {
+                                    BH.ApplyStatus(AllStatus.Find(s => s.name == "Rave"), 1);
+
+                                    selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                    Destroy(selectedCard);
+                                    selectedCard = null;
+                                }
+                                else
+                                {
+                                    print("Invalid building");
+                                }
+                            }
+                        }
+                        break;
+                    case "Trap Building":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<BuildingHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Building BH = objectHit.GetComponent<BuildingHandler>().building;
+
+                                BH.ApplyStatus(AllStatus.Find(s => s.name == "Trapped"), bombCounter);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Bomb":
+                        bombCounter++;
                         break;
                     default:
                         break;
@@ -300,7 +443,8 @@ namespace Exion.Default
         private Card RandomDrugCard()
         {
             Card RndCard;
-            return RndCard
+            RndCard = Drugs[Random.Range(0, Drugs.Length)];
+            return RndCard;
         }
 
         private void ApplyGodCard()
@@ -370,7 +514,7 @@ namespace Exion.Default
 
                                 suspicion += CH.MakeInsane(CH.Mental * 3);
                                 if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
-                                CH.DealMentalDamage(CH.Mental);
+                                CH.DealDirectMentalDamage(CH.Mental);
 
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
@@ -386,7 +530,7 @@ namespace Exion.Default
 
                                 suspicion += CH.MakeInsane(CH.Mental * 3);
                                 if (CH.Insanity == 100) CH.ApplyStatus(AllStatus.Find(s => s.name == "Confusion"), 1);
-                                CH.DealMentalDamage(CH.Mental);
+                                CH.DealDirectMentalDamage(CH.Mental);
 
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);

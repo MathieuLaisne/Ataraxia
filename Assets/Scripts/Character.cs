@@ -145,6 +145,12 @@ namespace Exion.Default
             if (m_mp <= 0) corrupted = true;
         }
 
+        public void DealDirectMentalDamage(int damage)
+        {
+            m_mp = Mathf.Clamp(m_mp - damage, 0, m_maxMP);
+            if (m_mp == 0) corrupted = true;
+        }
+
         public bool DealHealthDamage(int damage)
         {
             m_hp -= damage;
@@ -178,6 +184,11 @@ namespace Exion.Default
                 if (status.status.name == statusName) return true;
             }
             return false;
+        }
+
+        public void Heal(int amount)
+        {
+            m_hp = Mathf.Clamp(m_hp + amount, 0, m_maxHP);
         }
     }
 }

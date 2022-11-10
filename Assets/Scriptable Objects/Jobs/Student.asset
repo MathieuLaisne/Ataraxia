@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Student
   deck:
   - {fileID: 11400000, guid: aa6622a5348618441a4bcc662f0ef481, type: 2}
+  - {fileID: 11400000, guid: aa6622a5348618441a4bcc662f0ef481, type: 2}
+  - {fileID: 11400000, guid: aa6622a5348618441a4bcc662f0ef481, type: 2}
+  - {fileID: 11400000, guid: 91012d8d84a0ff94fa10b1136239204a, type: 2}
   - {fileID: 11400000, guid: 91012d8d84a0ff94fa10b1136239204a, type: 2}
   - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
   - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}

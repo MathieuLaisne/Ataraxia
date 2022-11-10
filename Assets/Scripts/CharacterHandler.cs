@@ -88,6 +88,12 @@ namespace Exion.Handler
             else material.color = new Color();
             if (timeManager.Time == "End Work") todayFree = allParks[Random.Range(0, allParks.Count)];
             if (timeManager.Time == "End Night" && character.HasStatus("Taking Over")) character.DealMentalDamage(2);
+            if (timeManager.Time == "Night" && character.Job.name == "Student") GoToRave();
+        }
+
+        private void GoToRave()
+        {
+
         }
 
         private void Roaming()

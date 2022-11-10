@@ -107,5 +107,11 @@ namespace Exion.Default
             }
             return false;
         }
+
+        public bool HasStatus(string name)
+        {
+            if (m_status.Find(n => n.status.name == name) != null) return true;
+            return false;
+        }
     }
 }

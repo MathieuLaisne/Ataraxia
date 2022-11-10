@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Bomb
   m_EditorClassIdentifier: 
   name: Bomb
-  description: Adds a bomb to a building, dealing 10 Health Damage on surrounding
-    people at the start of work time.
+  description: Adds 1 to your bomb counter.
   image: {fileID: 0}

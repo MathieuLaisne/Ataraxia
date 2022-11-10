@@ -168,11 +168,16 @@ MonoBehaviour:
   AllStatus:
   - {fileID: 11400000, guid: d91098128d016174c83be12f00904438, type: 2}
   - {fileID: 11400000, guid: 0fb6afbb448d01541a31c86d8d9176ca, type: 2}
+  - {fileID: 11400000, guid: 6b560b485f906474c8b340fb760e50c3, type: 2}
+  - {fileID: 11400000, guid: fefb8f9a049b1d141a7499d9cb6a2b0b, type: 2}
   - {fileID: 11400000, guid: b11317edbe9fbc246a186cae369ed70a, type: 2}
   - {fileID: 11400000, guid: 6869e95d5104f454e89806970932760d, type: 2}
+  - {fileID: 11400000, guid: 7fea5f64db234ce41bfe72abb4405725, type: 2}
+  - {fileID: 11400000, guid: d4a9a502f476a8e48a3a02fc917f8a43, type: 2}
   - {fileID: 11400000, guid: 60de277426b810140b027781d1fc86fa, type: 2}
   - {fileID: 11400000, guid: 3e4464af661c3644194421dbb4626543, type: 2}
   - {fileID: 11400000, guid: e263b2a60de749b40aaa8b08f367afbc, type: 2}
+  - {fileID: 11400000, guid: d252157f04d1a8d47abb5e19e38e6ef9, type: 2}
   armor: {fileID: 759344633}
   hp: {fileID: 169062925}
   mp: {fileID: 1507630313}
@@ -196,6 +201,7 @@ MonoBehaviour:
   tm: {fileID: 1752840454}
   crusader: {fileID: 8829960740854501258, guid: ae5cf8637b014a04d8d0857d81e09475, type: 3}
   gameOver: {fileID: 861404079}
+  Drugs: []
   skyboxes:
   - {fileID: 2100000, guid: 504426ff0d0ff7642a9fc80fb84c149e, type: 2}
   - {fileID: 2100000, guid: cf4dd3dc84bb30a4dba8f628e8797992, type: 2}
