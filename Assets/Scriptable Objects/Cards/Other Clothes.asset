@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Clothes
   description: Change clothes.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 9c0dbb0511168e6489732db38e46e56d, type: 3}

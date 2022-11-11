@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Create Drug
   description: Create a Random Drug in your deck.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: d9aa3b4daef951040842044c5f528014, type: 3}

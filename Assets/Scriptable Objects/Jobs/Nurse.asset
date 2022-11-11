@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Nurse
   deck:
-  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
-  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
-  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
-  - {fileID: 11400000, guid: 63c215fdc5dce8542b3ca37eb5a91d23, type: 2}
-  - {fileID: 11400000, guid: 79ee35931bf39b14c828603ef43fa82f, type: 2}
-  - {fileID: 11400000, guid: 5db336c255f16d641801806712ab7ecc, type: 2}
-  - {fileID: 11400000, guid: 540f5d4acbe2e1d4f95e0afe7fd1bb87, type: 2}
-  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
-  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
+  - {fileID: 11400000, guid: 1f759d34685068745b6468a1f991cfd1, type: 2}
+  - {fileID: 11400000, guid: 41882057ca9db0d40a50dc09ce588ca7, type: 2}
+  - {fileID: 11400000, guid: 03e7027ebc471e7479d68a453efbd14f, type: 2}
+  - {fileID: 11400000, guid: dc27ca5667edc7e4d874a05c0af53878, type: 2}
+  - {fileID: 11400000, guid: 8052215fd4bd7d4449f52be4e39d4a83, type: 2}
+  - {fileID: 11400000, guid: 61bbb66ca113d5740b85da0196338da9, type: 2}
+  - {fileID: 11400000, guid: 61bbb66ca113d5740b85da0196338da9, type: 2}
+  - {fileID: 11400000, guid: 61bbb66ca113d5740b85da0196338da9, type: 2}
+  - {fileID: 11400000, guid: 8052215fd4bd7d4449f52be4e39d4a83, type: 2}

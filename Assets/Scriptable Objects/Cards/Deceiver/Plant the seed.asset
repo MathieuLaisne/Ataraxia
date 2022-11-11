@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Plant The Seed
   description: Apply "Seeded" to target.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 5db38274d2c7e6643af121ee7625f6d5, type: 3}

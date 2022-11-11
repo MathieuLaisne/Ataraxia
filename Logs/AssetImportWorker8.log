@@ -1,0 +1,241 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'en' Physical Memory: 16332 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker8
+-projectPath
+C:/Users/Neox/CosmicHorrorJam
+-logFile
+Logs/AssetImportWorker8.log
+-srvPort
+63233
+Successfully changed project path to: C:/Users/Neox/CosmicHorrorJam
+C:/Users/Neox/CosmicHorrorJam
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 137.29 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Neox/CosmicHorrorJam/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   NVIDIA
+    VRAM:     8088 MB
+    Driver:   31.0.15.1694
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56428
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.012590 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 137.68 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.919 seconds
+Domain Reload Profiling:
+	ReloadAssembly (920ms)
+		BeginReloadAssembly (104ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (654ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (134ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (406ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (138ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (193ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.013829 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Neox\CosmicHorrorJam\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Neox\CosmicHorrorJam\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 138.02 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.748 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1749ms)
+		BeginReloadAssembly (165ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (1407ms)
+			LoadAssemblies (125ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (356ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (77ms)
+			SetupLoadedEditorAssemblies (783ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (138ms)
+				BeforeProcessingInitializeOnLoad (150ms)
+				ProcessInitializeOnLoadAttributes (410ms)
+				ProcessInitializeOnLoadMethodAttributes (59ms)
+				AfterProcessingInitializeOnLoad (19ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.05 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4468 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (229.1 KB). Loaded Objects now: 4920.
+Memory consumption went from 168.3 MB to 168.1 MB.
+Total: 5.606800 ms (FindLiveObjects: 0.492100 ms CreateObjectMapping: 0.138400 ms MarkObjects: 4.754000 ms  DeleteObjects: 0.220300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 25781.253021 seconds.
+  path: Assets/Scriptable Objects/Cards/Job/Student/Create Party.asset
+  artifactKey: Guid(e6377a176274b0842941987908a7a958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Cards/Job/Student/Create Party.asset using Guid(e6377a176274b0842941987908a7a958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c50ef0bd782db069c694daf2f87d288c') in 0.052840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Scriptable Objects/Cards/Job/Nurse/Mental Drug.asset
+  artifactKey: Guid(41882057ca9db0d40a50dc09ce588ca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Cards/Job/Nurse/Mental Drug.asset using Guid(41882057ca9db0d40a50dc09ce588ca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5f63d33f1eebf61d8fea9df9856df96') in 0.008302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Scriptable Objects/Cards/Job/Inspector/Hide Evidence.asset
+  artifactKey: Guid(2aca45523507f244eb891756ba5aa0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Cards/Job/Inspector/Hide Evidence.asset using Guid(2aca45523507f244eb891756ba5aa0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '711ea7049e0ec894a7c35fb886707d75') in 0.009309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Scriptable Objects/Cards/Ruthless/Urge.asset
+  artifactKey: Guid(898f3b5404ebc9a469a17d661840ce10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Cards/Ruthless/Urge.asset using Guid(898f3b5404ebc9a469a17d661840ce10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59939312a509711a7c841e60c16ee80c') in 0.008764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scriptable Objects/Cards/Job/Student/Party.asset
+  artifactKey: Guid(5cdb755f36ce99047b34ecc04ea3dfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Cards/Job/Student/Party.asset using Guid(5cdb755f36ce99047b34ecc04ea3dfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3ba23f045818d6120ea0d937378a5a0') in 0.009652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Scriptable Objects/Cards/Taintress/Fleshwarp.asset
+  artifactKey: Guid(80bcb04b1d8c9ae4292f36804008afb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Cards/Taintress/Fleshwarp.asset using Guid(80bcb04b1d8c9ae4292f36804008afb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ec56a747e579b8b74150043aa0ae3db') in 0.004313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Scriptable Objects/Cards/Deceiver/Mental Stab.asset
+  artifactKey: Guid(c175241c955bd264c84d4606bc3f6093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Cards/Deceiver/Mental Stab.asset using Guid(c175241c955bd264c84d4606bc3f6093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61e09daea4a5427c8c30a755cec3be7') in 0.008975 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Scriptable Objects/Cards/Ruthless/Take Over.asset
+  artifactKey: Guid(eef7b769e52fb2b499258494d4985da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Cards/Ruthless/Take Over.asset using Guid(eef7b769e52fb2b499258494d4985da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edbbbc66fc60382a37af5f63cb14f5a4') in 0.007999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1142.470509 seconds.
+  path: Assets/Nebula Skyboxes/Nebula_02_Cubemap.exr
+  artifactKey: Guid(db1cc316f827c9144bdd6c923ca9b3c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nebula Skyboxes/Nebula_02_Cubemap.exr using Guid(db1cc316f827c9144bdd6c923ca9b3c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '945096fe0fe518ec92602d36edf6ec4c') in 2.071242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Nebula Skyboxes/Nebula_04_Cubemap.exr
+  artifactKey: Guid(f2534a0c318d54f4b92555b9e652ad36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nebula Skyboxes/Nebula_04_Cubemap.exr using Guid(f2534a0c318d54f4b92555b9e652ad36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2f15a66199f623fe3ed472bae27a253') in 2.000478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 206.068214 seconds.
+  path: Assets/Scriptable Objects/Elder Gods/Nyarlatothep.asset
+  artifactKey: Guid(a52e60bf358915840b88c7007db709f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Elder Gods/Nyarlatothep.asset using Guid(a52e60bf358915840b88c7007db709f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c531a320a29e53571078e83c192a8ba0') in 0.007854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 85.537448 seconds.
+  path: Assets/Scriptable Objects/Jobs/Nurse.asset
+  artifactKey: Guid(e3eb8338b6549674a9fac2e454860fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Jobs/Nurse.asset using Guid(e3eb8338b6549674a9fac2e454860fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c61380f5234e6989cb3c3428a64382e5') in 0.009066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Scriptable Objects/Jobs/Worker.asset
+  artifactKey: Guid(17b8e6d9187e44a42b7973c1bee4b1a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Jobs/Worker.asset using Guid(17b8e6d9187e44a42b7973c1bee4b1a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c39ee6184524df1c61d61568cd233e4') in 0.009088 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

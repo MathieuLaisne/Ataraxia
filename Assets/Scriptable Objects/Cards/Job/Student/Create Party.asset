@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Plan Rave
   description: Selected Abandoned Building gets "Rave" status.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 5d459053809eeeb4bab35afcf417d3b8, type: 3}

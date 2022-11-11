@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Hidden Fleshwarp
   description: Target gets randomly 5% more or less Max HP. Apply status "Unremarkable
     Fleshwarp" Status.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 517bbe53f68a48247805720f526faa09, type: 3}

@@ -183,7 +183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3a71aca736dc38e46b20628694539dc1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 735bc169e95b4444391d693bccffda11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6ba9fc6ad65528a4c8974fe74b24f2ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a95fd94a4085d59499a953057e93caa5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -500,7 +500,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cleverly control the mortals to do your binding.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &247758912
@@ -713,7 +713,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Policeman
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &349237587
@@ -872,9 +872,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1480097183}
+      - m_Target: {fileID: 1480097178}
         m_TargetAssemblyTypeName: Exion.Handler.MenuManager, Assembly-CSharp
-        m_MethodName: SelectFirstContact
+        m_MethodName: 
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 85cf73b8c9414014292132f3fc6c7cd2, type: 2}
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ca464ba8ea1b284fa6cc697387c5764, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4735ea01293242d448dd030cb66b0100, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b60df75453a1fc14fbf3165b201f0614, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 006d4239ad36b82458c61efa4162b57e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1184,7 +1184,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Smash Those pesky mortals' psyche and show them who's boss.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &667273318
@@ -1319,8 +1319,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
-  m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
+  m_sharedMaterial: {fileID: -6501236630073876636, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6cc9c5bcffbd76409a7239aecf0e693, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76e76081d9bf20e45a920473b4cdea2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1723,7 +1723,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Worker
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1787,7 +1787,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &951086950
@@ -1858,7 +1858,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1073027588
@@ -2156,7 +2156,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nurse
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2220,7 +2220,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1132149040
@@ -2272,7 +2272,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1320195099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6c5f804dfb03cb4d8c8583ad7adb4a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b148c084fc05545869db97ce2a4cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   god: {fileID: 0}
@@ -2394,7 +2394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 213b78aae61f9a1449f1a2bb3e4d8f99, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfbb3f77f6a29d14fa7f24b0cf1cd5f8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2472,7 +2472,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: No one escpaes your touch. Show them what real horror is.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2536,7 +2536,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1473273146
@@ -2660,7 +2660,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480097178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb43ca3f18284bf4a9d92e09fa7e0b39, type: 3}
+  m_Script: {fileID: 11500000, guid: b18f6ff5683c98f43bd83e347358396c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320195101}
@@ -2804,7 +2804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 92d0836b2d6cb4f42b855bc8fee3eae1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca9ad56ef26bab341b1632b9d96fe0c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2994,7 +2994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 94b7e91ff6df4b242be3793090f58bbd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9fe7973fae824604383e124d1279e132, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3178,7 +3178,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Student
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3242,7 +3242,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1850968058
@@ -3491,7 +3491,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6cc9c5bcffbd76409a7239aecf0e693, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76e76081d9bf20e45a920473b4cdea2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3625,7 +3625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3db885b0c74f874f8565c155dba0816, type: 3}
+  m_Sprite: {fileID: 21300000, guid: efe0c155baf8fcb4699af17584d5b4dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3703,8 +3703,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
-  m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
+  m_sharedMaterial: {fileID: -6501236630073876636, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3894,7 +3894,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6cc9c5bcffbd76409a7239aecf0e693, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76e76081d9bf20e45a920473b4cdea2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

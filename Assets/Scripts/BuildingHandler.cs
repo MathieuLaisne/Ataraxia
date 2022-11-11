@@ -17,8 +17,8 @@ namespace Exion.Handler
 
         public void Start()
         {
-            PM = GetComponent<PlayerManager>();
-            timeManager = GetComponent<TimeManager>();
+            PM = FindObjectOfType<PlayerManager>();
+            timeManager = FindObjectOfType<TimeManager>();
         }
 
         public void FixedUpdate()

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Take Over
   description: Apply "Take Over" status
-  image: {fileID: 21300000, guid: 3abebd4200f358941b1d3e06ddc01c1f, type: 3}
+  image: {fileID: 21300000, guid: 1a3a7af5a7ca19743ad4df049f99c5ac, type: 3}

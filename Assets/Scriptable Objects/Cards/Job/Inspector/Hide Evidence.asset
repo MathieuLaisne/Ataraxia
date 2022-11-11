@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Hide Evidence
   description: Reduces Suspicion by 5.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: c94daf4b85b0fd548aa46bb68297ab4b, type: 3}
