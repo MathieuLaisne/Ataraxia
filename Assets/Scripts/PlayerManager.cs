@@ -11,6 +11,9 @@ namespace Exion.Default
     public class PlayerManager : MonoBehaviour
     {
         [SerializeField]
+        private GameObject tutorial;
+
+        [SerializeField]
         private TextMeshProUGUI infoBuildingName;
 
         [SerializeField]
@@ -123,6 +126,32 @@ namespace Exion.Default
             RenderSettings.skybox = skyboxes[Random.Range(0, 3)];
 
             player = FindObjectOfType<Player>();
+
+            if (PlayerPrefs.GetInt("Tutorial") == 1) ShowTutorial();
+
+            switch(player.god.name)
+            {
+                case "Cthulhu":
+                    if (PlayerPrefs.GetInt("Played Ruthless") == 0)
+                    {
+                        ShowGod(player.god);
+                    }
+                    break;
+                case "Nyarlatothep":
+                    if (PlayerPrefs.GetInt("Played Deceiver") == 0)
+                    {
+                        ShowGod(player.god);
+                    }
+                    break;
+                case "Shub-Niggurath":
+                    if (PlayerPrefs.GetInt("Played Taintress") == 0)
+                    {
+                        ShowGod(player.god);
+                    }
+                    break;
+                default:
+                    break;
+            }
 
             statusHandlerUI = new List<GameObject>();
             Hand = new GameObject[3];
@@ -885,6 +914,31 @@ namespace Exion.Default
         public void ReturnMenu()
         {
             SceneManager.LoadScene(0);
+        }
+
+        private void ShowTutorial()
+        {
+            tm.pause = true;
+            tutorial.SetActive(true);
+        }
+
+        private void ShowGod(ElderGod god)
+        {
+            tm.pause = true;
+            switch(god.name)
+            {
+                case "Cthulhu":
+                    PlayerPrefs.SetInt("Played Ruthless", 1);
+                    break;
+                case "Nyarlatothep":
+                    PlayerPrefs.SetInt("Played Deceiver", 1);
+                    break;
+                case "Shub-Niggurath":
+                    PlayerPrefs.SetInt("Played Taintress", 1);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

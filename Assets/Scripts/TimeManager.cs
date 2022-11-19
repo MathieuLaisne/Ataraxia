@@ -12,7 +12,10 @@ namespace Exion.Handler
 
         public Image pauseIndicator;
         public Sprite pauseSprite;
-        public Sprite playSprite;
+        public Sprite morningSprite;
+        public Sprite workSprite;
+        public Sprite leisureSprite;
+        public Sprite nightSprite;
 
         [SerializeField]
         private Color[] lightTime;
@@ -74,10 +77,10 @@ namespace Exion.Handler
             if (!pause)
             {
                 m_timeElapsed++;
-                if (pauseIndicator.sprite == pauseSprite) pauseIndicator.sprite = playSprite;
                 switch (m_time)
                 {
                     case "Morning":
+                        if (pauseIndicator.sprite != morningSprite) pauseIndicator.sprite = morningSprite;
                         sun.color = Color.Lerp(sun.color, Color.white, 0.1f);
                         if (m_timeElapsed == 15)
                         {
@@ -87,6 +90,7 @@ namespace Exion.Handler
                         break;
 
                     case "Work":
+                        if (pauseIndicator.sprite != workSprite) pauseIndicator.sprite = workSprite;
                         sun.color = Color.Lerp(sun.color, Color.yellow, 0.1f);
                         if (m_timeElapsed == 30)
                         {
@@ -105,6 +109,7 @@ namespace Exion.Handler
                         break;
 
                     case "Free Time":
+                        if (pauseIndicator.sprite != leisureSprite) pauseIndicator.sprite = leisureSprite;
                         sun.color = Color.Lerp(sun.color, Color.red, 0.1f);
                         if (m_timeElapsed == 20)
                         {
@@ -123,6 +128,7 @@ namespace Exion.Handler
                         break;
 
                     case "Night":
+                        if (pauseIndicator.sprite != nightSprite) pauseIndicator.sprite = nightSprite;
                         sun.color = Color.Lerp(sun.color, Color.blue, 0.1f);
                         if (m_timeElapsed == 10)
                         {
@@ -142,7 +148,7 @@ namespace Exion.Handler
                     default:
                         break;
                 }
-            } else if (pauseIndicator.sprite == playSprite) pauseIndicator.sprite = pauseSprite;
+            } else if (pauseIndicator.sprite != pauseSprite) pauseIndicator.sprite = pauseSprite;
         }
     }
 }

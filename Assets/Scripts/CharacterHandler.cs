@@ -50,6 +50,8 @@ namespace Exion.Handler
         private int stuckFrames = 0;
 
         public bool isPaused = true;
+
+        [SerializeField]
         private Vector3 todayFree;
 
         [SerializeField]
