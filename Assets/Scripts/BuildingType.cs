@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Exion.ScriptableObjects
+namespace Exion.Ataraxia.ScriptableObjects
 {
-    [CreateAssetMenu(fileName = "BuildingType", menuName = "CosmicHorrorJam/BuildingType")]
+    [CreateAssetMenu(fileName = "BuildingType", menuName = "Ataraxia/BuildingType")]
     public class BuildingType : ScriptableObject
     {
         public string m_name;

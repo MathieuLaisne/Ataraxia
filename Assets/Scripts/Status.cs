@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Exion.ScriptableObjects
+namespace Exion.Ataraxia.ScriptableObjects
 {
-    [CreateAssetMenu(menuName = "CosmicHorrorJam/Status")]
+    [CreateAssetMenu(menuName = "Ataraxia/Status")]
     public class Status : ScriptableObject
     {
         public string name;

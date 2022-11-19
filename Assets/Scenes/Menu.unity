@@ -246,12 +246,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1480097183}
-        m_TargetAssemblyTypeName: Exion.Handler.MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Exion.Ataraxia.Handler.MenuManager, Assembly-CSharp
         m_MethodName: SelectGod
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: b6369c8cc04b2f24eb1bae1910318a1c, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Exion.ScriptableObjects.ElderGod, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Exion.Ataraxia.ScriptableObjects.ElderGod,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -872,13 +873,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1480097178}
-        m_TargetAssemblyTypeName: Exion.Handler.MenuManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1480097183}
+        m_TargetAssemblyTypeName: Exion.Ataraxia.Handler.MenuManager, Assembly-CSharp
+        m_MethodName: SelectFirstContact
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 85cf73b8c9414014292132f3fc6c7cd2, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Exion.ScriptableObjects.Job, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Exion.Ataraxia.ScriptableObjects.Job,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1113,12 +1115,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1480097183}
-        m_TargetAssemblyTypeName: Exion.Handler.MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Exion.Ataraxia.Handler.MenuManager, Assembly-CSharp
         m_MethodName: SelectGod
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: a8b5a09b19843104bb33d7b6d2359d9d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Exion.ScriptableObjects.ElderGod, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Exion.Ataraxia.ScriptableObjects.ElderGod,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2363,12 +2366,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1480097183}
-        m_TargetAssemblyTypeName: Exion.Handler.MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Exion.Ataraxia.Handler.MenuManager, Assembly-CSharp
         m_MethodName: SelectFirstContact
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: ba41fc8043ec68f42b1d1500d78fed10, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Exion.ScriptableObjects.Job, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Exion.Ataraxia.ScriptableObjects.Job,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2867,12 +2871,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1480097183}
-        m_TargetAssemblyTypeName: Exion.Handler.MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Exion.Ataraxia.Handler.MenuManager, Assembly-CSharp
         m_MethodName: SelectGod
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: a52e60bf358915840b88c7007db709f0, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Exion.ScriptableObjects.ElderGod, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Exion.Ataraxia.ScriptableObjects.ElderGod,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2963,12 +2968,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1480097183}
-        m_TargetAssemblyTypeName: Exion.Handler.MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Exion.Ataraxia.Handler.MenuManager, Assembly-CSharp
         m_MethodName: SelectFirstContact
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: e3eb8338b6549674a9fac2e454860fd8, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Exion.ScriptableObjects.Job, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Exion.Ataraxia.ScriptableObjects.Job,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3594,12 +3600,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1480097183}
-        m_TargetAssemblyTypeName: Exion.Handler.MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Exion.Ataraxia.Handler.MenuManager, Assembly-CSharp
         m_MethodName: SelectFirstContact
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 17b8e6d9187e44a42b7973c1bee4b1a4, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Exion.ScriptableObjects.Job, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Exion.Ataraxia.ScriptableObjects.Job,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

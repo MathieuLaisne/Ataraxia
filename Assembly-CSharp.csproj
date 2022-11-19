@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\ListWrapper.cs" />
     <Compile Include="Assets\Scripts\Job.cs" />
     <Compile Include="Assets\Scripts\Building.cs" />
+    <Compile Include="Assets\Scripts\TutorialHandler.cs" />
     <Compile Include="Assets\Scripts\TimeManager.cs" />
     <Compile Include="Assets\Scripts\BezierArrow.cs" />
     <Compile Include="Assets\Scripts\CharacterHandlerUI.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\CharacterHandler.cs" />
-    <Compile Include="Assets\Scripts\TutorialHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

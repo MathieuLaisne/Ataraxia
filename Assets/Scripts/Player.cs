@@ -1,9 +1,8 @@
-using Exion.ScriptableObjects;
+using Exion.Ataraxia.ScriptableObjects;
 using UnityEngine;
 
-namespace Exion.Default
+namespace Exion.Ataraxia.Default
 {
-
     public class Player : MonoBehaviour
     {
         public ElderGod god;
@@ -11,7 +10,7 @@ namespace Exion.Default
         public GameObject firstContact;
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             DontDestroyOnLoad(gameObject);
         }

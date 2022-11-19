@@ -1,9 +1,9 @@
-using Exion.Default;
-using Exion.ScriptableObjects;
+using Exion.Ataraxia.Default;
+using Exion.Ataraxia.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class MenuManager : MonoBehaviour
     {

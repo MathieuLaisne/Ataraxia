@@ -1,12 +1,12 @@
-using Exion.Handler;
-using Exion.ScriptableObjects;
+using Exion.Ataraxia.Handler;
+using Exion.Ataraxia.ScriptableObjects;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Exion.Default
+namespace Exion.Ataraxia.Default
 {
     public class PlayerManager : MonoBehaviour
     {
@@ -129,7 +129,7 @@ namespace Exion.Default
 
             if (PlayerPrefs.GetInt("Tutorial") == 1) ShowTutorial();
 
-            switch(player.god.name)
+            switch (player.god.name)
             {
                 case "Cthulhu":
                     if (PlayerPrefs.GetInt("Played Ruthless") == 0)
@@ -137,18 +137,21 @@ namespace Exion.Default
                         ShowGod(player.god);
                     }
                     break;
+
                 case "Nyarlatothep":
                     if (PlayerPrefs.GetInt("Played Deceiver") == 0)
                     {
                         ShowGod(player.god);
                     }
                     break;
+
                 case "Shub-Niggurath":
                     if (PlayerPrefs.GetInt("Played Taintress") == 0)
                     {
                         ShowGod(player.god);
                     }
                     break;
+
                 default:
                     break;
             }
@@ -231,9 +234,9 @@ namespace Exion.Default
 
         private void DrawJobHand()
         {
-            if(jobDeck.Count < 3)
+            if (jobDeck.Count < 3)
             {
-                foreach(Card card in jobUsed)
+                foreach (Card card in jobUsed)
                 {
                     jobDeck.Add(card);
                 }
@@ -270,7 +273,7 @@ namespace Exion.Default
                 if (currentArrow) Destroy(currentArrow);
             }
             if (selectedCard && tm.Time != "Night") ApplyGodCard();
-            else if(selectedCard) ApplyJobCard();
+            else if (selectedCard) ApplyJobCard();
             else UIDrawer();
         }
 
@@ -327,6 +330,7 @@ namespace Exion.Default
                     case "Create Drug":
                         jobDeck.Add(RandomDrugCard());
                         break;
+
                     case "Mental Drug":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -347,7 +351,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 CH.DealMentalDamage(5);
@@ -359,6 +363,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Weakening Drug":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -378,7 +383,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 CH.DealHealthDamage(10);
@@ -389,6 +394,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Stimulant":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -408,7 +414,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 CH.Heal(10);
@@ -428,7 +434,7 @@ namespace Exion.Default
                                 GameObject objectHit = hit.transform.gameObject;
                                 Building BH = objectHit.GetComponent<BuildingHandler>().building;
 
-                                if(BH.Name == "Abandoned Building")
+                                if (BH.Name == "Abandoned Building")
                                 {
                                     BH.ApplyStatus(AllStatus.Find(s => s.name == "Rave"), 1);
 
@@ -443,6 +449,7 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Trap Building":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -459,9 +466,11 @@ namespace Exion.Default
                             }
                         }
                         break;
+
                     case "Bomb":
                         bombCounter++;
                         break;
+
                     default:
                         break;
                 }
@@ -521,7 +530,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 suspicion += CH.DestroyMentalBarrier();
@@ -554,7 +563,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 suspicion += CH.MakeInsane(CH.Mental * 3);
@@ -589,7 +598,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 CH.DealMentalDamage(5);
@@ -623,7 +632,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 suspicion += CH.MakeInsane(30);
@@ -657,7 +666,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 suspicion += CH.MakeInsane(45);
@@ -692,7 +701,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 suspicion += CH.MakeInsane(30);
@@ -725,7 +734,7 @@ namespace Exion.Default
                         {
                             if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                             {
-                                GameObject objectHit = hit.transform.gameObject;
+                                GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
                                 CH.ApplyStatus(AllStatus.Find(s => s.name == "Taking Over"), 1);
@@ -759,9 +768,8 @@ namespace Exion.Default
                     {
                         selectedCard = hit2D.transform.gameObject;
                         hit2D.transform.gameObject.GetComponent<CardHandler>().Highlight(true);
-                        infoCharacter.SetActive(false);
                         currentArrow = Instantiate(arrow, selectedCard.transform);
-                        currentArrow.transform.localPosition = selectedCard.transform.position;
+                        currentArrow.transform.position = selectedCard.transform.position + new Vector3(0, 100, 0);
                     }
                     else if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
                     {
@@ -925,17 +933,20 @@ namespace Exion.Default
         private void ShowGod(ElderGod god)
         {
             tm.pause = true;
-            switch(god.name)
+            switch (god.name)
             {
                 case "Cthulhu":
                     PlayerPrefs.SetInt("Played Ruthless", 1);
                     break;
+
                 case "Nyarlatothep":
                     PlayerPrefs.SetInt("Played Deceiver", 1);
                     break;
+
                 case "Shub-Niggurath":
                     PlayerPrefs.SetInt("Played Taintress", 1);
                     break;
+
                 default:
                     break;
             }

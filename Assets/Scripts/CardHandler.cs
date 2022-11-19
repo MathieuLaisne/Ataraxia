@@ -1,9 +1,9 @@
-using Exion.ScriptableObjects;
+using Exion.Ataraxia.ScriptableObjects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class CardHandler : MonoBehaviour
     {

@@ -51,5 +51,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ArrowHead: {fileID: 7139832219847840993, guid: 75aea8c3c3de9424f98996e0b18a275b, type: 3}
   ArrowNode: {fileID: 6038537148031252890, guid: f381826bf70a09c42b8fff8469b43687, type: 3}
-  nodeNum: 5
+  nodeNum: 10
   scale: 0.5

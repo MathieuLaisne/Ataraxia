@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Exion.ScriptableObjects
+namespace Exion.Ataraxia.ScriptableObjects
 {
-    [CreateAssetMenu(menuName = "CosmicHorrorJam/Job")]
+    [CreateAssetMenu(menuName = "Ataraxia/Job")]
     public class Job : ScriptableObject
     {
         public string name;

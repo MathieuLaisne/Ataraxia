@@ -1,8 +1,8 @@
-using Exion.Default;
+using Exion.Ataraxia.Default;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class BuildingHandler : MonoBehaviour
     {
@@ -25,7 +25,6 @@ namespace Exion.Handler
         {
             if (timeManager.Time == "End Work" && building.HasStatus("Trapped"))
             {
-
             }
         }
 

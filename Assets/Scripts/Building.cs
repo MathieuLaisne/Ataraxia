@@ -1,9 +1,9 @@
-using Exion.Handler;
-using Exion.ScriptableObjects;
+using Exion.Ataraxia.Handler;
+using Exion.Ataraxia.ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Exion.Default
+namespace Exion.Ataraxia.Default
 {
     public class Building
     {

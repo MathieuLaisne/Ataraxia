@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Exion.ScriptableObjects
+namespace Exion.Ataraxia.ScriptableObjects
 {
-    [CreateAssetMenu(menuName = "CosmicHorrorJam/Card")]
+    [CreateAssetMenu(menuName = "Ataraxia/Card")]
     public class Card : ScriptableObject
     {
         public string name;

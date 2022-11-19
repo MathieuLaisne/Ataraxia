@@ -1,8 +1,8 @@
-using Exion.Default;
+using Exion.Ataraxia.Default;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class CharacterHandlerUI : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Exion.Editor
+namespace Exion.Ataraxia.Editor
 {
     [System.Serializable]
     public class ListWrapper

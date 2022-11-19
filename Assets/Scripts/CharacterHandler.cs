@@ -1,9 +1,9 @@
-using Exion.Default;
+using Exion.Ataraxia.Default;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class CharacterHandler : MonoBehaviour
     {
@@ -68,7 +68,6 @@ namespace Exion.Handler
             if (agent == null) agent = GetComponent<NavMeshAgent>();
             NavMeshHit hit;
             if (NavMesh.SamplePosition(homePos, out hit, 0.6f, NavMesh.AllAreas)) homePos = hit.position;
-            print(homePos + " recalculated:" + hit.position);
             transform.localPosition = homePos;
             agent.speed = Random.Range(0.3f, 0.5f);
             agent.SetDestination(workPos);
@@ -95,14 +94,12 @@ namespace Exion.Handler
 
         private void GoToRave()
         {
-
         }
 
         private void Roaming()
         {
             agent.isStopped = false;
-            if (!agent.hasPath) recalculatePath();
-            else
+            if (!agent.hasPath)
             {
                 switch (timeManager.Time)
                 {

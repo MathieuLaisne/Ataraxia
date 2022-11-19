@@ -1,6 +1,6 @@
-using Exion.ScriptableObjects;
+using Exion.Ataraxia.ScriptableObjects;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class StatusHandler
     {

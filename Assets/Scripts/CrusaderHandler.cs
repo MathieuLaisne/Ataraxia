@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class CrusaderHandler : MonoBehaviour
     {
         private NavMeshAgent agent;
         public TimeManager timeManager;
 
-        void Start()
+        private void Start()
         {
             agent = GetComponent<NavMeshAgent>();
             timeManager = FindObjectOfType<TimeManager>();
@@ -34,7 +32,7 @@ namespace Exion.Handler
 
         public void OnTriggerEnter(Collider other)
         {
-            if(other.gameObject.GetComponent<CharacterHandler>())
+            if (other.gameObject.GetComponent<CharacterHandler>())
             {
                 if (other.gameObject.GetComponent<CharacterHandler>().character.corrupted && Random.Range(0, 100) > 75) Destroy(other.gameObject);
             }

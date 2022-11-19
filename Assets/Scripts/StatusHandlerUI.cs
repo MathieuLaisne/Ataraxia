@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class StatusHandlerUI : MonoBehaviour
     {
@@ -13,5 +13,7 @@ namespace Exion.Handler
             statusName.text = status.status.name;
             if (status.stacks > 1) statusName.text += " x" + status.stacks;
         }
+
+        //TODO tooltip
     }
 }

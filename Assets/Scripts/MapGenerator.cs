@@ -1,11 +1,11 @@
-using Exion.Editor;
-using Exion.Handler;
-using Exion.ScriptableObjects;
+using Exion.Ataraxia.Editor;
+using Exion.Ataraxia.Handler;
+using Exion.Ataraxia.ScriptableObjects;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
 using UnityEngine;
 
-namespace Exion.Default
+namespace Exion.Ataraxia.Default
 {
     public class MapGenerator : MonoBehaviour
     {

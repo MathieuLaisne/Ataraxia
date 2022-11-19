@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class CameraHandler : MonoBehaviour
     {

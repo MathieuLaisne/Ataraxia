@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Exion.Handler
+namespace Exion.Ataraxia.Handler
 {
     public class TimeManager : MonoBehaviour
     {
@@ -56,7 +56,7 @@ namespace Exion.Handler
                         break;
 
                     case "Free Time":
-                        sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Noon], 0.000005f); 
+                        sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Noon], 0.000005f);
                         sun.intensity = Mathf.Clamp(sun.intensity - 0.00005f, 0.5f, 1);
                         break;
 
@@ -148,7 +148,8 @@ namespace Exion.Handler
                     default:
                         break;
                 }
-            } else if (pauseIndicator.sprite != pauseSprite) pauseIndicator.sprite = pauseSprite;
+            }
+            else if (pauseIndicator.sprite != pauseSprite) pauseIndicator.sprite = pauseSprite;
         }
     }
 }
