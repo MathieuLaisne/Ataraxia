@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Strength
   m_EditorClassIdentifier: 
   name: Strength
-  description: Deals X more damage.
+  description: Deals 2 more damage per stack.

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Horryfying
   m_EditorClassIdentifier: 
   name: Horryfying
-  description: Deal 10 Mental Damage to all characters going near it. Generates 0.5
+  description: Deal 7 Mental Damage to all characters going near it. Generates 0.25
     suspicion each times.

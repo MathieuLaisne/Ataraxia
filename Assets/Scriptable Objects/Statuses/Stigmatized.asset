@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stigmatized
   m_EditorClassIdentifier: 
   name: Stigmatized
-  description: Loses 2 Mental Strength every morning. Generates 0.5 suspicion every
+  description: Loses 2 Mental Strength every morning. Generates 0.1 suspicion every
     morning.

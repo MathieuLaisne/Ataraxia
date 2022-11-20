@@ -93,16 +93,17 @@ namespace Exion.Ataraxia.Default
             get { return m_profile; }
         }
 
+        private int str = 1;
         public int Strength
         {
             get
             {
-                int str = 1;
+                int internal_str = str;
                 foreach (StatusHandler SH in m_status)
                 {
-                    if (SH.status.name == "Strength") str += SH.stacks;
+                    if (SH.status.name == "Strength") internal_str += 2 * SH.stacks;
                 }
-                return str;
+                return internal_str;
             }
         }
 
@@ -113,6 +114,7 @@ namespace Exion.Ataraxia.Default
             m_name = name; m_job = job; m_profile = img; m_maxHP = maxHp; m_maxMP = maxMental; m_mentalBarrier = barrier;
             m_hp = maxHP; m_mp = maxMental;
             m_status = new List<StatusHandler>(); m_friends = new List<Character>();
+            str = Random.Range(1, 5);
         }
 
         public void AddFriend(Character newFriend)
@@ -134,21 +136,32 @@ namespace Exion.Ataraxia.Default
             if (toAdd) m_status.Add(new StatusHandler(status, stack));
         }
 
-        public void DealMentalDamage(int damage)
+        public int DealMentalDamage(int damage)
         {
+            int unblocked = 0;
             for (int i = damage; i > 0; i--)
             {
-                if (m_mentalBarrier > 0) m_mentalBarrier--;
+                if (m_mentalBarrier > 0)
+                {
+                    m_mentalBarrier--;
+                    unblocked++;
+                }
                 else m_mp--;
                 if (m_mp == 0) break;
             }
             if (m_mp <= 0) corrupted = true;
+            return unblocked;
         }
 
-        public void DealDirectMentalDamage(int damage)
+        public bool DealDirectMentalDamage(int damage)
         {
             m_mp = Mathf.Clamp(m_mp - damage, 0, m_maxMP);
-            if (m_mp == 0) corrupted = true;
+            if (m_mp == 0)
+            {
+                corrupted = true;
+                return true;
+            }
+            return false;
         }
 
         public bool DealHealthDamage(int damage)
@@ -189,6 +202,13 @@ namespace Exion.Ataraxia.Default
         public void Heal(int amount)
         {
             m_hp = Mathf.Clamp(m_hp + amount, 0, m_maxHP);
+        }
+
+        public void Fleshwarp(int percentage)
+        {
+            int sign = Random.Range(0, 1) * 2 - 1;
+            m_maxHP += sign * percentage * m_maxHP;
+            m_hp += sign * percentage * m_hp;
         }
     }
 }

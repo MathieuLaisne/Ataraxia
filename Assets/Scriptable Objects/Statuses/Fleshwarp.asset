@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ea64e02c0f67e4990057f5165dea1d, type: 3}
   m_Name: Fleshwarp
   m_EditorClassIdentifier: 
-  name: Fleshwarp
-  description: Loses 5 Mental Strength every morning. Acquaintances loses 5 Mental
-    Strength every morning. Generates 1 suspicion every morning per Acquaintances.
+  name: Fleshwarped
+  description: Loses 8 Mental Strength every morning. Acquaintances loses 5 Mental
+    Strength every morning. Generates 0.5 suspicion every morning per Acquaintances.

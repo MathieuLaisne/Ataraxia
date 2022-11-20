@@ -494,6 +494,7 @@ namespace Exion.Ataraxia.Default
             {
                 switch (selectedCard.GetComponent<CardHandler>().card.name)
                 {
+                    #region Taintress Cards
                     case "Eerie Land":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -511,6 +512,160 @@ namespace Exion.Ataraxia.Default
                         }
                         break;
 
+                    case "Destroy Building":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<BuildingHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Building BH = objectHit.GetComponent<BuildingHandler>().building;
+
+                                if (BH.Type.name == "Abandonned Building") print("wrong building");
+                                else
+                                {
+                                    BH.Destroy();
+
+                                    selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                    Destroy(selectedCard);
+                                    selectedCard = null;
+                                }
+
+                            }
+                        }
+                        break;
+
+                    case "Horrifying Land":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<BuildingHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Building BH = objectHit.GetComponent<BuildingHandler>().building;
+
+                                BH.ApplyStatus(AllStatus.Find(s => s.name == "Horrifying"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+
+                    case "Horror's Nest":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<BuildingHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Building BH = objectHit.GetComponent<BuildingHandler>().building;
+
+                                BH.ApplyStatus(AllStatus.Find(s => s.name == "Nest"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+
+                    case "Stigmata":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Stigmatized"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Stigmatized"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Fleshwarp":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.Fleshwarp(10);
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Fleshwarped"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.Fleshwarp(10);
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Fleshwarped"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+
+                    case "Hidden Fleshwarp":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.Fleshwarp(5);
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Unremarkable Fleshwarp"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.Fleshwarp(5);
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Unremarkable Fleshwarp"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    #endregion
+
+                    #region Ruthless Cards
                     case "Smash Mental Barrier":
                         if (Physics.Raycast(ray, out hit))
                         {
@@ -745,7 +900,239 @@ namespace Exion.Ataraxia.Default
                             }
                         }
                         break;
+                    #endregion
 
+                    #region Deceiver Cards
+                    case "Daunting Emotion":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                suspicion += 0.5f * CH.DealMentalDamage(10);
+                                if (Random.Range(0, 100) < 50) CH.ApplyStatus(AllStatus.Find(s => s.name == "Nightmare"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                suspicion += 0.5f * CH.DealMentalDamage(10);
+                                if (Random.Range(0, 100) < 50) CH.ApplyStatus(AllStatus.Find(s => s.name == "Nightmare"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    case "Echoing Idea":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                if (CH.DealMentalDamage(7) == 0) CH.DealMentalDamage(7);
+                                
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                if (CH.DealMentalDamage(7) == 0) CH.DealMentalDamage(7);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+
+                    case "Fake Memory":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.DealDirectMentalDamage(15);
+                                suspicion += 0.5f * CH.Friends.Count;
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.DealDirectMentalDamage(15);
+                                suspicion += 0.5f * CH.Friends.Count;
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+
+                    case "Labyrinthine Mind":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                if (!CH.DealDirectMentalDamage(10))
+                                {
+                                    selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                    Destroy(selectedCard);
+                                }
+
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                if (!CH.DealDirectMentalDamage(10))
+                                {
+                                    selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                    Destroy(selectedCard);
+                                }
+
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+
+                    case "Mental Stab":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                if (CH.DealMentalDamage(7) == 0) CH.DealMentalDamage(7);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                if (CH.DealMentalDamage(10) > 0) CH.MakeInsane(10);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+
+                    case "Plant The Seed":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Seeded"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.ApplyStatus(AllStatus.Find(s => s.name == "Seeded"), 1);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+
+                    case "Whisper":
+                        if (Physics.Raycast(ray, out hit))
+                        {
+                            if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                            {
+                                GameObject objectHit = hit.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                                CH.DealDirectMentalDamage(7);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+
+                                selectedCard = null;
+                            }
+                        }
+                        else if (hit2D)
+                        {
+                            if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                            {
+                                GameObject objectHit = hit2D.transform.gameObject;
+                                Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                                CH.DealDirectMentalDamage(7);
+
+                                selectedCard.GetComponent<CardHandler>().Highlight(false);
+                                Destroy(selectedCard);
+
+                                selectedCard = null;
+                            }
+                        }
+                        break;
+                    #endregion
                     default:
                         print("Not Implemented yet.");
                         break;

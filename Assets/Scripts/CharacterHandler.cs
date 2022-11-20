@@ -88,7 +88,45 @@ namespace Exion.Ataraxia.Handler
             if (character.corrupted) material.color = new Color(139, 0, 139);
             else material.color = new Color();
             if (timeManager.Time == "End Work") todayFree = allParks[Random.Range(0, allParks.Count)];
-            if (timeManager.Time == "End Night" && character.HasStatus("Taking Over")) character.DealMentalDamage(2);
+            if (timeManager.Time == "End Night")
+            {
+                if (character.HasStatus("Taking Over")) character.DealMentalDamage(5);
+                if (character.HasStatus("Unremarkable Fleshwarp"))
+                {
+                    character.DealMentalDamage(5);
+                    foreach (Character friend in character.Friends)
+                    {
+                        friend.DealMentalDamage(2);
+                    }
+                    PM.suspicion += 0.25f * character.Friends.Count;
+                }
+                if (character.HasStatus("Fleshwarped"))
+                {
+                    character.DealMentalDamage(8);
+                    foreach (Character friend in character.Friends)
+                    {
+                        friend.DealMentalDamage(5);
+                    }
+                    PM.suspicion += 0.5f * character.Friends.Count;
+                }
+                if (character.HasStatus("Stigmatized"))
+                {
+                    character.DealMentalDamage(2);
+                    PM.suspicion += 0.1f;
+                }
+            }
+            if (timeManager.Time == "End Free")
+            {
+                if(character.HasStatus("Seeded"))
+                {
+                    character.DealMentalDamage(5);
+                    if(character.corrupted)
+                    {
+                        foreach (Character friend in character.Friends) friend.ApplyStatus(character.Statuses.Find(s => s.status.name == "Seeded").status, 1);
+                        character.Statuses.Remove(character.Statuses.Find(s => s.status.name == "Seeded"));
+                    }
+                }
+            }
             if (timeManager.Time == "Night" && character.Job.name == "Student") GoToRave();
         }
 
@@ -99,43 +137,34 @@ namespace Exion.Ataraxia.Handler
         private void Roaming()
         {
             agent.isStopped = false;
-            if (!agent.hasPath)
+            switch (timeManager.Time)
             {
-                switch (timeManager.Time)
-                {
-                    case "Free Time":
-                        destinationPos = todayFree;
-                        recalculatePath();
-                        break;
+                case "Free Time":
+                    destinationPos = todayFree;
+                    recalculatePath();
+                    break;
 
-                    case "End Free":
-                        destinationPos = homePos;
-                        recalculatePath();
-                        break;
+                case "End Free":
+                    destinationPos = homePos;
+                    recalculatePath();
+                    break;
 
-                    case "Morning":
-                        destinationPos = workPos;
-                        recalculatePath();
-                        if (agent.remainingDistance <= 0.2f)
-                        {
-                            gameObject.SetActive(false);
-                        }
-                        break;
+                case "Morning":
+                    destinationPos = workPos;
+                    recalculatePath();
+                    if (agent.remainingDistance <= 0.2f) gameObject.SetActive(false);
+                    break;
 
-                    default:
-                        if (agent.remainingDistance <= 0.2f)
-                        {
-                            gameObject.SetActive(false);
-                        }
-                        else
-                        {
-                            if (prevPos == transform.position) stuckFrames++;
-                            else stuckFrames = 0;
-                            if (stuckFrames > 60) recalculatePath();
-                            prevPos = transform.position;
-                        }
-                        break;
-                }
+                default:
+                    if (agent.remainingDistance <= 0.2f) gameObject.SetActive(false);
+                    else
+                    {
+                        if (prevPos == transform.position) stuckFrames++;
+                        else stuckFrames = 0;
+                        if (stuckFrames > 60) recalculatePath();
+                        prevPos = transform.position;
+                    }
+                    break;
             }
         }
 
@@ -157,10 +186,14 @@ namespace Exion.Ataraxia.Handler
                     switch (status.status.name)
                     {
                         case "Eerie":
-                            character.DealMentalDamage(status.stacks);
+                            character.DealMentalDamage(3 * status.stacks);
                             PM.suspicion += status.stacks * 0.1f;
                             break;
 
+                        case "Horryfying":
+                            character.DealMentalDamage(7 * status.stacks);
+                            PM.suspicion += status.stacks * 0.25f;
+                            break;
                         default:
                             break;
                     }

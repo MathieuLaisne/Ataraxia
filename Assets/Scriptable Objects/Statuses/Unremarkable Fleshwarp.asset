@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Unremarkable Fleshwarp
   description: Loses 5 Mental Strength every morning. Acquaintances loses 2 Mental
-    Strength every morning. Generates 0.5 suspicion every morning per Acquaintances.
+    Strength every morning. Generates 0.25 suspicion every morning per Acquaintances.
