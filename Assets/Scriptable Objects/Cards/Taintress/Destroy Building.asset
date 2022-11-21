@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Destroy Building
   m_EditorClassIdentifier: 
   name: Destroy Building
-  description: Selected building becomes an Abandoned building. People working there
-    gets the "Jobless" status.
+  description: "Selected building becomes an Abandoned building. \nPeople working
+    there gets the \"Jobless\" status."
   image: {fileID: 0}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Fleshwarp
   m_EditorClassIdentifier: 
   name: Fleshwarped
-  description: Loses 8 Mental Strength every morning. Acquaintances loses 5 Mental
-    Strength every morning. Generates 0.5 suspicion every morning per Acquaintances.
+  description: "Loses 8 Mental Strength every morning. \nAcquaintances loses 5 Mental
+    Strength every morning. \nGenerates 0.5 suspicion every morning per Acquaintances."

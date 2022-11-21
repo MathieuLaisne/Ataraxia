@@ -6,6 +6,7 @@ namespace Exion.Ataraxia.ScriptableObjects
     public class Status : ScriptableObject
     {
         public string name;
+        [Multiline]
         public string description;
 
         public Status(string n, string d)

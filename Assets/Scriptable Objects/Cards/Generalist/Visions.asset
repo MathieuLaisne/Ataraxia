@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Visions
   m_EditorClassIdentifier: 
   name: Visions
-  description: 'Selected Target sees your true form: Deal 15 Mental Damage and Insanity.
-    Apply the "Untargetable" Status.'
-  image: {fileID: 21300000, guid: fdacc63eb5c1f40408618ea55033bc68, type: 3}
+  description: "Selected Target sees your true form: \nDeal 15 Mental Damage and
+    Insanity. \nApply the \"Untargetable\" Status."
+  image: {fileID: 21300000, guid: 9f40cee088dc1d341b2b8388903d1d2c, type: 3}

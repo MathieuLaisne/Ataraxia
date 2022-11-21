@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Stimulant
   description: Heals 10 Health.
-  image: {fileID: 21300000, guid: b72d42ce26c13974dbe6b715670ba7af, type: 3}
+  image: {fileID: 21300000, guid: f7994ca61f1a94d4fb7071fa17f890a0, type: 3}

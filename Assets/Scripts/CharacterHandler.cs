@@ -69,7 +69,7 @@ namespace Exion.Ataraxia.Handler
             NavMeshHit hit;
             if (NavMesh.SamplePosition(homePos, out hit, 0.6f, NavMesh.AllAreas)) homePos = hit.position;
             transform.localPosition = homePos;
-            agent.speed = Random.Range(0.3f, 0.5f);
+            agent.speed = Random.Range(0.8f, 1.2f);
             agent.SetDestination(workPos);
             destinationPos = workPos;
             prevPos = homePos;

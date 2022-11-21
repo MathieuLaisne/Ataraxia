@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e08cf97b45b02554da064e31410bc0af, type: 2}
+  - {fileID: 2100000, guid: 14f818dccdc9cb645a98766ca93c0738, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   destinationPos: {x: 0, y: 0, z: 0}
   stuckFrames: 0
   isPaused: 1
+  todayFree: {x: 0, y: 0, z: 0}
   material: {fileID: 0}
 --- !u!195 &2999367293852262453
 NavMeshAgent:

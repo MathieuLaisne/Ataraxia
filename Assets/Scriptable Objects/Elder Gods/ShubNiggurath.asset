@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Shub-Niggurath
   deck:
-  - {fileID: 11400000, guid: 55df0055ec230ae4fa6e5b98928d28a1, type: 2}
-  - {fileID: 11400000, guid: 7017fa4e646da8046bf2ee91f6f80a06, type: 2}
-  - {fileID: 11400000, guid: 80bcb04b1d8c9ae4292f36804008afb5, type: 2}
-  - {fileID: 11400000, guid: 4c2f1d552ca0efa4fac483a6064cbb5e, type: 2}
-  - {fileID: 11400000, guid: 745e5aec3c369844e8fd53d6f9226788, type: 2}
-  - {fileID: 11400000, guid: 0d90d12bcdedbac4b836f1e2fcc49abe, type: 2}
-  - {fileID: 11400000, guid: 8e7a363f19897ed4488993d0ece12281, type: 2}
+  - {fileID: 11400000, guid: 193c85246311d004b91d2ab9c3d29342, type: 2}
+  - {fileID: 11400000, guid: a5a8a739a63017040910c8bda2f01adc, type: 2}
+  - {fileID: 11400000, guid: 10b69cb507cb90b4994b7c2a21708cb6, type: 2}
+  - {fileID: 11400000, guid: 4607df7c1e434a8468434de08471e9fb, type: 2}
+  - {fileID: 11400000, guid: eea2c3d9490540b45b1a7201e31840fb, type: 2}
+  - {fileID: 11400000, guid: 0be817eea2055844fa56da2cecdeef5e, type: 2}
+  - {fileID: 11400000, guid: 6f73fbc49075aa9459a99c0b8415361c, type: 2}

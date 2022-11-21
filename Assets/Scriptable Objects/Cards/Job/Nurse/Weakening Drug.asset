@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Weakening Drug
   description: Deal 10 Health Damage.
-  image: {fileID: 21300000, guid: 3f76da9833fcf3744ad78bdbd4b10a93, type: 3}
+  image: {fileID: 21300000, guid: fd0d5bd76158490428bc68450478db8d, type: 3}

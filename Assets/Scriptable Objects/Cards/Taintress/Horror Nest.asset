@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Horror's Nest
   description: Apply the "Nest" status to target building.
-  image: {fileID: 21300000, guid: 141719a499851ce4886d69fc1f1a4339, type: 3}
+  image: {fileID: 21300000, guid: 091ca3905b861ec44a6918af0ce95a68, type: 3}

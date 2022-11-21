@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Trap Building
   description: Apply the "Trapped" Status to target building.
-  image: {fileID: 21300000, guid: 6bbac66fe905fee40ab2d05ae92e84bc, type: 3}
+  image: {fileID: 21300000, guid: ccee4d0305fcc704f9e0d6b45a3d7bab, type: 3}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Echoing Idea
   m_EditorClassIdentifier: 
   name: Echoing Idea
-  description: Deals 7 Mental Damage, Repeats once if unblocked.
-  image: {fileID: 21300000, guid: 9bdb011d2f17d9f4bb4672960e76900e, type: 3}
+  description: Deals 7 Mental Damage, repeats once if unblocked.
+  image: {fileID: 21300000, guid: fbb21d8fc6bd6384085e947ae5ffaee7, type: 3}

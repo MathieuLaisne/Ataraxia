@@ -6,6 +6,7 @@ namespace Exion.Ataraxia.ScriptableObjects
     public class Card : ScriptableObject
     {
         public string name;
+        [Multiline]
         public string description;
         public Sprite image;
     }

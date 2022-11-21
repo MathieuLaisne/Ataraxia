@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Laundry
   description: Clean your clothes.
-  image: {fileID: 21300000, guid: 9c0dbb0511168e6489732db38e46e56d, type: 3}
+  image: {fileID: 21300000, guid: 3f346c4eb1c44044e877210148aa93c9, type: 3}
