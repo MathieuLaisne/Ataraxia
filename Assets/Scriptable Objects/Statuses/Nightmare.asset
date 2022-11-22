@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Nightmare
   m_EditorClassIdentifier: 
   name: Nightmare
-  description: Lose 3 Mental Strength every night.
+  description: 'Lose 3 Mental Strength every night.
+
+    Has a 30% Chance of removing
+    a stack.'

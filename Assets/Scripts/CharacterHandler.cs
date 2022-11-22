@@ -57,10 +57,14 @@ namespace Exion.Ataraxia.Handler
         [SerializeField]
         private Material material;
 
+        private MapGenerator MG;
+        private int timeHome;
+
         public void Start()
         {
             agent = GetComponent<NavMeshAgent>();
             PM = FindObjectOfType<PlayerManager>();
+            MG = FindObjectOfType<MapGenerator>();
         }
 
         public void initAll()
@@ -90,6 +94,7 @@ namespace Exion.Ataraxia.Handler
             if (timeManager.Time == "End Work") todayFree = allParks[Random.Range(0, allParks.Count)];
             if (timeManager.Time == "End Night")
             {
+                timeHome = -1;
                 if (character.HasStatus("Taking Over")) character.DealMentalDamage(5);
                 if (character.HasStatus("Unremarkable Fleshwarp"))
                 {
@@ -114,6 +119,20 @@ namespace Exion.Ataraxia.Handler
                     character.DealMentalDamage(2);
                     PM.suspicion += 0.1f;
                 }
+                if (character.HasStatus("Nightmare"))
+                {
+                    character.DealMentalDamage(3);
+                    if (Random.Range(0, 100) < 30)
+                    {
+                        character.Statuses.Find(s => s.status.name == "Nightmare").stacks--;
+                        if (character.Statuses.Find(s => s.status.name == "Nightmare").stacks == 0) character.Statuses.Remove(character.Statuses.Find(s => s.status.name == "Nightmare"));
+                    }
+                }
+                if(character.HasStatus("Confusion"))
+                {
+                    character.Statuses.Find(s => s.status.name == "Confusion").stacks--;
+                    if (character.Statuses.Find(s => s.status.name == "Confusion").stacks == 0) character.Statuses.Remove(character.Statuses.Find(s => s.status.name == "Confusion"));
+                }
             }
             if (timeManager.Time == "End Free")
             {
@@ -127,11 +146,39 @@ namespace Exion.Ataraxia.Handler
                     }
                 }
             }
-            if (timeManager.Time == "Night" && character.Job.name == "Student") GoToRave();
+            if (timeManager.Time == "Night")
+            {
+                if(character.Job.name == "Student") GoToRave();
+            }
         }
 
         private void GoToRave()
         {
+            if (timeHome == -1)
+            {
+                int width = Mathf.RoundToInt(Mathf.Sqrt(MG.map.Length));
+                for (int i = 0; i < width; i++)
+                {
+                    for (int j = 0; j < width; j++)
+                    {
+                        if (MG.map[i * width + j].HasStatus("Rave"))
+                        {
+                            timeHome = Random.Range(20, 60);
+                            agent.isStopped = false;
+                            gameObject.SetActive(true);
+                            destinationPos = new Vector3(i * 1.2f - width * 1.2f / 2 + 0.6f, j * 1.2f - width * 1.2f / 2 + 0.6f, -0.1f);
+                            break;
+                        }
+                    }
+                }
+            } else if(timeHome == 0) {
+                destinationPos = homePos;
+                timeHome--;
+            } else {
+                timeHome--;
+            }
+            recalculatePath();
+            if (agent.remainingDistance <= 0.2f) gameObject.SetActive(false);
         }
 
         private void Roaming()

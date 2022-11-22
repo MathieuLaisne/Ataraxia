@@ -25,7 +25,7 @@ namespace Exion.Ataraxia.Default
 
         public List<string> names;
 
-        private Building[] map;
+        public Building[] map;
         private List<Character> npc;
 
         [SerializeField]

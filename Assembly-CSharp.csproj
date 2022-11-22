@@ -760,9 +760,17 @@
       <Project>{C509C570-AA4C-D86D-5452-873B2A99D7B9}</Project>
       <Name>Unity.2D.PixelPerfect</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEditor.CacheServer.csproj">
+      <Project>{B4BAABBD-8B3F-3296-3721-D93CC1F50CAF}</Project>
+      <Name>UnityEditor.CacheServer</Name>
+    </ProjectReference>
     <ProjectReference Include="PsdPlugin.csproj">
       <Project>{A9A7AB89-A7FD-5008-DF7C-E395171E815D}</Project>
       <Name>PsdPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Addressables.csproj">
+      <Project>{B682B89B-9C71-4BC9-09E6-679B26498358}</Project>
+      <Name>Unity.Addressables</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{EE46584A-2933-032E-6E8B-B2001DC01C44}</Project>
@@ -780,10 +788,6 @@
       <Project>{30DBA61D-2117-255C-022F-4381F18AF8A8}</Project>
       <Name>Unity.2D.Path.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{68BB3B88-CEBC-8665-BC3B-89F26155B860}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.csproj">
       <Project>{5E979BCD-0780-1321-3094-12E83B1025D8}</Project>
       <Name>Unity.InputSystem</Name>
@@ -796,6 +800,10 @@
       <Project>{C0BCBDA0-C6F4-5A19-01BB-A670CBA8E91A}</Project>
       <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
+      <Project>{68BB3B88-CEBC-8665-BC3B-89F26155B860}</Project>
+      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.csproj">
       <Project>{B6F0DFD0-CFF6-25D6-A1B0-F33B024A05F2}</Project>
       <Name>Unity.AI.Navigation</Name>
@@ -807,6 +815,10 @@
     <ProjectReference Include="Unity.AI.Navigation.Editor.csproj">
       <Project>{F9630288-D951-541C-2C00-302E9E94FFEF}</Project>
       <Name>Unity.AI.Navigation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Addressables.Editor.csproj">
+      <Project>{D26567EE-F2D1-3F88-3CBE-EEC2AD0BF223}</Project>
+      <Name>Unity.Addressables.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
       <Project>{FEB0E175-A91C-F0A5-D2BB-8212162688A8}</Project>
@@ -851,6 +863,10 @@
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
       <Project>{7DF88895-C014-C2CC-61BA-C40F37D19EC5}</Project>
       <Name>Unity.InternalAPIEditorBridge.001</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ResourceManager.csproj">
+      <Project>{06720262-88E5-817D-1021-542D08D4D50E}</Project>
+      <Name>Unity.ResourceManager</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
       <Project>{E15C725A-EFAD-E26C-AE68-7469C1ABC766}</Project>
@@ -908,9 +924,17 @@
       <Project>{6EB6DCAA-491F-CD02-CF0A-DE6B48AC40CE}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.csproj">
+      <Project>{57E337DD-BD19-77B7-8908-8B592E119A06}</Project>
+      <Name>Unity.ScriptableBuildPipeline</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Editor.csproj">
       <Project>{9653FCB4-0336-9A95-8932-96ED59D06BD6}</Project>
       <Name>Unity.2D.SpriteShape.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj">
+      <Project>{979F8691-974E-64A1-901F-1783F31DC21A}</Project>
+      <Name>Unity.ScriptableBuildPipeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
       <Project>{EF6FC745-A5D8-FF7F-04C9-19409FB13F30}</Project>
@@ -919,30 +943,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{04B29D8F-6806-D277-005A-97D113F9C23C}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Addressables.csproj">
-      <Project>{B682B89B-9C71-4BC9-09E6-679B26498358}</Project>
-      <Name>Unity.Addressables</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Addressables.Editor.csproj">
-      <Project>{D26567EE-F2D1-3F88-3CBE-EEC2AD0BF223}</Project>
-      <Name>Unity.Addressables.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.CacheServer.csproj">
-      <Project>{B4BAABBD-8B3F-3296-3721-D93CC1F50CAF}</Project>
-      <Name>UnityEditor.CacheServer</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ResourceManager.csproj">
-      <Project>{06720262-88E5-817D-1021-542D08D4D50E}</Project>
-      <Name>Unity.ResourceManager</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ScriptableBuildPipeline.csproj">
-      <Project>{57E337DD-BD19-77B7-8908-8B592E119A06}</Project>
-      <Name>Unity.ScriptableBuildPipeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj">
-      <Project>{979F8691-974E-64A1-901F-1783F31DC21A}</Project>
-      <Name>Unity.ScriptableBuildPipeline.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

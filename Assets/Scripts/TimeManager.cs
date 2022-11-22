@@ -92,7 +92,7 @@ namespace Exion.Ataraxia.Handler
                     case "Work":
                         if (pauseIndicator.sprite != workSprite) pauseIndicator.sprite = workSprite;
                         sun.color = Color.Lerp(sun.color, Color.yellow, 0.1f);
-                        if (m_timeElapsed == 30)
+                        if (m_timeElapsed == 60)
                         {
                             m_timeElapsed = 0;
                             m_time = "End Work";
@@ -130,7 +130,7 @@ namespace Exion.Ataraxia.Handler
                     case "Night":
                         if (pauseIndicator.sprite != nightSprite) pauseIndicator.sprite = nightSprite;
                         sun.color = Color.Lerp(sun.color, Color.blue, 0.1f);
-                        if (m_timeElapsed == 10)
+                        if (m_timeElapsed == 80)
                         {
                             m_timeElapsed = 0;
                             m_time = "End Night";

@@ -77,8 +77,8 @@
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\math.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\double2.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\bool3x4.gen.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\uint2.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\int2x3.gen.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\uint2.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\Geometry\Plane.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\bool4x4.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\double3.gen.cs" />
@@ -104,8 +104,8 @@
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\Noise\noise3D.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\uint3x4.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\bool2x2.gen.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\float3.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\matrix.gen.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\float3.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\half4.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\uint2x4.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.6\Unity.Mathematics\rigid_transform.cs" />

@@ -10,9 +10,11 @@ namespace Exion.Ataraxia.Default
 {
     public class PlayerManager : MonoBehaviour
     {
+        #region UI
         [SerializeField]
         private GameObject tutorial;
 
+        #region Building UI
         [SerializeField]
         private TextMeshProUGUI infoBuildingName;
 
@@ -27,6 +29,11 @@ namespace Exion.Ataraxia.Default
 
         [SerializeField]
         private GameObject buildingStatus;
+        #endregion
+
+        #region Character UI
+        [SerializeField]
+        private GameObject characterContainer;
 
         [SerializeField]
         private TextMeshProUGUI infoCharacterName;
@@ -45,78 +52,88 @@ namespace Exion.Ataraxia.Default
 
         [SerializeField]
         private GameObject characterStatus;
+        #endregion
 
         [SerializeField]
         private GameObject status;
 
-        [SerializeField]
-        private GameObject characterContainer;
-
-        [SerializeField]
-        private List<Status> AllStatus;
-
-        [SerializeField]
-        private GameObject armor;
-
+        #region HP UI
         [SerializeField]
         private Image hp;
+        [SerializeField]
+        private TextMeshProUGUI HPText;
+        #endregion
 
+        #region MP UI
+        [SerializeField]
+        private TextMeshProUGUI MPText;
         [SerializeField]
         private Image mp;
 
         [SerializeField]
-        private Image insanity;
-
+        private GameObject armor;
         [SerializeField]
         private TextMeshProUGUI armorText;
+        #endregion
 
+        #region Insanity UI
         [SerializeField]
-        private TextMeshProUGUI HPText;
-
-        [SerializeField]
-        private TextMeshProUGUI MPText;
-
+        private Image insanity;
         [SerializeField]
         private TextMeshProUGUI insanityText;
+        #endregion
 
+        #region card UI
         [SerializeField]
         private GameObject arrow;
-
-        private GameObject selectedCard;
+        private GameObject currentArrow;
+        #endregion
 
         private List<GameObject> statusHandlerUI;
-
-        public float suspicion = 0f;
-        public Image susBar;
-        public TextMeshProUGUI susText;
-        public GameObject card;
-        public Transform cardContainer;
-
-        public GameObject[] Hand;
-        public List<Card> Deck;
-        public List<Card> jobDeck;
-        public List<Card> Used;
-        public List<Card> jobUsed;
-
-        public Player player;
-
-        private GameObject currentArrow;
-
-        [SerializeField]
-        private TimeManager tm;
-
-        [SerializeField]
-        private GameObject crusader;
 
         [SerializeField]
         private GameObject gameOver;
 
-        private int nbCrusader = 0;
+        public Material[] skyboxes;
+        #endregion
+
+        #region suspicion
+        public float suspicion = 0f;
+        public Image susBar;
+        public TextMeshProUGUI susText;
+        #endregion
+
+        #region cards
+        public GameObject card;
+        public Transform cardContainer;
+
+        public GameObject[] Hand;
+
+        public List<Card> Deck;
+        public List<Card> jobDeck;
+
+        public List<Card> Used;
+        public List<Card> jobUsed;
 
         [SerializeField]
         private Card[] Drugs;
 
-        public Material[] skyboxes;
+        private GameObject selectedCard;
+
+        [SerializeField]
+        private List<Status> AllStatus;
+        #endregion
+
+        public Player player;
+        [SerializeField]
+        private TimeManager tm;
+
+        #region crusader
+        [SerializeField]
+        private GameObject crusader;
+
+        private int nbCrusader = 0;
+        #endregion
 
         public int bombCounter = 1;
 

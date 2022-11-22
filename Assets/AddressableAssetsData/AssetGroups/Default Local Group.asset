@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/Scriptable Objects/Cards/Ruthless/Wrathful Cry.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6b60129d6a1c6354991cb768c853b288
+    m_Address: Assets/Scriptable Objects
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7da934120bdedad42a6e2661b829c48e, type: 2}
   m_SchemaSet:

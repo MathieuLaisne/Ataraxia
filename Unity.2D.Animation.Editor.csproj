@@ -100,8 +100,8 @@
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\SkinningCache\SkinningCachePersistentState.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\SkinningModule.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SpriteSkin\SpriteSkinCompositeDebugWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\IMGUI\RectSelectionTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\EditorUtilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\IMGUI\RectSelectionTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\SkinningCache\CharacterCache.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\LayoutOverlay\ScrollableToolbar.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\VisibilityTool\VisibilityToolBase.cs" />
@@ -162,8 +162,8 @@
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\UI\WeightPainterPanel.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\IMGUI\SpriteMeshController.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\SkinningSerializer\ISkinningSerializer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\ResourceLoader.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\IMGUI\SpriteMeshView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\ResourceLoader.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\MeshTool\MeshToolWrapper.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\TextContent.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.7\Editor\SkinningModule\SkinningCache\BoneCache.cs" />
