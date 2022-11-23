@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Monstrous Building
   m_EditorClassIdentifier: 
   name: Horrifying Land
-  description: Apply the "Horrifying" status to target building.
+  description: Apply <color=yellow>Horrifying</color> to target building.
   image: {fileID: 0}

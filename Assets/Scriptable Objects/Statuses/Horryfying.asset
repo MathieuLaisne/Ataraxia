@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Horryfying
   m_EditorClassIdentifier: 
   name: Horryfying
-  description: "Deal 7 Mental Damage to all characters going near it. \nGenerates
-    0.25 suspicion each times."
+  description: "Deal 7 <color=#000EAB>Mental</color> Damage to all characters going
+    near it. \nGenerates 0.25 <color=#4B00AB>Suspicion</color> each times."

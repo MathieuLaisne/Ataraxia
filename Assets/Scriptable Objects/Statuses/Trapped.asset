@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Trapped
   m_EditorClassIdentifier: 
   name: Trapped
-  description: Characters have a 10% of losing 5 health for each bomb counter when
-    going here.
+  description: Characters have a 10% of losing 5 <color=#AB0000>Health</color> for
+    each bomb counter when going here.

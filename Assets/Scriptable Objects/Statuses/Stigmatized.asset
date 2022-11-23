@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stigmatized
   m_EditorClassIdentifier: 
   name: Stigmatized
-  description: "Loses 2 Mental Strength every morning. \nGenerates 0.1 suspicion
-    every morning."
+  description: "Loses 2 <color=#000EAB>Mental</color> Strength every morning. \nGenerates
+    0.1 <color=#4B00AB>Suspicion</color> every morning."

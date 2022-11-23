@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Daunting Emotion
   m_EditorClassIdentifier: 
   name: Daunting Emotion
-  description: "Deal 10 Mental Damage. \n50% of Applying Nightmare. \n+0.5 Suspicion
-    per Unblocked Damage."
-  image: {fileID: 21300000, guid: 1bdd6cbd27cf6ea4d9134de98a30e735, type: 3}
+  description: "Deal 10 <color=#000EAB>Mental</color> Damage. \n50% of Applying <color=yellow>Nightmare</color>.
+    \n+0.5 <color=#4B00AB>Suspicion</color> per Unblocked Damage."
+  image: {fileID: 21300000, guid: 07f2eecafb6510a41a2f6107dbeb6af8, type: 3}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Hysteria
   m_EditorClassIdentifier: 
   name: Hysteria
-  description: "Apply the \"Confusion\" Status to targret. \nGenerate 3 Suspicion."
-  image: {fileID: 21300000, guid: 85070cde8dd108d4485863e54ebed1fd, type: 3}
+  description: "Apply <color=yellow>Confusion</color> to targret. \nGenerate 3 <color=#4B00AB>Suspicion</color>."
+  image: {fileID: 21300000, guid: e1424f9cfed1d2d4b81c9aa0f013ab5f, type: 3}

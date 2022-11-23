@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Whisper
   m_EditorClassIdentifier: 
   name: Whisper
-  description: Deal 7 direct Mental Damage.
-  image: {fileID: 21300000, guid: 0705587c317059e489110cbacdb29f5f, type: 3}
+  description: Deal 7 direct <color=#000EAB>Mental</color> Damage.
+  image: {fileID: 21300000, guid: 7cb4d5f63a003fa4c9feb0886dfadce8, type: 3}

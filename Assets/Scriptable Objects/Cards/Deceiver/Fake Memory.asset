@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Fake Memory
   m_EditorClassIdentifier: 
   name: Fake Memory
-  description: "Deal 15 Direct Mental Damage. \nGenerate 1 Suspicion per friend."
-  image: {fileID: 21300000, guid: 80e377a09db5f8540bd6533e1d3b0b05, type: 3}
+  description: "Deal 15 Direct <color=#000EAB>Mental</color> Damage. \nGenerate 1
+    <color=#4B00AB>Suspicion</color> per friend."
+  image: {fileID: 21300000, guid: fa017a1c433448e439d9472996738517, type: 3}

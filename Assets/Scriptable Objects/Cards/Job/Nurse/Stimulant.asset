@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stimulant
   m_EditorClassIdentifier: 
   name: Stimulant
-  description: Heals 10 Health.
+  description: Heals 10 <color=#AB0000>Health</color>.
   image: {fileID: 21300000, guid: f7994ca61f1a94d4fb7071fa17f890a0, type: 3}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Eerie Land
   m_EditorClassIdentifier: 
   name: Eerie Land
-  description: Apply the "Eerie" Status to target building.
+  description: Apply <color=yellow>Eerie</color> to target building.
   image: {fileID: 21300000, guid: ad46d803bc0318542a0eae35f8441b46, type: 3}

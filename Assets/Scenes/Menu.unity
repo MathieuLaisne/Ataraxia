@@ -183,7 +183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3a71aca736dc38e46b20628694539dc1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 735bc169e95b4444391d693bccffda11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ccee4d0305fcc704f9e0d6b45a3d7bab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c0dbb0511168e6489732db38e46e56d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6ba9fc6ad65528a4c8974fe74b24f2ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a95fd94a4085d59499a953057e93caa5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -501,7 +501,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cleverly control the mortals to do your binding.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -714,7 +714,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Policeman
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ca464ba8ea1b284fa6cc697387c5764, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4735ea01293242d448dd030cb66b0100, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b60df75453a1fc14fbf3165b201f0614, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 006d4239ad36b82458c61efa4162b57e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1187,7 +1187,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Smash Those pesky mortals' psyche and show them who's boss.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1322,8 +1322,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
-  m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
+  m_sharedMaterial: {fileID: -6501236630073876636, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6cc9c5bcffbd76409a7239aecf0e693, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76e76081d9bf20e45a920473b4cdea2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1591,7 +1591,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1726,7 +1726,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Worker
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1861,7 +1861,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2159,7 +2159,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nurse
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2275,7 +2275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1320195099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6c5f804dfb03cb4d8c8583ad7adb4a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b148c084fc05545869db97ce2a4cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   god: {fileID: 0}
@@ -2398,7 +2398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 213b78aae61f9a1449f1a2bb3e4d8f99, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfbb3f77f6a29d14fa7f24b0cf1cd5f8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2476,7 +2476,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: No one escpaes your touch. Show them what real horror is.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2664,7 +2664,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480097178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb43ca3f18284bf4a9d92e09fa7e0b39, type: 3}
+  m_Script: {fileID: 11500000, guid: b18f6ff5683c98f43bd83e347358396c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320195101}
@@ -2808,7 +2808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 92d0836b2d6cb4f42b855bc8fee3eae1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca9ad56ef26bab341b1632b9d96fe0c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3000,7 +3000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 94b7e91ff6df4b242be3793090f58bbd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9fe7973fae824604383e124d1279e132, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3080,7 +3080,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 964056c82c015224a976d9f700ab1e4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 141719a499851ce4886d69fc1f1a4339, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3184,7 +3184,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Student
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3375,7 +3375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6cc9c5bcffbd76409a7239aecf0e693, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76e76081d9bf20e45a920473b4cdea2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3509,7 +3509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6cc9c5bcffbd76409a7239aecf0e693, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76e76081d9bf20e45a920473b4cdea2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3644,7 +3644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3db885b0c74f874f8565c155dba0816, type: 3}
+  m_Sprite: {fileID: 21300000, guid: efe0c155baf8fcb4699af17584d5b4dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3722,8 +3722,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
-  m_sharedMaterial: {fileID: -6501236630073876636, guid: be718ba12563ee54284e94b0e2b27193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
+  m_sharedMaterial: {fileID: -6501236630073876636, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3913,7 +3913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6cc9c5bcffbd76409a7239aecf0e693, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76e76081d9bf20e45a920473b4cdea2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stigmata
   m_EditorClassIdentifier: 
   name: Stigmata
-  description: Apply the "Stigmatized" status to target.
+  description: Apply <color=yellow>Stigmatized</color> status to target.
   image: {fileID: 0}

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Mental Stab
   m_EditorClassIdentifier: 
   name: Mental Stab
-  description: Deal 10 Mental Damage and twice as much insanity if blocked.
-  image: {fileID: 21300000, guid: a404f21448b7ca14e8ac5a986419f14a, type: 3}
+  description: Deal 10 <color=#000EAB>Mental</color> Damage and twice as much <color=#AB005C>Insanity</color>
+    if blocked.
+  image: {fileID: 21300000, guid: d1eb9f3ac936e4a40bd3d961ed160188, type: 3}

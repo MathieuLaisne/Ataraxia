@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Nest
   m_EditorClassIdentifier: 
   name: Nest
-  description: Heals monsters for 10% health each night.
+  description: Heals monsters for 10% <color=#AB0000>Health</color> each night.

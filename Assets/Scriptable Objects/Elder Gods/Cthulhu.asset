@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Cthulhu
   deck:
-  - {fileID: 11400000, guid: 7f58bc50d55036044ba0e48c9535f0b6, type: 2}
-  - {fileID: 11400000, guid: 12b9c1f370baa1f47a27b6763567d26d, type: 2}
-  - {fileID: 11400000, guid: 101b34ca9f6831f478caa1ebc8baa7a8, type: 2}
-  - {fileID: 11400000, guid: 4c5015104821dd346b015e4cdfd73a40, type: 2}
-  - {fileID: 11400000, guid: c5aa1747ef06c1b40800be2217da226f, type: 2}
-  - {fileID: 11400000, guid: 40c4a55e51cf96043bd000f4d1f9be55, type: 2}
-  - {fileID: 11400000, guid: 7be9e9cb28db17c42b384418c0ed1178, type: 2}
+  - {fileID: 11400000, guid: 91cb19d3a12e22a4a9094c91f6ac5f12, type: 2}
+  - {fileID: 11400000, guid: 2d2dd78f15c71954fa1b187d68631977, type: 2}
+  - {fileID: 11400000, guid: 2ac90284f21daea48851665c7425b465, type: 2}
+  - {fileID: 11400000, guid: 3e2e15af0411c9e4da8dc4bf47a78f1b, type: 2}
+  - {fileID: 11400000, guid: eef7b769e52fb2b499258494d4985da0, type: 2}
+  - {fileID: 11400000, guid: 898f3b5404ebc9a469a17d661840ce10, type: 2}
+  - {fileID: 11400000, guid: 5dc6e68391c0dd6438ad92d4277dc8a7, type: 2}

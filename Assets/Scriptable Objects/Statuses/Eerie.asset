@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Eerie
   m_EditorClassIdentifier: 
   name: Eerie
-  description: "Deal 3 Mental Damage to all characters going near it. \nGenerates
-    0.1 Suspicion each times."
+  description: "Deal 3 <color=#000EAB>Mental</color> Damage to all characters going
+    near it. \nGenerates 0.1 <color=#4B00AB>Suspicion</color> each times."

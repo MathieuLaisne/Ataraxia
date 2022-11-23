@@ -7,13 +7,23 @@ namespace Exion.Ataraxia.Handler
     {
         public StatusHandler status;
         public TextMeshProUGUI statusName;
+        public GameObject tooltip;
+        public TextMeshProUGUI statusDescription;
 
         private void Start()
         {
             statusName.text = status.status.name;
             if (status.stacks > 1) statusName.text += " x" + status.stacks;
+            statusDescription.text = status.status.description;
         }
 
-        //TODO tooltip
+        private void OnMouseEnter()
+        {
+            tooltip.SetActive(true);
+        }
+        private void OnMouseExit()
+        {
+            tooltip.SetActive(false);
+        }
     }
 }

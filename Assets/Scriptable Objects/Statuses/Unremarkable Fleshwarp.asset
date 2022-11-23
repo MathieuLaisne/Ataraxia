@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Unremarkable Fleshwarp
   m_EditorClassIdentifier: 
   name: Unremarkable Fleshwarp
-  description: "Loses 5 Mental Strength every morning. \nAcquaintances loses 2 Mental
-    Strength every morning. \nGenerates 0.25 suspicion every morning \nper Acquaintances."
+  description: "Loses 5 <color=#000EAB>Mental</color> Strength every morning. \nAcquaintances
+    loses 2 <color=#000EAB>Mental</color> Strength every morning. \nGenerates 0.25
+    <color=#4B00AB>Suspicion</color> every morning \nper Acquaintances."

@@ -1,0 +1,4 @@
+sus: <color=#4B00AB>Suspicion</color>
+hp: <color=#AB0000>Health</color>
+mp: <color=#000EAB>Mental</color>
+insanity: <color=#AB005C>Insanity</color>

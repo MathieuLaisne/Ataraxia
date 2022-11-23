@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Taking Over
   m_EditorClassIdentifier: 
   name: Taking Over
-  description: Lose 5 Mental Strength every Morning.
+  description: Lose 5 <color=#000EAB>Mental</color> Strength every Morning.

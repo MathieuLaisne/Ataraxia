@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Seeded
   m_EditorClassIdentifier: 
   name: Seeded
-  description: "Loses 5 Mental Strength Every Night. \nOn Corruption, remove the
-    Status and gives it to all Acquaintances."
+  description: "Loses 5 <color=#000EAB>Mental</color> Strength Every Night. \nOn
+    Corruption, remove the Status and gives it to all Acquaintances."
