@@ -16,6 +16,9 @@ namespace Exion.Ataraxia.Default
         private List<BuildingType> buildingTypes;
 
         [SerializeField]
+        private Status jobless;
+
+        [SerializeField]
         private Job[] jobs;
 
         [SerializeField]
@@ -163,6 +166,8 @@ namespace Exion.Ataraxia.Default
                     Vector3 pos = new Vector3(i * 1.2f - width * 1.2f / 2 + 0.6f, j * 1.2f - width * 1.2f / 2 + 0.6f, -0.1f);
                     var obj = Instantiate(map[i * width + j].Structure, pos, new Quaternion(), transform);
                     BuildingHandler BH = obj.AddComponent<BuildingHandler>();
+                    BH.abandoned = buildingTypes[0];
+                    BH.jobless = jobless;
                     BH.building = map[i * width + j];
                     if (map[i * width + j].Type.hasRes)
                     {

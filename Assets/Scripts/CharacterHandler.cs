@@ -90,7 +90,6 @@ namespace Exion.Ataraxia.Handler
         public void FixedUpdate()
         {
             if (character.corrupted) material.color = new Color(139, 0, 139);
-            else material.color = new Color();
             if (timeManager.Time == "End Work") todayFree = allParks[Random.Range(0, allParks.Count)];
             if (timeManager.Time == "End Night")
             {
@@ -132,6 +131,15 @@ namespace Exion.Ataraxia.Handler
                 {
                     character.Statuses.Find(s => s.status.name == "Confusion").stacks--;
                     if (character.Statuses.Find(s => s.status.name == "Confusion").stacks == 0) character.Statuses.Remove(character.Statuses.Find(s => s.status.name == "Confusion"));
+                }
+                if (character.HasStatus("Jobless"))
+                {
+                    if (character.DealHealthDamage(10))
+                    {
+                        PM.suspicion += 1f;
+                        Destroy(this);
+                    }
+                    character.DealMentalDamage(5);
                 }
             }
             if (timeManager.Time == "End Free")

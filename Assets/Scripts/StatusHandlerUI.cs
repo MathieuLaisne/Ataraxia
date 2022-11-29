@@ -10,7 +10,7 @@ namespace Exion.Ataraxia.Handler
         public GameObject tooltip;
         public TextMeshProUGUI statusDescription;
 
-        private void OnEnable()
+        public void Init()
         {
             statusName.text = status.status.name;
             if (status.stacks > 1) statusName.text += " x" + status.stacks;

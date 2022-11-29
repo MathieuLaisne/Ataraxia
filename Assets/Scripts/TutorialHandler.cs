@@ -48,7 +48,7 @@ namespace Exion.Ataraxia.Handler
 
                 case 1:
                     tutorial.text = "<color=purple>Ataraxia</color> is a Strategy Card Game requiring you, an Eldritch God, to corrupt the minds of mortals living in this city.\n" +
-                        "Your first contact will help you in doing so, but beware of not raising suspicion too fast, or you might bring Crusaders on you.";
+                        "Your first contact will help you in doing so, but beware of not raising <color=#4B00AB>Suspicion</color> too fast, or you might bring Crusaders on you.";
                     previous.SetActive(true);
                     break;
 
@@ -65,8 +65,8 @@ namespace Exion.Ataraxia.Handler
                     break;
 
                 case 4:
-                    tutorial.text = "On Human status, you'll see their <color=red>Health</color>," +
-                        "their <color=blue>Mental Strength</color> and their <color=purple>Insanity</color>.\n" +
+                    tutorial.text = "On Human status, you'll see their <color=#AB0000>Health</color>," +
+                        "their <color=#000EAB>Mental Strength</color> and their <color=#AB005C>Insanity</color>.\n" +
                         "You'll also notice what is their work and who are their friends.\n" +
                         "It is also possible to click on the friends to bring their status or to click on a passerby for the same result.";
                     break;
@@ -74,7 +74,7 @@ namespace Exion.Ataraxia.Handler
                 case 5:
                     tutorial.text = "During the night, you'll draw 3 cards corresponding to your first contact's job.\n" +
                         "You can only play one per night, so choose wisely.\n" +
-                        "Furthermore, as mere mortals, they won't be able to help much most of the time, doing menial things like laundry or partying.";
+                        "Furthermore, as mere mortals, they won't be able to help much most of the time, doing menial things like Laundry or Partying.";
                     break;
 
                 default:

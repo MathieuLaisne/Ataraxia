@@ -59,20 +59,18 @@ namespace Exion.Ataraxia.Default
             m_building = type.building;
         }
 
-        public void Destroy()
+        public void Destroy(Status jobless, BuildingType abandoned)
         {
-            if (m_type.destroyable)
+            if (m_type.hasWorker)
             {
-                if (m_type.hasWorker)
+                foreach (Character worker in m_workers)
                 {
-                    foreach (Character worker in m_workers)
-                    {
-                        worker.ApplyStatus(new Status("Jobless", "Have no work, will lose health and mental strength over time."), 1);
-                    }
+                    worker.ApplyStatus(jobless, 1);
                 }
-                m_type = new BuildingType("Construction Site", false, true, false);
-                m_workers = new List<Character>();
             }
+            m_name = "Abandoned " + "m_name";
+            m_type = abandoned;
+            m_workers = new List<Character>();
         }
 
         public void ApplyStatus(Status status, int stack)

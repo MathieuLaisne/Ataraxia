@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0ea64e02c0f67e4990057f5165dea1d, type: 3}
-  m_Name: Horryfying
+  m_Name: Jobless
   m_EditorClassIdentifier: 
-  name: Horrifying
-  description: "Deal 7 <color=#000EAB>Mental</color> Damage to all characters going
-    near it. \nGenerates 0.25 <color=#4B00AB>Suspicion</color> each times."
+  name: Jobless
+  description: Lose 10 <color=#AB0000>Health</color> and 5 <color=#000EAB>Mental</color>
+    Strength every morning.

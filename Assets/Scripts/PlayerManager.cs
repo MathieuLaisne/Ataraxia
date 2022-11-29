@@ -94,6 +94,12 @@ namespace Exion.Ataraxia.Default
         [SerializeField]
         private GameObject gameOver;
 
+        [SerializeField]
+        private GameObject menu;
+
+        [SerializeField]
+        private GameObject won;
+
         public Material[] skyboxes;
         #endregion
 
@@ -145,33 +151,6 @@ namespace Exion.Ataraxia.Default
             player = FindObjectOfType<Player>();
 
             if (PlayerPrefs.GetInt("Tutorial") == 1) ShowTutorial();
-
-            switch (player.god.name)
-            {
-                case "Cthulhu":
-                    if (PlayerPrefs.GetInt("Played Ruthless") == 0)
-                    {
-                        ShowGod(player.god);
-                    }
-                    break;
-
-                case "Nyarlatothep":
-                    if (PlayerPrefs.GetInt("Played Deceiver") == 0)
-                    {
-                        ShowGod(player.god);
-                    }
-                    break;
-
-                case "Shub-Niggurath":
-                    if (PlayerPrefs.GetInt("Played Taintress") == 0)
-                    {
-                        ShowGod(player.god);
-                    }
-                    break;
-
-                default:
-                    break;
-            }
 
             statusHandlerUI = new List<GameObject>();
             Hand = new GameObject[3];
@@ -281,6 +260,7 @@ namespace Exion.Ataraxia.Default
         // Update is called once per frame
         private void Update()
         {
+            if (Input.GetButtonDown("Cancel")) PauseMenu();
             if (Input.GetMouseButtonDown(1))
             {
                 selectedCard.GetComponent<CardHandler>().Highlight(false);
@@ -294,6 +274,7 @@ namespace Exion.Ataraxia.Default
             else UIDrawer();
         }
 
+        //Called once per second
         private void FixedUpdate()
         {
             susBar.fillAmount = suspicion / 100;
@@ -331,6 +312,7 @@ namespace Exion.Ataraxia.Default
             }
         }
 
+        #region Card Handler
         private void ApplyJobCard()
         {
             RaycastHit hit;
@@ -389,7 +371,11 @@ namespace Exion.Ataraxia.Default
                                 GameObject objectHit = hit.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandler>().character;
 
-                                CH.DealHealthDamage(10);
+                                if (CH.DealHealthDamage(10))
+                                {
+                                    suspicion += 1f;
+                                    Destroy(objectHit);
+                                }
 
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
@@ -403,7 +389,11 @@ namespace Exion.Ataraxia.Default
                                 GameObject objectHit = hit2D.transform.gameObject;
                                 Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
 
-                                CH.DealHealthDamage(10);
+                                if (CH.DealHealthDamage(10))
+                                {
+                                    suspicion += 1f;
+                                    Destroy(objectHit);
+                                }
 
                                 selectedCard.GetComponent<CardHandler>().Highlight(false);
                                 Destroy(selectedCard);
@@ -540,7 +530,7 @@ namespace Exion.Ataraxia.Default
                                 if (BH.Type.name == "Abandonned Building") print("wrong building");
                                 else
                                 {
-                                    BH.Destroy();
+                                    objectHit.GetComponent<BuildingHandler>().DestroyBuilding();
 
                                     selectedCard.GetComponent<CardHandler>().Highlight(false);
                                     Destroy(selectedCard);
@@ -1156,7 +1146,9 @@ namespace Exion.Ataraxia.Default
                 }
             }
         }
+        #endregion
 
+        #region UI
         private void UIDrawer()
         {
             RaycastHit hit;
@@ -1219,6 +1211,7 @@ namespace Exion.Ataraxia.Default
                             GameObject obj = Instantiate(status, characterStatus.transform);
                             statusHandlerUI.Add(obj);
                             obj.GetComponent<StatusHandlerUI>().status = s;
+                            obj.GetComponent<StatusHandlerUI>().Init();
                         }
                     }
                 }
@@ -1269,6 +1262,7 @@ namespace Exion.Ataraxia.Default
                             GameObject obj = Instantiate(status, characterStatus.transform);
                             statusHandlerUI.Add(obj);
                             obj.GetComponent<StatusHandlerUI>().status = s;
+                            obj.GetComponent<StatusHandlerUI>().Init();
                         }
                     }
                     else if (hit.transform.gameObject.GetComponent<BuildingHandler>())
@@ -1311,7 +1305,9 @@ namespace Exion.Ataraxia.Default
                         {
                             GameObject obj = Instantiate(status, buildingStatus.transform);
                             statusHandlerUI.Add(obj);
+                            print(s.status.name);
                             obj.GetComponent<StatusHandlerUI>().status = s;
+                            obj.GetComponent<StatusHandlerUI>().Init();
                         }
                     }
                 }
@@ -1323,9 +1319,10 @@ namespace Exion.Ataraxia.Default
             }
         }
 
-        public void ReturnMenu()
+        private void PauseMenu()
         {
-            SceneManager.LoadScene(0);
+            tm.pause = true;
+            menu.SetActive(true);
         }
 
         private void ShowTutorial()
@@ -1333,27 +1330,19 @@ namespace Exion.Ataraxia.Default
             tm.pause = true;
             tutorial.SetActive(true);
         }
+        #endregion
 
-        private void ShowGod(ElderGod god)
+        #region public methods
+        public void ReturnMenu()
         {
-            tm.pause = true;
-            switch (god.name)
-            {
-                case "Cthulhu":
-                    PlayerPrefs.SetInt("Played Ruthless", 1);
-                    break;
-
-                case "Nyarlatothep":
-                    PlayerPrefs.SetInt("Played Deceiver", 1);
-                    break;
-
-                case "Shub-Niggurath":
-                    PlayerPrefs.SetInt("Played Taintress", 1);
-                    break;
-
-                default:
-                    break;
-            }
+            SceneManager.LoadScene(0);
         }
+
+        public void ReturnGame()
+        {
+            menu.SetActive(false);
+            tm.pause = false;
+        }
+        #endregion
     }
 }

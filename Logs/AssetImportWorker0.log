@@ -15,7 +15,7 @@ C:/Users/Neox/CosmicHorrorJam
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59381
+65357
 Successfully changed project path to: C:/Users/Neox/CosmicHorrorJam
 C:/Users/Neox/CosmicHorrorJam
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Neox/CosmicHorrorJam
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 144.74 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 145.84 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56968
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56828
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.017981 seconds.
+Registered in 0.013324 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 156.67 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 147.10 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.953 seconds
+- Completed reload, in  0.970 seconds
 Domain Reload Profiling:
-	ReloadAssembly (954ms)
-		BeginReloadAssembly (109ms)
+	ReloadAssembly (971ms)
+		BeginReloadAssembly (114ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (676ms)
-			LoadAssemblies (104ms)
+		EndReloadAssembly (690ms)
+			LoadAssemblies (109ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (135ms)
+			SetupTypeCache (142ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (430ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (431ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (157ms)
+				RefreshPlugins (147ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (197ms)
-				ProcessInitializeOnLoadMethodAttributes (62ms)
+				ProcessInitializeOnLoadAttributes (205ms)
+				ProcessInitializeOnLoadMethodAttributes (65ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013947 seconds.
+Registered in 0.015910 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Neox\CosmicHorrorJam\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Neox\CosmicHorrorJam\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 146.19 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 145.04 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.874 seconds
+- Completed reload, in  1.884 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1875ms)
-		BeginReloadAssembly (154ms)
+	ReloadAssembly (1885ms)
+		BeginReloadAssembly (170ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (1537ms)
-			LoadAssemblies (131ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (1530ms)
+			LoadAssemblies (137ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (345ms)
+			SetupTypeCache (354ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (101ms)
-			SetupLoadedEditorAssemblies (878ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (891ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (146ms)
-				BeforeProcessingInitializeOnLoad (166ms)
-				ProcessInitializeOnLoadAttributes (421ms)
-				ProcessInitializeOnLoadMethodAttributes (117ms)
-				AfterProcessingInitializeOnLoad (15ms)
+				RefreshPlugins (145ms)
+				BeforeProcessingInitializeOnLoad (171ms)
+				ProcessInitializeOnLoadAttributes (486ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (18ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
 Refreshing native plugins compatible for Editor in 1.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4955 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (229.4 KB). Loaded Objects now: 5408.
-Memory consumption went from 184.0 MB to 183.8 MB.
-Total: 5.118600 ms (FindLiveObjects: 0.498000 ms CreateObjectMapping: 0.158700 ms MarkObjects: 4.237000 ms  DeleteObjects: 0.223600 ms)
+Unloading 4960 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (229.0 KB). Loaded Objects now: 5418.
+Memory consumption went from 257.3 MB to 257.1 MB.
+Total: 5.620200 ms (FindLiveObjects: 0.564000 ms CreateObjectMapping: 0.187800 ms MarkObjects: 4.642100 ms  DeleteObjects: 0.225000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,49 +159,13 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 8847.413900 seconds.
-  path: Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset
-  artifactKey: Guid(9be52456ce02ed140ad895a52f102d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset using Guid(9be52456ce02ed140ad895a52f102d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3312d66c16efa1c777c5576de32c3631') in 0.049774 seconds 
+  Time since last request: 26903.999671 seconds.
+  path: Assets/Graphics/Materials/fog.mat
+  artifactKey: Guid(eff15b1b82293b747b842128a6a57428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Materials/fog.mat using Guid(eff15b1b82293b747b842128a6a57428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5021a156ea7c6eb64a12e64065e2ce1') in 0.150063 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.755512 seconds.
-  path: Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset
-  artifactKey: Guid(a54e5bf963730eb42a83a579b1946dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset using Guid(a54e5bf963730eb42a83a579b1946dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8bf287f70a4259127ed165eff558ba8') in 0.014201 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.770774 seconds.
-  path: Assets/AddressableAssetsData/DataBuilders/BuildScriptFastMode.asset
-  artifactKey: Guid(2c5c736c346edd94f9ffba31842e0581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/DataBuilders/BuildScriptFastMode.asset using Guid(2c5c736c346edd94f9ffba31842e0581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c810bbeff9b40498e98eb543526c8db') in 0.013963 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedPlayMode.asset
-  artifactKey: Guid(e6480fe8c1992fb46baec0f72afe3993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedPlayMode.asset using Guid(e6480fe8c1992fb46baec0f72afe3993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17389a746d4bd50a8bb38a0609f0c920') in 0.014100 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/AddressableAssetsData/DataBuilders/BuildScriptVirtualMode.asset
-  artifactKey: Guid(5eb1a1002ac092d43b46068805d66917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/DataBuilders/BuildScriptVirtualMode.asset using Guid(5eb1a1002ac092d43b46068805d66917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489da76a22bd114bd3393ceb589a5155') in 0.013365 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.278962 seconds.
-  path: Assets/AddressableAssetsData/AddressableAssetSettings.asset
-  artifactKey: Guid(431036ca8f26a27418698df10080637d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AddressableAssetSettings.asset using Guid(431036ca8f26a27418698df10080637d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3a2df59e187dc0e85acb89a398224bc') in 0.015346 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 243.443211 seconds.
-  path: Assets/AddressableAssetsData/AddressableAssetSettings.asset
-  artifactKey: Guid(431036ca8f26a27418698df10080637d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AddressableAssetSettings.asset using Guid(431036ca8f26a27418698df10080637d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3546ccc626003c69c6b6c30fef372773') in 0.013066 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 63.838302 seconds.
-  path: Assets/AddressableAssetsData/Windows/addressables_content_state.bin
-  artifactKey: Guid(777a8839014f8a44f8c41e984344f673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/Windows/addressables_content_state.bin using Guid(777a8839014f8a44f8c41e984344f673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a8834c93d4e1f9b08ed87fd67465052') in 0.010256 seconds 
+  Time since last request: 923.842735 seconds.
+  path: Assets/Graphics/Materials/fog.mat
+  artifactKey: Guid(eff15b1b82293b747b842128a6a57428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Materials/fog.mat using Guid(eff15b1b82293b747b842128a6a57428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0481e88558417787bf3a9520affcee5a') in 0.017841 seconds 
