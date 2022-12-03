@@ -18,3 +18,5 @@ MonoBehaviour:
     Apply
     <color=yellow>Unremarkable Fleshwarp</color>.'
   image: {fileID: 21300000, guid: 517bbe53f68a48247805720f526faa09, type: 3}
+  inflictedStatus:
+  - {fileID: 11400000, guid: 0c7b5b3c2cf600141bd8048ccccfaf1b, type: 2}

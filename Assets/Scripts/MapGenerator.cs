@@ -314,7 +314,7 @@ namespace Exion.Ataraxia.Default
             }
         }
 
-        public void SetPrisoner()
+        private void SetPrisoner()
         {
             int nbPrisoner = 0;
             foreach (Building b in map)
@@ -331,7 +331,7 @@ namespace Exion.Ataraxia.Default
             }
         }
 
-        public void SetFriends()
+        private void SetFriends()
         {
             foreach (Character c in npc)
             {
@@ -361,6 +361,15 @@ namespace Exion.Ataraxia.Default
                     prisoners[rndIndex].AddFriend(c);
                 }
             }
+        }
+
+        public bool Won()
+        {
+            foreach(Character c in npc)
+            {
+                if (!c.corrupted) return false;
+            }
+            return true;
         }
     }
 }

@@ -1,29 +1,29 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Exion.Ataraxia.Handler
 {
-    public class StatusHandlerUI : MonoBehaviour
+    public class StatusHandlerUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         public StatusHandler status;
         public TextMeshProUGUI statusName;
-        public GameObject tooltip;
-        public TextMeshProUGUI statusDescription;
 
         public void Init()
         {
             statusName.text = status.status.name;
             if (status.stacks > 1) statusName.text += " x" + status.stacks;
-            statusDescription.text = status.status.description;
         }
 
-        private void OnMouseEnter()
+        public void OnPointerEnter(PointerEventData eventData)
         {
-            tooltip.SetActive(true);
+            TooltipManager.m_instance.SetTooltip(status.status.description);
         }
-        private void OnMouseExit()
+
+        public void OnPointerExit(PointerEventData eventData)
         {
-            tooltip.SetActive(false);
+            TooltipManager.m_instance.HideTooltip();
         }
+
     }
 }

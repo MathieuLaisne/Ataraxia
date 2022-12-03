@@ -17,3 +17,5 @@ MonoBehaviour:
     living in the building. \nGenerate 1 <color=#4B00AB>Suspicion</color> per affected
     character."
   image: {fileID: 21300000, guid: fbbedaecd743e6b47af49c516c98f330, type: 3}
+  inflictedStatus:
+  - {fileID: 11400000, guid: d91098128d016174c83be12f00904438, type: 2}

@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Worker
   deck:
-  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
-  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
-  - {fileID: 11400000, guid: e520771cb63c4e5459a54e71155786e2, type: 2}
-  - {fileID: 11400000, guid: 779b4f15798534e45b926145dc4a8c90, type: 2}
-  - {fileID: 11400000, guid: 779b4f15798534e45b926145dc4a8c90, type: 2}
-  - {fileID: 11400000, guid: 779b4f15798534e45b926145dc4a8c90, type: 2}
-  - {fileID: 11400000, guid: 18c37ac612309cd4b924932ad8d71b04, type: 2}
-  - {fileID: 11400000, guid: 18c37ac612309cd4b924932ad8d71b04, type: 2}
-  - {fileID: 11400000, guid: f59cb2e9c5983804099437d728190abf, type: 2}
+  - {fileID: 11400000, guid: 61bbb66ca113d5740b85da0196338da9, type: 2}
+  - {fileID: 11400000, guid: 8052215fd4bd7d4449f52be4e39d4a83, type: 2}
+  - {fileID: 11400000, guid: 61bbb66ca113d5740b85da0196338da9, type: 2}
+  - {fileID: 11400000, guid: 61bbb66ca113d5740b85da0196338da9, type: 2}
+  - {fileID: 11400000, guid: 8052215fd4bd7d4449f52be4e39d4a83, type: 2}
+  - {fileID: 11400000, guid: 83a659c3f48f580419180bb418cdbaa9, type: 2}
+  - {fileID: 11400000, guid: 83a659c3f48f580419180bb418cdbaa9, type: 2}
+  - {fileID: 11400000, guid: 83a659c3f48f580419180bb418cdbaa9, type: 2}
+  - {fileID: 11400000, guid: 2ceb9bb0dd55fcd42bbf7a801a9d294a, type: 2}

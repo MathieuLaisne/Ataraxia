@@ -15,3 +15,5 @@ MonoBehaviour:
   name: Stigmata
   description: Apply <color=yellow>Stigmatized</color> status to target.
   image: {fileID: 0}
+  inflictedStatus:
+  - {fileID: 11400000, guid: eb92994709c686d4b8edec9b7a7e00c2, type: 2}

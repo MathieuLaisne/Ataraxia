@@ -207,8 +207,8 @@ namespace Exion.Ataraxia.Default
         public void Fleshwarp(int percentage)
         {
             int sign = Random.Range(0, 1) * 2 - 1;
-            m_maxHP += sign * percentage * m_maxHP;
-            m_hp += sign * percentage * m_hp;
+            m_maxHP += sign * percentage / 100 * m_maxHP;
+            m_hp += sign * percentage / 100 * m_hp;
         }
     }
 }

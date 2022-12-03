@@ -133,6 +133,8 @@ namespace Exion.Ataraxia.Default
         public Player player;
         [SerializeField]
         private TimeManager tm;
+        [SerializeField]
+        private MapGenerator map;
 
         #region crusader
         [SerializeField]
@@ -274,7 +276,7 @@ namespace Exion.Ataraxia.Default
             else UIDrawer();
         }
 
-        //Called once per second
+        //Called every second
         private void FixedUpdate()
         {
             susBar.fillAmount = suspicion / 100;
@@ -309,6 +311,11 @@ namespace Exion.Ataraxia.Default
             {
                 tm.pause = true;
                 gameOver.SetActive(true);
+            }
+            if (map.Won())
+            {
+                tm.pause = true;
+                won.SetActive(true);
             }
         }
 
@@ -1321,8 +1328,15 @@ namespace Exion.Ataraxia.Default
 
         private void PauseMenu()
         {
-            tm.pause = true;
-            menu.SetActive(true);
+            if(menu.activeSelf)
+            {
+                tm.pause = false;
+                menu.SetActive(false);
+            } else
+            {
+                tm.pause = true;
+                menu.SetActive(true);
+            }
         }
 
         private void ShowTutorial()

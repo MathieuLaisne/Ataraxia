@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Exion.Ataraxia.ScriptableObjects
@@ -9,5 +10,7 @@ namespace Exion.Ataraxia.ScriptableObjects
         [Multiline]
         public string description;
         public Sprite image;
+
+        public List<Status> inflictedStatus;
     }
 }

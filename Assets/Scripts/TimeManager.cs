@@ -16,6 +16,7 @@ namespace Exion.Ataraxia.Handler
         public Sprite workSprite;
         public Sprite leisureSprite;
         public Sprite nightSprite;
+        public Sprite playSprite;
 
         [SerializeField]
         private Color[] lightTime;
@@ -40,7 +41,12 @@ namespace Exion.Ataraxia.Handler
         // Start is called before the first frame update
         private void Update()
         {
-            if (Input.GetButtonDown("Jump")) pause = !pause;
+            if (Input.GetButtonDown("Jump"))
+            {
+                pause = !pause;
+                if (pauseIndicator.sprite != pauseSprite) pauseIndicator.sprite = pauseSprite;
+                else pauseIndicator.sprite = playSprite;
+            }
             if (!pause)
             {
                 switch (m_time)
@@ -92,7 +98,7 @@ namespace Exion.Ataraxia.Handler
                     case "Work":
                         if (pauseIndicator.sprite != workSprite) pauseIndicator.sprite = workSprite;
                         sun.color = Color.Lerp(sun.color, Color.yellow, 0.1f);
-                        if (m_timeElapsed == 60)
+                        if (m_timeElapsed == 10)
                         {
                             m_timeElapsed = 0;
                             m_time = "End Work";

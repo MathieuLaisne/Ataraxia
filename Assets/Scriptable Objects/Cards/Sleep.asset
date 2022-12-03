@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Sleep
   description: Sleep Early Tonight.
-  image: {fileID: 21300000, guid: 4a00ac66fe7aaee43ad915e465d2f159, type: 3}
+  image: {fileID: 21300000, guid: 0f48f73c81df304469d7b1376d75b957, type: 3}
+  inflictedStatus: []

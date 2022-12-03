@@ -15,3 +15,5 @@ MonoBehaviour:
   name: Horrifying Land
   description: Apply <color=yellow>Horrifying</color> to target building.
   image: {fileID: 0}
+  inflictedStatus:
+  - {fileID: 11400000, guid: 26a6280fbd675034f92dd8a9ba5447e6, type: 2}

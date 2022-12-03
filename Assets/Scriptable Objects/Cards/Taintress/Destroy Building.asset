@@ -16,3 +16,5 @@ MonoBehaviour:
   description: "Selected building becomes an Abandoned building. \nApply <color=yellow>Jobless</color>
     to those working here."
   image: {fileID: 0}
+  inflictedStatus:
+  - {fileID: 11400000, guid: a0e94b934c72c64409b6574e41695dda, type: 2}

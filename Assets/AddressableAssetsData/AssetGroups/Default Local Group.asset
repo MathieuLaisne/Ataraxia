@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/Scriptable Objects
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 59d891fa9faf37a48b92da46e2ec0c03
+    m_Address: Assets/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 431036ca8f26a27418698df10080637d, type: 2}
   m_SchemaSet:
