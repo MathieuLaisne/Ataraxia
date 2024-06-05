@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11084873, g: 0.09802764, b: 0.09308123, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1495,7 +1494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3aee3bc83cb893439e995a0f8a50d00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 759990463a915b74f9537fe58a491774, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1644,7 +1643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 123eadc032634bf4c866096127ee6d0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e031cb1fa49894292b06ceb557021a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2679,7 +2678,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87315a1a374a41b45b0de5355ff95dab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40e17561f62437e4fb42bf35252a8b45, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2706,7 +2705,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 808879723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f943623df0b3d646b0fca7cba4a078c, type: 3}
+  m_Script: {fileID: 11500000, guid: 49571ddcbae82574aa3886b06c2e268c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 450309625}
@@ -3525,6 +3524,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -3708,7 +3708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ec5eab733b690d6468662cc570bfa9e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e80c7528716bc924d8a311df22300ec2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4000,7 +4000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 194397f386b884944af7625dac0c3391, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c830b7ee5a203c42953c285c43ee1f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4979,7 +4979,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4777fe222396c8448b6be9e5bd9443f5, type: 2}
+  - {fileID: 2100000, guid: 6a88a3ebc0a2d3b49a5f10cae4cbb623, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5125,7 +5125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e79757f3bc3ff4c4087a3128da4426f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afcc4cef79885fa419c7c7505cdb3863, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

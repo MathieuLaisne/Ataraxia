@@ -294,3 +294,111 @@ Received Import Request.
 Number of updated assets reloaded before import = 0
 Start importing Assets/Scenes/Main.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2e9e1487f45233babec545a58b8cff4') in 0.017614 seconds 
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 342.560104 seconds.
+  path: Assets/Graphics/Sprites/Card Art/change clothes.png
+  artifactKey: Guid(30a5f2cb708e3ba4abfb7db63e4f40e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/change clothes.png using Guid(30a5f2cb708e3ba4abfb7db63e4f40e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17da70190e05a51d2958d433821dd32a') in 0.388336 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Graphics/Sprites/Card Art/fake memory.png
+  artifactKey: Guid(b36857da2ed8f0b498e255f7a263cd73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/fake memory.png using Guid(b36857da2ed8f0b498e255f7a263cd73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba3a1ede95ec54204680e2fe6bd650cf') in 0.188694 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Graphics/Sprites/Card Art/fleshwarp.png
+  artifactKey: Guid(d734f1b98ba360b47b1a7e9823d04d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/fleshwarp.png using Guid(d734f1b98ba360b47b1a7e9823d04d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '127cb1056e962c992fa85d0e8e3c578d') in 0.199688 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Graphics/Sprites/Card Art/Mass hysteria.png
+  artifactKey: Guid(00e79b7a6a0f4374f88323118ca22600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/Mass hysteria.png using Guid(00e79b7a6a0f4374f88323118ca22600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4224040593c193e0bb350675789a657d') in 0.182306 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Graphics/Sprites/Card Art/create rave.png
+  artifactKey: Guid(49b08a808dcf9cd43a4aa9dc36d2c543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/create rave.png using Guid(49b08a808dcf9cd43a4aa9dc36d2c543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5d766c01b013fd8df91b94051cb515') in 0.213065 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Graphics/Sprites/Card Art/party.png
+  artifactKey: Guid(4fad1a5ba82d5734db3296f3ba32d41d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/party.png using Guid(4fad1a5ba82d5734db3296f3ba32d41d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92a82589c95f45d71276b7ff665bc622') in 0.182230 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Graphics/Sprites/Card Art/labyrinthine mind.png
+  artifactKey: Guid(343efd8fefbb0ec469c6abaa67f81625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/labyrinthine mind.png using Guid(343efd8fefbb0ec469c6abaa67f81625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dcf71429255622a9e342a9ad6b0a96c') in 0.113534 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Graphics/Sprites/Card Art/horror nest.png
+  artifactKey: Guid(b180ebd04e87c9c4aab5bceab74eb72e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/horror nest.png using Guid(b180ebd04e87c9c4aab5bceab74eb72e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28c512461f595309d85541d6ab59a841') in 0.200764 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.383628 seconds.
+  path: Assets/Graphics/Sprites/Card Art/Wrathful cry.png
+  artifactKey: Guid(3222e901c678b2d4ba06575aa32cc752) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/Wrathful cry.png using Guid(3222e901c678b2d4ba06575aa32cc752) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '846baae3b3ec244dc1a2e668a163e177') in 0.108849 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 10.108080 seconds.
+  path: Assets/Graphics/Sprites/Card Art/plant the seed.png
+  artifactKey: Guid(3b31902ea85a2c342b37b7376b8cebbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/plant the seed.png using Guid(3b31902ea85a2c342b37b7376b8cebbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203860f254ac7077f9714d23cabe619e') in 0.232750 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Graphics/Sprites/Card Art/Stimulant.png
+  artifactKey: Guid(e97408832c19d6948b41cbae17de6ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/Stimulant.png using Guid(e97408832c19d6948b41cbae17de6ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ec56081c8fb2631ba1caec9278fb35') in 0.189912 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.422980 seconds.
+  path: Assets/Graphics/Sprites/Card Art/Take Over.png
+  artifactKey: Guid(439aad20847a0a646abd82fdc49dbe71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/Take Over.png using Guid(439aad20847a0a646abd82fdc49dbe71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66b23897088289819f84f115a9a540da') in 0.164352 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Graphics/Sprites/Card Art/weakening drug.png
+  artifactKey: Guid(cf37d910f5efe6c438530df2c8e3717f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Graphics/Sprites/Card Art/weakening drug.png using Guid(cf37d910f5efe6c438530df2c8e3717f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0de595c69db06719664ebc7647cdf05') in 0.168855 seconds 
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Nyarlatothep
   deck:
-  - {fileID: 11400000, guid: a7fa462fd1da384428a0e64a6e8848d6, type: 2}
-  - {fileID: 11400000, guid: 9a42ba1a0c8c2634494c9edc559c3747, type: 2}
-  - {fileID: 11400000, guid: 8eac93f0bf5b1ea498f30ffcb09e6e9e, type: 2}
-  - {fileID: 11400000, guid: 1cb60f2317b49c648958dbb7e2c10446, type: 2}
-  - {fileID: 11400000, guid: c175241c955bd264c84d4606bc3f6093, type: 2}
-  - {fileID: 11400000, guid: f21a48a587be96a4e873fd0df124f29a, type: 2}
-  - {fileID: 11400000, guid: a791ef8690d99fb4da5d58cb102712d5, type: 2}
+  - {fileID: 11400000, guid: b4e8982f6fa24e64a8e3bb30bcfd9fd3, type: 2}
+  - {fileID: 11400000, guid: e6946374c1ea2294788c447f1339a7f8, type: 2}
+  - {fileID: 11400000, guid: 3c2cff84907bd0e489f506822682b142, type: 2}
+  - {fileID: 11400000, guid: 37dcd07288b272a4a9573ce32173fc9c, type: 2}
+  - {fileID: 11400000, guid: ef112d007bc93084e8674a9584100e9f, type: 2}
+  - {fileID: 11400000, guid: 60446f91adc77f94f901c2e7011cf11f, type: 2}
+  - {fileID: 11400000, guid: 0c7fe1fb0583fa04bbbb384a0a30393f, type: 2}
