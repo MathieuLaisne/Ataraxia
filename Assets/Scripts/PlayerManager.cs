@@ -312,7 +312,7 @@ namespace Exion.Ataraxia.Default
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                if (hit.transform.gameObject.GetComponent<BuildingHandler>())
                 {
                     GameObject objectHit = hit.transform.gameObject;
                     Building BH = objectHit.GetComponent<BuildingHandler>().building;

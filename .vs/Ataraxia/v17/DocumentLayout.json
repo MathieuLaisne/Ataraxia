@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Neox\\Proj\\Ataraxia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\tutorialhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorialhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TutorialHandler.cs",
               "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\TutorialHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TutorialHandler.cs",
@@ -55,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MenuManager.cs",
               "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\MenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuManager.cs",
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Assets\\Scripts\\MenuManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T11:59:56.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T11:59:56.023Z"
             },
             {
               "$type": "Document",
@@ -80,15 +79,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerManager.cs",
               "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\PlayerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerManager.cs",
               "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\PlayerManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerManager.cs",
-              "ViewState": "AQIAADUBAAAAAAAAAIA5wEYBAAAJAAAA",
+              "ViewState": "AQIAACsBAAAAAAAAAAAiwD8BAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T22:17:15.947Z"
+              "WhenOpened": "2024-06-04T22:17:15.947Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

@@ -168,16 +168,18 @@ MonoBehaviour:
   AllStatus:
   - {fileID: 11400000, guid: d91098128d016174c83be12f00904438, type: 2}
   - {fileID: 11400000, guid: 0fb6afbb448d01541a31c86d8d9176ca, type: 2}
-  - {fileID: 11400000, guid: a73c26d99be463c419dc0ef12e91bee2, type: 2}
-  - {fileID: 11400000, guid: 26a6280fbd675034f92dd8a9ba5447e6, type: 2}
+  - {fileID: 11400000, guid: 73d08b95474b0b34c8f9ce1f389556d2, type: 2}
+  - {fileID: 11400000, guid: fd1c2db0f2117f0439ff922c28914afe, type: 2}
   - {fileID: 11400000, guid: b11317edbe9fbc246a186cae369ed70a, type: 2}
   - {fileID: 11400000, guid: 6869e95d5104f454e89806970932760d, type: 2}
-  - {fileID: 11400000, guid: 9a4fb0c7d254c7e4a85874bdf7e76105, type: 2}
-  - {fileID: 11400000, guid: eb92994709c686d4b8edec9b7a7e00c2, type: 2}
+  - {fileID: 11400000, guid: db126d20689ccba46ba7f2565a093c99, type: 2}
+  - {fileID: 11400000, guid: 7da7733f903ae4940b1484e076fc7704, type: 2}
+  - {fileID: 11400000, guid: 039b9f06217c14942bd4a982fa64f339, type: 2}
   - {fileID: 11400000, guid: 60de277426b810140b027781d1fc86fa, type: 2}
   - {fileID: 11400000, guid: 3e4464af661c3644194421dbb4626543, type: 2}
   - {fileID: 11400000, guid: e263b2a60de749b40aaa8b08f367afbc, type: 2}
-  - {fileID: 11400000, guid: 0c7b5b3c2cf600141bd8048ccccfaf1b, type: 2}
+  - {fileID: 11400000, guid: 75a244a7858fd8c4488b08ee07b02ad2, type: 2}
+  - {fileID: 11400000, guid: 20108619bc782574797399aec652e3cb, type: 2}
   armor: {fileID: 759344633}
   hp: {fileID: 169062925}
   mp: {fileID: 1507630313}
@@ -199,17 +201,17 @@ MonoBehaviour:
   jobUsed: []
   player: {fileID: 0}
   tm: {fileID: 1752840454}
-  crusader: {fileID: 1379264425851516778, guid: 0c6c14765e74ee148a4d672ecc78ab4a, type: 3}
+  crusader: {fileID: 1379264425851516778, guid: dd59ce683014ef64d9e4db5ba4453ee9, type: 3}
   gameOver: {fileID: 861404079}
   Drugs:
-  - {fileID: 11400000, guid: 41882057ca9db0d40a50dc09ce588ca7, type: 2}
-  - {fileID: 11400000, guid: dc27ca5667edc7e4d874a05c0af53878, type: 2}
-  - {fileID: 11400000, guid: 03e7027ebc471e7479d68a453efbd14f, type: 2}
+  - {fileID: 11400000, guid: 14d9acfabc8812047b56fd6d2c66d220, type: 2}
+  - {fileID: 11400000, guid: 54d8da4de08b1d94eab5e87d6ac92758, type: 2}
+  - {fileID: 11400000, guid: 11b3cff094b584444b2b10a5647526f8, type: 2}
   skyboxes:
-  - {fileID: 2100000, guid: 4b4128c1f062e0048aca861e458791e9, type: 2}
-  - {fileID: 2100000, guid: 85d40c908e450404eae0dbe9481296ef, type: 2}
-  - {fileID: 2100000, guid: d9d0a40def91b004596998600125a39e, type: 2}
-  - {fileID: 2100000, guid: 84d25f28cd3b31e4aa3f5b378743fe51, type: 2}
+  - {fileID: 2100000, guid: bb2e85cc6aba53349961f4388fed1b06, type: 2}
+  - {fileID: 2100000, guid: 1f6f1bd210cfb504cbda44e7982c6f64, type: 2}
+  - {fileID: 2100000, guid: 7d5b5227338d0ff4fa535c3bf4256cb8, type: 2}
+  - {fileID: 2100000, guid: 910ae1a0c4089a74c9683155eb062893, type: 2}
   bombCounter: 1
 --- !u!4 &5301371
 Transform:
@@ -420,7 +422,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3aee3bc83cb893439e995a0f8a50d00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 759990463a915b74f9537fe58a491774, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -846,7 +848,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit to Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c20cf3e673920eb45bdbc0fe76575ba5, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1843,7 +1845,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3aee3bc83cb893439e995a0f8a50d00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 759990463a915b74f9537fe58a491774, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2192,7 +2194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 050f895bc13b96440a377a02c2d6aecd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: de2c6140be07d914da984442f7416e0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2906,7 +2908,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: GAME OVER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d3ad26fce62ad184bbaa65ba1af0bc1e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c20cf3e673920eb45bdbc0fe76575ba5, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3784,7 +3786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ec5eab733b690d6468662cc570bfa9e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e80c7528716bc924d8a311df22300ec2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4488,7 +4490,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ec5eab733b690d6468662cc570bfa9e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e80c7528716bc924d8a311df22300ec2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4567,7 +4569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3aee3bc83cb893439e995a0f8a50d00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 759990463a915b74f9537fe58a491774, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4721,7 +4723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ec5eab733b690d6468662cc570bfa9e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e80c7528716bc924d8a311df22300ec2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4925,12 +4927,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 17b8e6d9187e44a42b7973c1bee4b1a4, type: 2}
   chara: {fileID: 8802930274869842255, guid: efddea1cbe1124a4f8d1216a3ab0ccb3, type: 3}
   profile:
-  - {fileID: 21300000, guid: a761375ec6e85fd4287ff51273a7ecd4, type: 3}
-  - {fileID: 21300000, guid: ea1504f2da9c7e74986709eeab65e129, type: 3}
-  - {fileID: 21300000, guid: 4f3e4213fa3e9d146b75dd8c7a53cfb6, type: 3}
-  - {fileID: 21300000, guid: 090bbaa9f9d319147b552448a5f241c6, type: 3}
-  - {fileID: 21300000, guid: 630ac473967e24b47a9e65b3d652bf69, type: 3}
-  - {fileID: 21300000, guid: 313f5dd57e1f6414e883ecd15e14ca7b, type: 3}
+  - {fileID: 21300000, guid: 86be4be99e2479e49b3cf60f32112ecd, type: 3}
+  - {fileID: 21300000, guid: a87c777eb13a25f4491abe5714c50626, type: 3}
+  - {fileID: 21300000, guid: 58b6dc0ef223a464586d453a395ce75b, type: 3}
+  - {fileID: 21300000, guid: 640405cdb38220a4cad0e914f7ee74f1, type: 3}
+  - {fileID: 21300000, guid: 5ea1f6dcacc450144bbe1d0f6627919d, type: 3}
+  - {fileID: 21300000, guid: 7cfc7e002b45482429e12736e3658839, type: 3}
   names:
   - John
   - Joe
@@ -5174,11 +5176,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sun: {fileID: 968243511}
   pauseIndicator: {fileID: 1743899471}
-  pauseSprite: {fileID: 21300000, guid: e79757f3bc3ff4c4087a3128da4426f0, type: 3}
-  morningSprite: {fileID: 21300000, guid: 0f147ca4064d1184cb1609ae2bfa0a5d, type: 3}
-  workSprite: {fileID: 21300000, guid: fc2e73d286d4cdf4a8c6ab7c0d3c11cb, type: 3}
-  leisureSprite: {fileID: 21300000, guid: 5b7da75a0d61b9f4393e7ea12d277a25, type: 3}
-  nightSprite: {fileID: 21300000, guid: 686d671ea16772648bc8c86b0a578c56, type: 3}
+  pauseSprite: {fileID: 21300000, guid: c7ac8b85ab949de4ea1b1ffbe11b65d5, type: 3}
+  morningSprite: {fileID: 21300000, guid: 71b06dfaf21d1e84b939a8acc8d1d177, type: 3}
+  workSprite: {fileID: 21300000, guid: db0456fbbcbfb8b4081c2d90a934aaee, type: 3}
+  leisureSprite: {fileID: 21300000, guid: fe54ea0cdca46fa488fc87a5a6c82e1d, type: 3}
+  nightSprite: {fileID: 21300000, guid: f16ad901ddea1f84ab4c04c87696418b, type: 3}
   lightTime:
   - {r: 0.627451, g: 0.63529414, b: 1, a: 0}
   - {r: 0.9824472, g: 1, b: 0.8156863, a: 1}
