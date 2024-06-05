@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Stimulant
   description: Heals 10 Health.
   image: {fileID: 21300000, guid: b72d42ce26c13974dbe6b715670ba7af, type: 3}
+  Modifiers:
+  - Name: 7
+    statusType: {fileID: 0}
+    Amount: -10

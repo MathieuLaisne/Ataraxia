@@ -37,5 +37,10 @@ namespace Exion.Ataraxia.Handler
         {
             SceneManager.LoadScene(1);
         }
+
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
     }
 }

@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Bomb
   description: Adds 1 to your bomb counter.
   image: {fileID: 21300000, guid: 4a1792ee081b9764281c6d84a9f88c59, type: 3}
+  Modifiers:
+  - Name: 20
+    statusType: {fileID: 0}
+    Amount: 1

@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: Smash
   m_EditorClassIdentifier: 
   name: Smash Mental Barrier
-  description: Removes all mental barriers. Have a 50% chance of generating x suspicion
+  description: Removes all mental barriers. Have a 50% chance of generating 2 suspicion
     per friends.
   image: {fileID: 21300000, guid: 8e0a776eda5150a48850c5b6251c6014, type: 3}
+  Modifiers:
+  - Name: 3
+    statusType: {fileID: 0}
+    Amount: 1
+  - Name: 14
+    statusType: {fileID: 0}
+    Amount: 50
+  - Name: 12
+    statusType: {fileID: 0}
+    Amount: 2

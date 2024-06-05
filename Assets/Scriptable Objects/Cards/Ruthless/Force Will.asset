@@ -16,3 +16,10 @@ MonoBehaviour:
   description: Target loses all Mental Strength and gain 3 times its max Mental Strength
     as Insanity.
   image: {fileID: 21300000, guid: 63fb2e60ab1e9034a89e177fdbd424aa, type: 3}
+  Modifiers:
+  - Name: 2
+    statusType: {fileID: 0}
+    Amount: 1
+  - Name: 5
+    statusType: {fileID: 0}
+    Amount: 3

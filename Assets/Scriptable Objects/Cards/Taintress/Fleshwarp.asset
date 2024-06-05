@@ -16,3 +16,10 @@ MonoBehaviour:
   description: Target randomly gets 10% more or less Max HP. Apply the "Fleshwarped"
     status.
   image: {fileID: 21300000, guid: 9b37859f96e7e244b983342bb298aab9, type: 3}
+  Modifiers:
+  - Name: 8
+    statusType: {fileID: 0}
+    Amount: 10
+  - Name: 16
+    statusType: {fileID: 11400000, guid: 73d08b95474b0b34c8f9ce1f389556d2, type: 2}
+    Amount: 100

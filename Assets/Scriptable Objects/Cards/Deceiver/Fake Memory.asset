@@ -15,3 +15,10 @@ MonoBehaviour:
   name: Fake Memory
   description: Deal 15 Direct Mental Damage. Generate 1 Suspicion per friend.
   image: {fileID: 21300000, guid: fa017a1c433448e439d9472996738517, type: 3}
+  Modifiers:
+  - Name: 1
+    statusType: {fileID: 0}
+    Amount: 15
+  - Name: 12
+    statusType: {fileID: 0}
+    Amount: 1

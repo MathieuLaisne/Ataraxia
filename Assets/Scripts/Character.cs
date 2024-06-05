@@ -138,19 +138,19 @@ namespace Exion.Ataraxia.Default
 
         public int DealMentalDamage(int damage)
         {
-            int unblocked = 0;
+            int blocked = 0;
             for (int i = damage; i > 0; i--)
             {
                 if (m_mentalBarrier > 0)
                 {
                     m_mentalBarrier--;
-                    unblocked++;
+                    blocked++;
                 }
                 else m_mp--;
                 if (m_mp == 0) break;
             }
             if (m_mp <= 0) corrupted = true;
-            return unblocked;
+            return blocked;
         }
 
         public bool DealDirectMentalDamage(int damage)
@@ -166,8 +166,8 @@ namespace Exion.Ataraxia.Default
 
         public bool DealHealthDamage(int damage)
         {
-            m_hp -= damage;
-            if (m_hp <= 0) return true;
+            m_hp = Mathf.Clamp(m_hp - damage, 0, m_maxHP);
+            if (m_hp == 0) return true;
             return false;
         }
 
@@ -185,7 +185,7 @@ namespace Exion.Ataraxia.Default
             {
                 corrupted = true;
                 m_insanity = 100;
-                return m_friends.Count * 2f;
+                return m_friends.Count * 2f; //suspicion generated per friends if person went crazy.
             }
             return 0;
         }
@@ -197,11 +197,6 @@ namespace Exion.Ataraxia.Default
                 if (status.status.name == statusName) return true;
             }
             return false;
-        }
-
-        public void Heal(int amount)
-        {
-            m_hp = Mathf.Clamp(m_hp + amount, 0, m_maxHP);
         }
 
         public void Fleshwarp(int percentage)

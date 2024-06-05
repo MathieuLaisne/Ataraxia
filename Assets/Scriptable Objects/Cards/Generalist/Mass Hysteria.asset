@@ -16,3 +16,10 @@ MonoBehaviour:
   description: Apply the "Confusion" Status to all people working and living in the
     building. Generate 1 Suspicion per affected character.
   image: {fileID: 21300000, guid: fbbedaecd743e6b47af49c516c98f330, type: 3}
+  Modifiers:
+  - Name: 17
+    statusType: {fileID: 11400000, guid: d91098128d016174c83be12f00904438, type: 2}
+    Amount: 100
+  - Name: 13
+    statusType: {fileID: 0}
+    Amount: 1

@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Exion.Ataraxia.Default;
 
 namespace Exion.Ataraxia.ScriptableObjects
 {
@@ -8,5 +10,6 @@ namespace Exion.Ataraxia.ScriptableObjects
         public string name;
         public string description;
         public Sprite image;
+        public Modifier[] Modifiers;
     }
 }

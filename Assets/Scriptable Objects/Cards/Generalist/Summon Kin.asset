@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Summon Kin
   description: Summon a monster to selected place.
   image: {fileID: 0}
+  Modifiers:
+  - Name: 18
+    statusType: {fileID: 0}
+    Amount: 1

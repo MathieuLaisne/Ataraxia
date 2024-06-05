@@ -15,3 +15,10 @@ MonoBehaviour:
   name: Mental Stab
   description: Deal 10 Mental Damage and twice as much insanity if blocked.
   image: {fileID: 21300000, guid: d1eb9f3ac936e4a40bd3d961ed160188, type: 3}
+  Modifiers:
+  - Name: 0
+    statusType: {fileID: 0}
+    Amount: 10
+  - Name: 6
+    statusType: {fileID: 0}
+    Amount: 2

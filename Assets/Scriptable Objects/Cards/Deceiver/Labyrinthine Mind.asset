@@ -16,3 +16,10 @@ MonoBehaviour:
   description: 'Deal 10 direct mental damage. If Target reaches 0 Mentality, keep
     this card in your hand. '
   image: {fileID: 21300000, guid: 412090cd4d0e88e4da5b5fae37fdc408, type: 3}
+  Modifiers:
+  - Name: 1
+    statusType: {fileID: 0}
+    Amount: 10
+  - Name: 24
+    statusType: {fileID: 0}
+    Amount: 1

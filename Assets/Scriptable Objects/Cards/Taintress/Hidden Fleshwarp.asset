@@ -16,3 +16,10 @@ MonoBehaviour:
   description: Target gets randomly 5% more or less Max HP. Apply status "Unremarkable
     Fleshwarp" Status.
   image: {fileID: 21300000, guid: 517bbe53f68a48247805720f526faa09, type: 3}
+  Modifiers:
+  - Name: 8
+    statusType: {fileID: 0}
+    Amount: 5
+  - Name: 16
+    statusType: {fileID: 11400000, guid: 75a244a7858fd8c4488b08ee07b02ad2, type: 2}
+    Amount: 100

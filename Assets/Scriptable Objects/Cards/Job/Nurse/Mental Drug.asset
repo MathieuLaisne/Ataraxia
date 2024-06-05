@@ -15,3 +15,10 @@ MonoBehaviour:
   name: Tranquilizer
   description: Deal 5 Mental Damage. Reduces Suspicion by 1.
   image: {fileID: 21300000, guid: 3ef3bbb3a2357094b9a8e7e026627d39, type: 3}
+  Modifiers:
+  - Name: 0
+    statusType: {fileID: 0}
+    Amount: 5
+  - Name: 11
+    statusType: {fileID: 0}
+    Amount: -1

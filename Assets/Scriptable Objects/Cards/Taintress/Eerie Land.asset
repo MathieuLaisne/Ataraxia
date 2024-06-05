@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Eerie Land
   description: Apply the "Eerie" Status to target building.
   image: {fileID: 21300000, guid: 2efa8644c1487db4aa58ad8c5296099a, type: 3}
+  Modifiers:
+  - Name: 15
+    statusType: {fileID: 11400000, guid: 0fb6afbb448d01541a31c86d8d9176ca, type: 2}
+    Amount: 100

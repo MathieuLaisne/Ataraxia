@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Wrathful Cry
   description: Deal 30 Insanity.
   image: {fileID: 21300000, guid: cd74ee133a3a5c248b45d14620057338, type: 3}
+  Modifiers:
+  - Name: 4
+    statusType: {fileID: 0}
+    Amount: 30

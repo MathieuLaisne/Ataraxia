@@ -16,3 +16,7 @@ MonoBehaviour:
   description: Selected building becomes an Abandoned building. People working there
     gets the "Jobless" status.
   image: {fileID: 0}
+  Modifiers:
+  - Name: 21
+    statusType: {fileID: 0}
+    Amount: 1

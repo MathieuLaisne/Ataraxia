@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Stigmata
   description: Apply the "Stigmatized" status to target.
   image: {fileID: 0}
+  Modifiers:
+  - Name: 16
+    statusType: {fileID: 11400000, guid: 039b9f06217c14942bd4a982fa64f339, type: 2}
+    Amount: 100

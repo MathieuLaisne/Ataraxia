@@ -16,3 +16,13 @@ MonoBehaviour:
   description: Deal 10 Mental Damage. 50% of Applying Nightmare. +0.5 Suspicion per
     Unblocked Damage.
   image: {fileID: 21300000, guid: 07f2eecafb6510a41a2f6107dbeb6af8, type: 3}
+  Modifiers:
+  - Name: 0
+    statusType: {fileID: 0}
+    Amount: 10
+  - Name: 16
+    statusType: {fileID: 11400000, guid: 6869e95d5104f454e89806970932760d, type: 2}
+    Amount: 50
+  - Name: 10
+    statusType: {fileID: 0}
+    Amount: 0.5

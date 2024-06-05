@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Horrifying Land
   description: Apply the "Horrifying" status to target building.
   image: {fileID: 0}
+  Modifiers:
+  - Name: 15
+    statusType: {fileID: 11400000, guid: fd1c2db0f2117f0439ff922c28914afe, type: 2}
+    Amount: 100

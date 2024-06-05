@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Plan Rave
   description: Selected Abandoned Building gets "Rave" status.
   image: {fileID: 21300000, guid: 5d459053809eeeb4bab35afcf417d3b8, type: 3}
+  Modifiers:
+  - Name: 15
+    statusType: {fileID: 11400000, guid: db126d20689ccba46ba7f2565a093c99, type: 2}
+    Amount: 100

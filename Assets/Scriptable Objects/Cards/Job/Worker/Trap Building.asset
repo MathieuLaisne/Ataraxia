@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Trap Building
   description: Apply the "Trapped" Status to target building.
   image: {fileID: 21300000, guid: 6bbac66fe905fee40ab2d05ae92e84bc, type: 3}
+  Modifiers:
+  - Name: 15
+    statusType: {fileID: 11400000, guid: e263b2a60de749b40aaa8b08f367afbc, type: 2}
+    Amount: 100

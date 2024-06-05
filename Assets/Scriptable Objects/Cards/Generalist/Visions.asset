@@ -16,3 +16,13 @@ MonoBehaviour:
   description: 'Selected Target sees your true form: Deal 15 Mental Damage and Insanity.
     Apply the "Untargetable" Status.'
   image: {fileID: 21300000, guid: fdacc63eb5c1f40408618ea55033bc68, type: 3}
+  Modifiers:
+  - Name: 0
+    statusType: {fileID: 0}
+    Amount: 15
+  - Name: 4
+    statusType: {fileID: 0}
+    Amount: 15
+  - Name: 16
+    statusType: {fileID: 11400000, guid: 20108619bc782574797399aec652e3cb, type: 2}
+    Amount: 100

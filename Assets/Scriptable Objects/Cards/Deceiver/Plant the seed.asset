@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Plant The Seed
   description: Apply "Seeded" to target.
   image: {fileID: 21300000, guid: 5db38274d2c7e6643af121ee7625f6d5, type: 3}
+  Modifiers:
+  - Name: 16
+    statusType: {fileID: 11400000, guid: 7da7733f903ae4940b1484e076fc7704, type: 2}
+    Amount: 100

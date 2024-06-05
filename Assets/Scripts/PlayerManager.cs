@@ -1,10 +1,13 @@
 using Exion.Ataraxia.Handler;
 using Exion.Ataraxia.ScriptableObjects;
 using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
+using Random = UnityEngine.Random;
 
 namespace Exion.Ataraxia.Default
 {
@@ -272,9 +275,287 @@ namespace Exion.Ataraxia.Default
                 selectedCard = null;
                 if (currentArrow) Destroy(currentArrow);
             }
-            if (selectedCard && tm.Time != "Night") ApplyGodCard();
-            else if (selectedCard) ApplyJobCard();
+            /*if (selectedCard && tm.Time != "Night") ApplyGodCard();
+            else if (selectedCard) ApplyJobCard();*/
+            if (selectedCard) ApplyCardEffect();
             else UIDrawer();
+        }
+
+        private Character GetClickedCharacter(Ray ray, RaycastHit2D hit2D)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                {
+                    GameObject objectHit = hit.transform.gameObject;
+                    Character CH = objectHit.GetComponent<CharacterHandler>().character;
+
+                    return CH;
+                }
+            }
+            else if (hit2D)
+            {
+                if (hit2D.transform.gameObject.GetComponent<CharacterHandlerUI>())
+                {
+                    GameObject objectHit = hit2D.transform.gameObject;
+                    Character CH = objectHit.GetComponent<CharacterHandlerUI>().character;
+
+                    return CH;
+                }
+            }
+            return null;
+        }
+
+        private Building GetClickedBuilding(Ray ray)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.gameObject.GetComponent<CharacterHandler>())
+                {
+                    GameObject objectHit = hit.transform.gameObject;
+                    Building BH = objectHit.GetComponent<BuildingHandler>().building;
+
+                    return BH;
+                }
+            }
+            return null;
+        }
+
+        private void ApplyCardEffect()
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit2D = Physics2D.Raycast(Input.mousePosition, new Vector2(0, 0));
+
+            Card c = selectedCard.GetComponent<CardHandler>().card;
+
+            Character CH = GetClickedCharacter(ray, hit2D);
+
+            Building BH = GetClickedBuilding(ray);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                bool effectApplied = false;
+                for (int i = 0; i < c.Modifiers.Length; i++)
+                {
+                    switch (c.Modifiers[i].Name)
+                    {
+                        case ModifierType.DEAL_MENTAL_DAMAGE:
+                            if (CH != null)
+                            {
+                                effectApplied = true;
+                                int blocked = CH.DealMentalDamage((int)c.Modifiers[i].Amount);
+                                if (Array.Exists(c.Modifiers, m => m.Name == ModifierType.DEAL_INSANITY_PER_BLOCKED))
+                                {
+                                    CH.MakeInsane(blocked);
+                                }
+                                Modifier modSusBlocked = Array.Find<Modifier>(c.Modifiers, m => m.Name == ModifierType.SUSPICION_PER_BLOCKED);
+                                if (modSusBlocked != null)
+                                {
+                                    suspicion += (modSusBlocked.Amount * blocked);
+                                }
+                                Modifier modSusUnblocked = Array.Find<Modifier>(c.Modifiers, m => m.Name == ModifierType.SUSPICION_PER_UNBLOCKED);
+                                if (modSusBlocked != null)
+                                {
+                                    suspicion += (modSusUnblocked.Amount * ((int)c.Modifiers[i].Amount - blocked));
+                                }
+
+                                Modifier modRepeatUnblocked = Array.Find<Modifier>(c.Modifiers, m => m.Name == ModifierType.REPEAT_IF_UNBLOCKED);
+                                if (modRepeatUnblocked != null && blocked == 0)
+                                {
+                                    for(int repeat = 0; repeat <modRepeatUnblocked.Amount; repeat++)
+                                    {
+                                        CH.DealMentalDamage((int)c.Modifiers[i].Amount);
+                                    }
+                                }
+
+                                Modifier modDNDOnKill = Array.Find<Modifier>(c.Modifiers, m => m.Name == ModifierType.DO_NOT_DESTROY_IF_KILLS);
+                                if(modDNDOnKill != null && CH.corrupted)
+                                {
+                                    effectApplied = false;
+                                }
+                            }
+                            break;
+                        case ModifierType.DEAL_DIRECT_MENTAL_DAMAGE:
+                            if (CH != null)
+                            {
+                                effectApplied = true;
+                                CH.DealDirectMentalDamage((int)c.Modifiers[i].Amount);
+
+                                Modifier modDNDOnKill = Array.Find<Modifier>(c.Modifiers, m => m.Name == ModifierType.DO_NOT_DESTROY_IF_KILLS);
+                                if (modDNDOnKill != null && CH.corrupted)
+                                {
+                                    effectApplied = false;
+                                }
+                            }
+                            break;
+                        case ModifierType.REMOVE_ALL_MENTAL:
+                            if(CH != null)
+                            {
+                                effectApplied = true;
+                                CH.DealMentalDamage(CH.Mental);
+                            }
+                            break;
+                        case ModifierType.DESTROY_MENTAL_BARRIERS:
+                            if (CH != null)
+                            {
+                                effectApplied = true;
+                                CH.DestroyMentalBarrier();
+                            }
+                            break;
+                        case ModifierType.DEAL_INSANITY_DAMAGE:
+                            if(CH != null)
+                            {
+                                effectApplied = true;
+                                suspicion += CH.MakeInsane((int)c.Modifiers[i].Amount);
+                            }
+                            break;
+                        case ModifierType.DEAL_INSANITY_PER_MAX_MENTAL:
+                            if(CH != null)
+                            {
+                                effectApplied = true;
+                                suspicion += CH.MakeInsane(CH.maxMental * (int)c.Modifiers[i].Amount);
+                            }
+                            break;
+                        case ModifierType.DEAL_INSANITY_PER_BLOCKED:
+                            //Is done in a DEAL MENTAL DAMAGE Routine
+                            break;
+                        case ModifierType.DEAL_HEALTH_DAMAGE:
+                            if(CH != null)
+                            {
+                                effectApplied = true;
+                                bool died = CH.DealHealthDamage((int)c.Modifiers[i].Amount);
+
+                                Modifier modDNDOnKill = Array.Find<Modifier>(c.Modifiers, m => m.Name == ModifierType.DO_NOT_DESTROY_IF_KILLS);
+                                if (modDNDOnKill != null && died)
+                                {
+                                    effectApplied = false;
+                                }
+                            }
+                            break;
+                        case ModifierType.RANDOM_MAX_HEALTH_CHANGE:
+                            if(CH != null)
+                            {
+                                effectApplied = true;
+                                CH.Fleshwarp((int)c.Modifiers[i].Amount);
+                            }
+                            break;
+                        case ModifierType.SUSPICION_PER_BLOCKED:
+                            //Is done in a DEAL MENTAL DAMAGE Routine
+                            break;
+                        case ModifierType.SUSPICION_PER_UNBLOCKED:
+                            //Is done in a DEAL MENTAL DAMAGE Routine
+                            break;
+                        case ModifierType.SUSPICION_FLAT:
+                            if(c.Modifiers.Length == 1 || effectApplied)
+                            {
+                                suspicion += c.Modifiers[i].Amount;
+                            }
+                            break;
+                        case ModifierType.SUSPICION_PER_FRIEND:
+                            if ( CH != null )
+                            {
+                                effectApplied = true;
+                                Modifier modFriendChance = Array.Find<Modifier>(c.Modifiers, m => m.Name == ModifierType.SUSPICION_PER_FRIEND_CHANCE);
+                                if(modFriendChance != null)
+                                {
+                                    foreach(Character f in CH.Friends)
+                                    {
+                                        if (Random.Range(0, 100) >= modFriendChance.Amount)
+                                        {
+                                            suspicion += c.Modifiers[i].Amount;
+                                        }
+                                    }
+                                    break;
+                                }
+                                suspicion += c.Modifiers[i].Amount * CH.Friends.Count;
+                            }
+                            break;
+                        case ModifierType.SUSPICION_PER_AFFECTED:
+                            //Is done in APPLY EFFECT TO ALL IN BUILDING Routine
+                            break;
+                        case ModifierType.SUSPICION_PER_FRIEND_CHANCE:
+                            //Is done in SUSPICION PER FRIEND Routine
+                            break;
+                        case ModifierType.APPLY_EFFECT_TO_BUILDING:
+                            if (BH != null)
+                            {
+                                effectApplied = true;
+                                int amount = c.Modifiers[i].statusType.name == "Trapped" ? bombCounter : 1;
+                                BH.ApplyStatus(c.Modifiers[i].statusType, amount);
+                            }
+                            break;
+                        case ModifierType.APPLY_EFFECT_TO_CHARACTER:
+                            if (CH != null)
+                            {
+                                effectApplied = true;
+                                CH.ApplyStatus(c.Modifiers[i].statusType, 1);
+                            }
+                            break;
+                        case ModifierType.APPLY_EFFECT_TO_ALL_IN_BUILDING:
+                            if (BH != null)
+                            {
+                                effectApplied = true;
+                                foreach(Character resident in BH.Residents)
+                                {
+                                    resident.ApplyStatus(c.Modifiers[i].statusType, 1);
+                                }
+                                foreach(Character worker in BH.Workers)
+                                {
+                                    worker.ApplyStatus(c.Modifiers[i].statusType, 1);
+                                }
+
+                                int Affected = BH.Workers.Count + BH.Residents.Count;
+
+                                Modifier modSusAffected = Array.Find<Modifier>(c.Modifiers, m => m.Name == ModifierType.SUSPICION_PER_AFFECTED);
+                                if (modSusAffected != null)
+                                {
+                                    suspicion += (modSusAffected.Amount * Affected);
+                                }
+                            }
+                            break;
+                        case ModifierType.SUMMON_MONSTER:
+                            print("To implement summoning structure");
+                            break;
+                        case ModifierType.CREATE_RANDOM_DRUG:
+                            jobDeck.Add(RandomDrugCard());
+                            break;
+                        case ModifierType.TICK_BOMB:
+                            bombCounter++;
+                            break;
+                        case ModifierType.RUIN_BUILDING:
+                            if (BH != null)
+                            {
+                                if (BH.Type.name == "Abandonned Building") print("wrong building");
+                                else
+                                {
+                                    effectApplied = true;
+                                    BH.Destroy();
+                                }
+                            }
+                            break;
+                        case ModifierType.REPEAT_IF_UNBLOCKED:
+                            //Is done in DEAL MENTAL DAMAGE Routine
+                            break;
+                        case ModifierType.DO_NOT_DESTROY: //Why does it exists?!
+                            effectApplied = false;
+                            break;
+                        case ModifierType.DO_NOT_DESTROY_IF_KILLS:
+                            //Is done in all DEAL MENTAL DAMAGE Routines and DEAL HEALTH DAMAGE Routine
+                            break;
+                        default:
+                            print("Not Implemented yet");
+                            break;
+                    }
+                }
+                if (effectApplied)
+                {
+                    selectedCard.GetComponent<CardHandler>().Highlight(false);
+                    Destroy(selectedCard);
+                    selectedCard = null;
+                }
+            }
         }
 
         private void FixedUpdate()
@@ -314,6 +595,7 @@ namespace Exion.Ataraxia.Default
             }
         }
 
+        /*
         private void ApplyJobCard()
         {
             RaycastHit hit;
@@ -476,7 +758,7 @@ namespace Exion.Ataraxia.Default
                 }
                 EmptyHand();
             }
-        }
+        }*/
 
         private Card RandomDrugCard()
         {
@@ -485,6 +767,7 @@ namespace Exion.Ataraxia.Default
             return RndCard;
         }
 
+        /*
         private void ApplyGodCard()
         {
             RaycastHit hit;
@@ -1138,7 +1421,7 @@ namespace Exion.Ataraxia.Default
                         break;
                 }
             }
-        }
+        }*/
 
         private void UIDrawer()
         {
