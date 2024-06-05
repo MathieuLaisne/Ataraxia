@@ -544,6 +544,13 @@ namespace Exion.Ataraxia.Default
                         case ModifierType.DO_NOT_DESTROY_IF_KILLS:
                             //Is done in all DEAL MENTAL DAMAGE Routines and DEAL HEALTH DAMAGE Routine
                             break;
+                        case ModifierType.EMPTY_HAND:
+                            selectedCard.GetComponent<CardHandler>().Highlight(false);
+                            Destroy(selectedCard);
+                            selectedCard = null;
+                            effectApplied = false;
+                            EmptyHand();
+                            break;
                         default:
                             print("Not Implemented yet");
                             break;

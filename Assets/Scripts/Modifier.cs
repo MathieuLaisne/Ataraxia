@@ -49,7 +49,9 @@ namespace Exion.Ataraxia.Default
         REPEAT_IF_UNBLOCKED,
 
         DO_NOT_DESTROY,
-        DO_NOT_DESTROY_IF_KILLS
+        DO_NOT_DESTROY_IF_KILLS,
+
+        EMPTY_HAND
     }
 
 }

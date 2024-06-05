@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Neox\\Proj\\Ataraxia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\tutorialhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\modifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\modifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\tutorialhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorialhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\modifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\modifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\characterhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TutorialHandler.cs",
               "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\TutorialHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TutorialHandler.cs",
@@ -50,12 +50,11 @@
               "RelativeToolTip": "Assets\\Scripts\\TutorialHandler.cs",
               "ViewState": "AQIAAD4AAAAAAAAAAAAIwA8AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T12:07:49.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T12:07:49.248Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MenuManager.cs",
               "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\MenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuManager.cs",
@@ -67,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Character.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Character.cs",
@@ -85,7 +84,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerManager.cs",
               "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\PlayerManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerManager.cs",
-              "ViewState": "AQIAACsBAAAAAAAAAAAiwD8BAAAeAAAA",
+              "ViewState": "AQIAABECAAAAAAAAAAAowCQCAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T22:17:15.947Z",
               "EditorCaption": ""
@@ -122,13 +121,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Modifier.cs",
               "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Modifier.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Modifier.cs",
               "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Modifier.cs",
               "RelativeToolTip": "Assets\\Scripts\\Modifier.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwBcAAAAlAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwDUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T23:59:38.601Z",
               "EditorCaption": ""
