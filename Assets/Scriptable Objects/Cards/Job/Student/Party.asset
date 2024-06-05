@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Party
   description: Party Real Hard.
   image: {fileID: 21300000, guid: cf67588a3be975247bcf5a2f4c2dd1e6, type: 3}
+  Modifiers:
+  - Name: 25
+    statusType: {fileID: 0}
+    Amount: 1

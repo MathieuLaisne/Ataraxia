@@ -22,3 +22,6 @@ MonoBehaviour:
   - Name: 11
     statusType: {fileID: 0}
     Amount: -1
+  - Name: 25
+    statusType: {fileID: 0}
+    Amount: 1

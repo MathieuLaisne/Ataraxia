@@ -19,3 +19,6 @@ MonoBehaviour:
   - Name: 15
     statusType: {fileID: 11400000, guid: e263b2a60de749b40aaa8b08f367afbc, type: 2}
     Amount: 100
+  - Name: 25
+    statusType: {fileID: 11400000, guid: e263b2a60de749b40aaa8b08f367afbc, type: 2}
+    Amount: 1

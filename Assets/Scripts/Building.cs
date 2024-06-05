@@ -113,5 +113,36 @@ namespace Exion.Ataraxia.Default
             if (m_status.Find(n => n.status.name == name) != null) return true;
             return false;
         }
+
+        public int AmountStatus(string name)
+        {
+            StatusHandler SH = m_status.Find(n => n.status.name == name);
+            if(SH != null)
+            {
+                return SH.stacks;
+            }
+            return 0;
+        }
+
+        public void DamageWorkers(int amount)
+        {
+            foreach (Character c in m_workers)
+            {
+                c.DealHealthDamage(amount);
+            }
+        }
+
+        public void DamageResidents(int amount)
+        {
+            foreach(Character c in m_residents)
+            {
+                c.DealHealthDamage(amount);
+            }
+        }
+
+        public void RemoveStatus(string name)
+        {
+            m_status.Remove(m_status.Find(n => n.status.name == name));
+        }
     }
 }

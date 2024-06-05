@@ -23,8 +23,21 @@ namespace Exion.Ataraxia.Handler
 
         public void FixedUpdate()
         {
-            if (timeManager.Time == "End Work" && building.HasStatus("Trapped"))
+            if (timeManager.Time == "End Work")
             {
+                if (building.HasStatus("Trapped"))
+                {
+                    building.DamageWorkers(building.AmountStatus("Trapped"));
+                    building.DamageResidents(building.AmountStatus("Trapped"));
+                }
+                if (building.AmountStatus("Trapped") >= 5)
+                {
+                    building.Destroy();
+                }
+            }
+            if (timeManager.Time == "End Night" && building.HasStatus("Rave"))
+            {
+                building.RemoveStatus("Rave");
             }
         }
 

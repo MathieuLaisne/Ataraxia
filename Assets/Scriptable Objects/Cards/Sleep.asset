@@ -15,3 +15,7 @@ MonoBehaviour:
   name: Sleep
   description: Sleep Early Tonight.
   image: {fileID: 21300000, guid: 0f48f73c81df304469d7b1376d75b957, type: 3}
+  Modifiers:
+  - Name: 25
+    statusType: {fileID: 0}
+    Amount: 1

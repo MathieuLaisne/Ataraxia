@@ -96,18 +96,24 @@ namespace Exion.Ataraxia.Handler
                     character.DealMentalDamage(5);
                     foreach (Character friend in character.Friends)
                     {
-                        friend.DealMentalDamage(2);
+                        if (!friend.corrupted)
+                        {
+                            friend.DealMentalDamage(2);
+                            PM.suspicion += 0.25f;
+                        }
                     }
-                    PM.suspicion += 0.25f * character.Friends.Count;
                 }
                 if (character.HasStatus("Fleshwarped"))
                 {
                     character.DealMentalDamage(8);
                     foreach (Character friend in character.Friends)
                     {
-                        friend.DealMentalDamage(5);
+                        if(!friend.corrupted)
+                        {
+                            friend.DealMentalDamage(5);
+                            PM.suspicion += 0.5f;
+                        }
                     }
-                    PM.suspicion += 0.5f * character.Friends.Count;
                 }
                 if (character.HasStatus("Stigmatized"))
                 {
@@ -126,12 +132,13 @@ namespace Exion.Ataraxia.Handler
                         character.Statuses.Remove(character.Statuses.Find(s => s.status.name == "Seeded"));
                     }
                 }
+                if (character.Job.name == "Student") GoToRave();
             }
-            if (timeManager.Time == "Night" && character.Job.name == "Student") GoToRave();
         }
 
         private void GoToRave()
         {
+            
         }
 
         private void Roaming()

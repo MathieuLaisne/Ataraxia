@@ -19,3 +19,6 @@ MonoBehaviour:
   - Name: 11
     statusType: {fileID: 0}
     Amount: -5
+  - Name: 25
+    statusType: {fileID: 0}
+    Amount: 0
