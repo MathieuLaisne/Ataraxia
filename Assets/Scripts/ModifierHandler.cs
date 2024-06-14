@@ -232,5 +232,11 @@ namespace Exion.Ataraxia.Handler
             Modifier[] Modifiers = { }; float sus = 0; int bomb = 0; List<Card> list = new List<Card>(); Card rnd = null; bool empty; //unused
             ApplyModifier(Modifiers, m, CH, BH, ref sus, ref bomb, ref list, rnd, out empty);
         }
+
+        public static void AppluModifierOnCharacter(Modifier m, Character CH)
+        {
+            Modifier[] Modifiers = { }; float sus = 0; int bomb = 0; List<Card> list = new List<Card>(); Card rnd = null; bool empty; BuildingHandler BH = null; //unused
+            ApplyModifier(Modifiers, m, CH, BH, ref sus, ref bomb, ref list, rnd, out empty);
+        }
     }
 }

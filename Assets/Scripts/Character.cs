@@ -1,6 +1,7 @@
 using Exion.Ataraxia.Handler;
 using Exion.Ataraxia.ScriptableObjects;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Exion.Ataraxia.Default
@@ -9,6 +10,8 @@ namespace Exion.Ataraxia.Default
     public class Character
     {
         private string m_name;
+
+        public bool IsUntargettable = false;
 
         public string Name
         {
@@ -132,6 +135,10 @@ namespace Exion.Ataraxia.Default
                     SH.stacks += stack;
                     toAdd = false;
                 }
+            }
+            if(status.name == "Untargettable")
+            {
+                IsUntargettable = true;
             }
             if (toAdd) m_status.Add(new StatusHandler(status, stack));
         }

@@ -15,6 +15,8 @@ namespace Exion.Ataraxia.Handler
 
         public TimeManager timeManager;
 
+        public bool IsUntargettable = false;
+
         //Effect Action verifiers
         List<Modifier> ModifierRequireMeetCharacter;
         List<Modifier> ModifierRequireTime;
@@ -150,6 +152,10 @@ namespace Exion.Ataraxia.Handler
 
         public void ApplyStatus(Status s, int amount)
         {
+            if(s.name == "Untargettable")
+            {
+                IsUntargettable = true;
+            }
             foreach (Modifier m in s.Modifiers)
             {
                 if(m.RequirementType.Contains(RequirementType.ON_MEET_CHARACTER))

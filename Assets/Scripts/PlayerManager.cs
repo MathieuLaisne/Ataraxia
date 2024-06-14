@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 using Random = UnityEngine.Random;
 using UnityEditor;
+using Unity.VisualScripting;
 
 namespace Exion.Ataraxia.Default
 {
@@ -340,8 +341,14 @@ namespace Exion.Ataraxia.Default
                 bool emptyHand = false;
                 for (int i = 0; i < c.Modifiers.Length; i++)
                 {
-                    if(ModifierHandler.ApplyModifier(c.Modifiers, c.Modifiers[i], CH, BH, ref suspicion, ref bombCounter, ref jobDeck, RandomDrugCard(), out emptyHand))
+                    if(CH.IsUntargettable || BH.IsUntargettable)
+                    {
+                        break;
+                    }
+                    if (ModifierHandler.ApplyModifier(c.Modifiers, c.Modifiers[i], CH, BH, ref suspicion, ref bombCounter, ref jobDeck, RandomDrugCard(), out emptyHand))
+                    {
                         effectApplied = true;
+                    }
                 }
                 if(emptyHand)
                 {
@@ -615,6 +622,14 @@ namespace Exion.Ataraxia.Default
                 case Target.HUMANS:
                     foreach(GameObject selection in GameObject.FindGameObjectsWithTag("Human"))
                     {
+                        CharacterHandler CH = selection.GetComponent<CharacterHandler>();
+                        if (CH != null)
+                        {
+                            if(CH.character.IsUntargettable)
+                            {
+                                continue;
+                            }
+                        }
                         selection.GetComponent<Outline>().enabled = active;
                     }
                     break;
