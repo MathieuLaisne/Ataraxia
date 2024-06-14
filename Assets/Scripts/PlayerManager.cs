@@ -629,8 +629,17 @@ namespace Exion.Ataraxia.Default
                             {
                                 continue;
                             }
+                            selection.GetComponent<Outline>().enabled = active;
                         }
-                        selection.GetComponent<Outline>().enabled = active;
+                        CharacterHandlerUI CHUI = selection.GetComponent<CharacterHandlerUI>();
+                        if (CHUI != null)
+                        {
+                            if (CHUI.character.IsUntargettable)
+                            {
+                                continue;
+                            }
+                            selection.GetComponent<UnityEngine.UI.Outline>().enabled = active;
+                        }
                     }
                     break;
                 case Target.MONSTER:
