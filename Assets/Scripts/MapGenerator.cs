@@ -73,7 +73,7 @@ namespace Exion.Ataraxia.Default
 
         private void FixedUpdate()
         {
-            if (timeManager.Time == "End Work")
+            if (timeManager.Time == TimePeriod.End_Work)
             {
                 foreach (ListWrapper objs in charactersMap)
                 {

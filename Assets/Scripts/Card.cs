@@ -11,5 +11,6 @@ namespace Exion.Ataraxia.ScriptableObjects
         public string description;
         public Sprite image;
         public Modifier[] Modifiers;
+        public Target mainTarget; //which type to highlight
     }
 }

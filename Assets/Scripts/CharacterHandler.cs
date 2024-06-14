@@ -87,8 +87,8 @@ namespace Exion.Ataraxia.Handler
         {
             if (character.corrupted) material.color = new Color(139, 0, 139);
             else material.color = new Color();
-            if (timeManager.Time == "End Work") todayFree = allParks[Random.Range(0, allParks.Count)];
-            if (timeManager.Time == "End Night")
+            if (timeManager.Time == TimePeriod.End_Work) todayFree = allParks[Random.Range(0, allParks.Count)];
+            if (timeManager.Time == TimePeriod.End_Night)
             {
                 if (character.HasStatus("Taking Over")) character.DealMentalDamage(5);
                 if (character.HasStatus("Unremarkable Fleshwarp"))
@@ -121,7 +121,7 @@ namespace Exion.Ataraxia.Handler
                     PM.suspicion += 0.1f;
                 }
             }
-            if (timeManager.Time == "End Free")
+            if (timeManager.Time == TimePeriod.End_Free_Time)
             {
                 if(character.HasStatus("Seeded"))
                 {
@@ -146,17 +146,17 @@ namespace Exion.Ataraxia.Handler
             agent.isStopped = false;
             switch (timeManager.Time)
             {
-                case "Free Time":
+                case TimePeriod.Free_Time:
                     destinationPos = todayFree;
                     recalculatePath();
                     break;
 
-                case "End Free":
+                case TimePeriod.End_Free_Time:
                     destinationPos = homePos;
                     recalculatePath();
                     break;
 
-                case "Morning":
+                case TimePeriod.Morning:
                     destinationPos = workPos;
                     recalculatePath();
                     if (agent.remainingDistance <= 0.2f) gameObject.SetActive(false);

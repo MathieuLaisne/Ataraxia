@@ -19,3 +19,8 @@ MonoBehaviour:
   - Name: 4
     statusType: {fileID: 0}
     Amount: 30
+    RequirementType: 
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0
+  mainTarget: 6

@@ -27,13 +27,13 @@ namespace Exion.Ataraxia.Handler
             Noon = 2
         }
 
-        public string Time
+        public TimePeriod Time
         {
             get { return m_time; }
         }
 
         [SerializeField]
-        private string m_time = "Morning";
+        private TimePeriod m_time = TimePeriod.Morning;
 
         public bool pause = true;
 
@@ -45,22 +45,22 @@ namespace Exion.Ataraxia.Handler
             {
                 switch (m_time)
                 {
-                    case "Morning":
+                    case TimePeriod.Morning:
                         sun.intensity += 0.00000001f;
                         sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Day], 0.00005f);
                         break;
 
-                    case "Work":
+                    case TimePeriod.Work:
                         sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Day], 0.00005f);
                         sun.intensity = Mathf.Clamp(sun.intensity + 0.00005f, 0.5f, 1);
                         break;
 
-                    case "Free Time":
+                    case TimePeriod.Free_Time:
                         sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Noon], 0.000005f);
                         sun.intensity = Mathf.Clamp(sun.intensity - 0.00005f, 0.5f, 1);
                         break;
 
-                    case "Night":
+                    case TimePeriod.Night:
                         sun.color = Color.Lerp(sun.color, lightTime[(int)LightColour.Night], 0.00005f);
                         sun.intensity = Mathf.Clamp(sun.intensity - 0.00005f, 0.5f, 1);
                         break;
@@ -79,69 +79,78 @@ namespace Exion.Ataraxia.Handler
                 m_timeElapsed++;
                 switch (m_time)
                 {
-                    case "Morning":
+                    case TimePeriod.Morning:
                         if (pauseIndicator.sprite != morningSprite) pauseIndicator.sprite = morningSprite;
                         sun.color = Color.Lerp(sun.color, Color.white, 0.1f);
                         if (m_timeElapsed == 15)
                         {
                             m_timeElapsed = 0;
-                            m_time = "Work";
+                            m_time = TimePeriod.End_Morning;
                         }
                         break;
 
-                    case "Work":
+                    case TimePeriod.End_Morning:
+                        sun.color = Color.Lerp(sun.color, Color.yellow, 0.01f);
+                        if (m_timeElapsed == 1)
+                        {
+                            m_timeElapsed = 0;
+                            m_time = TimePeriod.Work;
+                        }
+                        break;
+
+                    case TimePeriod.Work:
                         if (pauseIndicator.sprite != workSprite) pauseIndicator.sprite = workSprite;
                         sun.color = Color.Lerp(sun.color, Color.yellow, 0.1f);
                         if (m_timeElapsed == 30)
                         {
                             m_timeElapsed = 0;
-                            m_time = "End Work";
+                            m_time = TimePeriod.End_Work;
                         }
                         break;
 
-                    case "End Work":
+                    case TimePeriod.End_Work:
                         sun.color = Color.Lerp(sun.color, Color.yellow, 0.1f);
                         if (m_timeElapsed == 1)
                         {
                             m_timeElapsed = 0;
-                            m_time = "Free Time";
+                            m_time = TimePeriod.Free_Time;
                         }
                         break;
 
-                    case "Free Time":
+                    case TimePeriod.Free_Time:
                         if (pauseIndicator.sprite != leisureSprite) pauseIndicator.sprite = leisureSprite;
                         sun.color = Color.Lerp(sun.color, Color.red, 0.1f);
                         if (m_timeElapsed == 20)
                         {
                             m_timeElapsed = 0;
-                            m_time = "End Free";
+                            m_time = TimePeriod.End_Free_Time;
                         }
                         break;
 
-                    case "End Free":
+                    case TimePeriod.End_Free_Time:
                         sun.color = Color.Lerp(sun.color, Color.magenta, 0.1f);
                         if (m_timeElapsed == 1)
                         {
                             m_timeElapsed = 0;
-                            m_time = "Night";
+                            m_time = TimePeriod.Night;
                         }
                         break;
 
-                    case "Night":
+                    case TimePeriod.Night:
                         if (pauseIndicator.sprite != nightSprite) pauseIndicator.sprite = nightSprite;
                         sun.color = Color.Lerp(sun.color, Color.blue, 0.1f);
                         if (m_timeElapsed == 10)
                         {
                             m_timeElapsed = 0;
-                            m_time = "End Night";
+                            m_time = TimePeriod.End_Night;
                         }
                         break;
 
-                    case "End Night":
+                    case TimePeriod.End_Night:
                         if (m_timeElapsed == 1)
                         {
                             m_timeElapsed = 0;
-                            m_time = "Morning";
+                            m_time = TimePeriod.Morning;
                         }
                         break;
 
@@ -151,5 +160,20 @@ namespace Exion.Ataraxia.Handler
             }
             else if (pauseIndicator.sprite != pauseSprite) pauseIndicator.sprite = pauseSprite;
         }
+    }
+
+    public enum TimePeriod
+    {
+        Morning,
+        End_Morning,
+
+        Work,
+        End_Work,
+
+        Free_Time,
+        End_Free_Time,
+
+        Night,
+        End_Night
     }
 }

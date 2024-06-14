@@ -1,4 +1,5 @@
 using Exion.Ataraxia.ScriptableObjects;
+using Exion.Ataraxia.Handler;
 using System;
 
 namespace Exion.Ataraxia.Default
@@ -9,6 +10,10 @@ namespace Exion.Ataraxia.Default
         public ModifierType Name;
         public Status statusType;
         public float Amount;
+        public RequirementType[] RequirementType;
+        public int AmountRequired;
+        public TimePeriod timePeriod;
+        public Target target;
     }
 
 
@@ -51,7 +56,45 @@ namespace Exion.Ataraxia.Default
         DO_NOT_DESTROY,
         DO_NOT_DESTROY_IF_KILLS,
 
-        EMPTY_HAND
+        EMPTY_HAND,
+
+        DEAL_MAX_HEALTH_DAMAGE
+    }
+
+
+    public enum RequirementType
+    {
+        NONE,
+        
+        ON_MEET_CHARACTER,
+        ON_MEET_BUILDING,
+
+        TIME_IS,
+
+        AMOUNT_OF_STATUS_IS, 
+
+        IS_CORRUPTED
+    }
+
+    public enum Target
+    {
+        TARGET, //base effect of all cards
+
+        SELF,
+
+        WORKERS,
+
+        FRIENDS,
+
+        RESIDENTS,
+
+        MONSTER,
+
+        HUMANS,
+
+        BUILDING,
+
+        ALL
     }
 
 }

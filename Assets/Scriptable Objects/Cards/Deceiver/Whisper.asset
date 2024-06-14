@@ -17,4 +17,10 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 7cb4d5f63a003fa4c9feb0886dfadce8, type: 3}
   Modifiers:
   - Name: 1
+    statusType: {fileID: 0}
     Amount: 7
+    RequirementType: 
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0
+  mainTarget: 6

@@ -14,3 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Nest
   description: Heals monsters for 10% health each night
+  Modifiers:
+  - Name: 26
+    statusType: {fileID: 0}
+    Amount: -10
+    RequirementType: 03000000
+    AmountRequired: 0
+    timePeriod: 6
+    target: 5

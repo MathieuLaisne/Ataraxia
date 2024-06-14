@@ -20,6 +20,15 @@ MonoBehaviour:
   - Name: 8
     statusType: {fileID: 0}
     Amount: 10
+    RequirementType: 
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0
   - Name: 16
     statusType: {fileID: 11400000, guid: 73d08b95474b0b34c8f9ce1f389556d2, type: 2}
     Amount: 100
+    RequirementType: 
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0
+  mainTarget: 6

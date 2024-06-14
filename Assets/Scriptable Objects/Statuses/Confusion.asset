@@ -14,3 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Confusion
   description: For a day, have a 50% of injuring characters they meet.
+  Modifiers:
+  - Name: 7
+    statusType: {fileID: 0}
+    Amount: 0
+    RequirementType: 01000000
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0

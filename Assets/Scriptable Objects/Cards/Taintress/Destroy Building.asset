@@ -20,3 +20,8 @@ MonoBehaviour:
   - Name: 21
     statusType: {fileID: 0}
     Amount: 1
+    RequirementType: 
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0
+  mainTarget: 7

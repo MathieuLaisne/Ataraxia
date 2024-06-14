@@ -14,3 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Nightmare
   description: Lose 3 Mental Strength every night.
+  Modifiers:
+  - Name: 0
+    statusType: {fileID: 0}
+    Amount: 3
+    RequirementType: 03000000
+    AmountRequired: 0
+    timePeriod: 6
+    target: 0

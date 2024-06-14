@@ -15,3 +15,18 @@ MonoBehaviour:
   name: Fleshwarped
   description: Loses 8 Mental Strength every morning. Acquaintances loses 5 Mental
     Strength every morning. Generates 0.5 suspicion every morning per Acquaintances.
+  Modifiers:
+  - Name: 0
+    statusType: {fileID: 0}
+    Amount: 8
+    RequirementType: 03000000
+    AmountRequired: 0
+    timePeriod: 6
+    target: 0
+  - Name: 12
+    statusType: {fileID: 0}
+    Amount: 0.5
+    RequirementType: 03000000
+    AmountRequired: 0
+    timePeriod: 6
+    target: 0

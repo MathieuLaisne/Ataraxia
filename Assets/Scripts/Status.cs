@@ -1,3 +1,4 @@
+using Exion.Ataraxia.Default;
 using UnityEngine;
 
 namespace Exion.Ataraxia.ScriptableObjects
@@ -7,6 +8,7 @@ namespace Exion.Ataraxia.ScriptableObjects
     {
         public string name;
         public string description;
+        public Modifier[] Modifiers;
 
         public Status(string n, string d)
         {

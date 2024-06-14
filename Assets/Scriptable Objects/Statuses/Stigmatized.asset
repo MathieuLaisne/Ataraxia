@@ -15,3 +15,18 @@ MonoBehaviour:
   name: Stigmatized
   description: Loses 2 Mental Strength every morning. Generates 0.1 suspicion every
     morning.
+  Modifiers:
+  - Name: 0
+    statusType: {fileID: 0}
+    Amount: 2
+    RequirementType: 03000000
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0
+  - Name: 11
+    statusType: {fileID: 0}
+    Amount: 0.1
+    RequirementType: 03000000
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0

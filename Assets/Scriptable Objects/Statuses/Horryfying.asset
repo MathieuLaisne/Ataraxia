@@ -15,3 +15,18 @@ MonoBehaviour:
   name: Horryfying
   description: Deal 7 Mental Damage to all characters going near it. Generates 0.25
     suspicion each times.
+  Modifiers:
+  - Name: 0
+    statusType: {fileID: 0}
+    Amount: 7
+    RequirementType: 01000000
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0
+  - Name: 11
+    statusType: {fileID: 0}
+    Amount: 0.25
+    RequirementType: 01000000
+    AmountRequired: 0
+    timePeriod: 0
+    target: 0

@@ -3,6 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+using UOutline = UnityEngine.UI.Outline;
+
 namespace Exion.Ataraxia.Handler
 {
     public class CardHandler : MonoBehaviour
@@ -11,7 +13,7 @@ namespace Exion.Ataraxia.Handler
         public TextMeshProUGUI cardName;
         public TextMeshProUGUI cardText;
         public Image cardImg;
-        public GameObject highlight;
+        public UOutline highlight;
 
         // Start is called before the first frame update
         private void Start()
@@ -25,7 +27,7 @@ namespace Exion.Ataraxia.Handler
         {
             if (state) transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             else transform.localScale = new Vector3(1, 1, 1);
-            highlight.SetActive(state);
+            highlight.enabled = state;
         }
     }
 }

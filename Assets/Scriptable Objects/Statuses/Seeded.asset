@@ -15,3 +15,18 @@ MonoBehaviour:
   name: Seeded
   description: Loses 5 Mental Strength Every Night. On Corruption, remove the Status
     and gives it to all Acquaintances.
+  Modifiers:
+  - Name: 0
+    statusType: {fileID: 0}
+    Amount: 5
+    RequirementType: 03000000
+    AmountRequired: 0
+    timePeriod: 6
+    target: 0
+  - Name: 16
+    statusType: {fileID: 11400000}
+    Amount: 1
+    RequirementType: 05000000
+    AmountRequired: 0
+    timePeriod: 6
+    target: 3

@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Neox\\Proj\\Ataraxia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\characterhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\modifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\modifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\modifierhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\modifierhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DCAD1E1-9DD0-6855-13B4-36D4DDBF94B2}|Assembly-CSharp-Editor.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\editor\\modifiereditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DCAD1E1-9DD0-6855-13B4-36D4DDBF94B2}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\modifiereditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\cardhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cardhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Neox\\Proj\\Ataraxia\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\VertexModifiers\\Outline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\VertexModifiers\\Outline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\timemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\timemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|c:\\users\\neox\\proj\\ataraxia\\assets\\scripts\\buildinghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\buildinghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buildinghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|C:\\Users\\Neox\\Proj\\Ataraxia\\assets\\scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCA5276-FC84-7085-69BD-F66D1B33CAA8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Graphics\\OutlineFill.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Graphics\\OutlineFill.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +50,133 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MapGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\MapGenerator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MapGenerator.cs",
-              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\MapGenerator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MapGenerator.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAQwD4AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T22:08:24.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Building.cs",
-              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Building.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Building.cs",
-              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Building.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Building.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAI4AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T21:51:04.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Outline.cs",
+              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\VertexModifiers\\Outline.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\VertexModifiers\\Outline.cs",
+              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\VertexModifiers\\Outline.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\VertexModifiers\\Outline.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T13:21:01.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OutlineFill.shader",
+              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Graphics\\OutlineFill.shader",
+              "RelativeDocumentMoniker": "Assets\\Graphics\\OutlineFill.shader",
+              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Graphics\\OutlineFill.shader",
+              "RelativeToolTip": "Assets\\Graphics\\OutlineFill.shader",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2024-06-14T12:17:09.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CardHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\CardHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CardHandler.cs",
+              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\CardHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CardHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:51:28.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "BuildingHandler.cs",
               "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\BuildingHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BuildingHandler.cs",
               "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\BuildingHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\BuildingHandler.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACcAAAAuAAAA",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAowKIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T21:48:07.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T11:43:13.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MenuManager.cs",
-              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\MenuManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MenuManager.cs",
-              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\MenuManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MenuManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAfAAAA",
+              "DocumentIndex": 0,
+              "Title": "Modifier.cs",
+              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Modifier.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Modifier.cs",
+              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Modifier.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Modifier.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAowF4AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T11:59:56.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Character.cs",
-              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Character.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character.cs",
-              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Character.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character.cs",
-              "ViewState": "AQIAALgAAAAAAAAAAAAhwMkAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T10:41:55.84Z",
+              "WhenOpened": "2024-06-07T10:35:24.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlayerManager.cs",
-              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\PlayerManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerManager.cs",
-              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\PlayerManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerManager.cs",
-              "ViewState": "AQIAAA4AAAAArJmZmZkOwD4AAAAAAAAA",
+              "Title": "ModifierHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\ModifierHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ModifierHandler.cs",
+              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\ModifierHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ModifierHandler.cs",
+              "ViewState": "AQIAANMAAAAAAAAAAAAAABkAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T22:17:15.947Z",
+              "WhenOpened": "2024-06-14T11:40:26.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModifierEditor.cs",
+              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Editor\\ModifierEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\ModifierEditor.cs",
+              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Editor\\ModifierEditor.cs",
+              "RelativeToolTip": "Assets\\Editor\\ModifierEditor.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwDwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T12:10:37.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TimeManager.cs",
+              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\TimeManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TimeManager.cs",
+              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\TimeManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TimeManager.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwAUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T10:39:33.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Card.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Card.cs",
-              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\Card.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Card.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
+              "Title": "MapGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\MapGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MapGenerator.cs",
+              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\MapGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MapGenerator.cs",
+              "ViewState": "AQIAAMwAAAAAAAAAAAAowOIAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T21:18:03.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T22:08:24.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CharacterHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\CharacterHandler.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterHandler.cs",
-              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\CharacterHandler.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CharacterHandler.cs",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAwwIwAAAAMAAAA",
+              "DocumentIndex": 3,
+              "Title": "PlayerManager.cs",
+              "DocumentMoniker": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\PlayerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerManager.cs",
+              "ToolTip": "C:\\Users\\Neox\\Proj\\Ataraxia\\Assets\\Scripts\\PlayerManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerManager.cs",
+              "ViewState": "AQIAAF4CAAAAAAAAAAAgwHECAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T21:17:31.146Z",
+              "WhenOpened": "2024-06-04T22:17:15.947Z",
               "EditorCaption": ""
             }
           ]
